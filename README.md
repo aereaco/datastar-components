@@ -91,13 +91,12 @@ The datastar-components plugin empowers you to build reusable, reactive Web Comp
 *   [**🤝 Contribution & Feedback**](#bookmark=id.civp5gtfwmil "null")
     
 
-📦 **Installation & Setup** [⬆️](#-table-of-contents)
+📦 **Installation & Setup** [⬆](#-table-of-contents "⬆ Back to Table of Contents")
 -----------------------------
-
 
 To get started with the datastar-components plugin, follow these steps to set up your environment and create your first components.
 
-### **1\. Include the Libraries**
+### **1\. Include the Libraries** [⬆️](#-table-of-contents "⬆ Back to Table of Contents")
 
 Ensure datastar.js is loaded **before** datastar-components.js. It's recommended to load them as ES Modules.
 
@@ -167,8 +166,8 @@ Ensure datastar.js is loaded **before** datastar-components.js. It's recommended
 </body>  
 </html>
 ```    
-<a id="installation.2"></a>
-### **2\. Set Up Your Development Server**
+
+### **2\. Set Up Your Development Server** [⬆️](#-table-of-contents "⬆ Back to Table of Contents")
 
 You'll need a simple web server to serve your component HTML files. Here’s a quick setup using Deno or Node.js with Express.
 
@@ -243,13 +242,12 @@ You'll need a simple web server to serve your component HTML files. Here’s a q
     Your index.html and component .html files can be accessed via http://localhost:3000/.
     
 
-**👷‍♂️ Creating Your First Component**
+**👷‍♂️ Creating Your First Component** [⬆](#-table-of-contents "⬆ Back to Table of Contents")
 -------------------------------------
 
 Let's create a few simple interactive components showcasing different template usages.
 
-<a id="create.a"></a>
-### **Seamless DatastarJS Integration**
+### **Seamless DatastarJS Integration** [⬆️](#-table-of-contents "⬆ Back to Table of Contents")
 
 The `datastar-components` plugin fundamentally integrates with DatastarJS by treating the HTML content of your components as a Datastar-enabled template. This means you can use all of Datastar's declarative attributes (e.g., `data-data`, `data-text`, `data-on`, `data-if`, `data-for`) directly within your component's HTML, without needing to manually initialize or bind Datastar within each component's JavaScript.
 
@@ -257,8 +255,7 @@ When a component is loaded and connected to the DOM, the plugin automatically pe
 
 Furthermore, any reactive `data-prop-*` attributes passed to your component from its parent are automatically converted into Datastar signals and made available within the component's scope via the `$props` object, ensuring seamless reactive data flow.
 
-<a id="create.1"></a>
-### **1\. Light DOM Component (my-light-counter.html)**
+### **1\. Light DOM Component (my-light-counter.html)** [⬆️](#-table-of-contents "⬆ Back to Table of Contents")
 
 This component will render its content directly into the main DOM. Its styles might be affected by global styles.
 
@@ -301,7 +298,7 @@ This component will render its content directly into the main DOM. Its styles mi
 ```
     
 <a id="create.2"></a>
-### **2\. Shadow DOM (Open) Component (my-shadow-open-counter.html)**
+### **2\. Shadow DOM (Open) Component (my-shadow-open-counter.html)** [⬆️](#-table-of-contents "⬆ Back to Table of Contents")
 
 This component will create an "open" Shadow DOM, encapsulating its styles and DOM. Its internal DOM can be accessed from the outside via JavaScript.
 
@@ -345,7 +342,7 @@ This component will create an "open" Shadow DOM, encapsulating its styles and DO
     
     
 <a id="create.3"></a>
-### **3\. Shadow DOM (Closed) Component (my-shadow-closed-counter.html)**
+### **3\. Shadow DOM (Closed) Component (my-shadow-closed-counter.html)** [⬆️](#-table-of-contents "⬆ Back to Table of Contents")
 
 This component will create a "closed" Shadow DOM, offering stronger encapsulation as its internal DOM is not directly accessible from outside JavaScript.
 
@@ -386,7 +383,7 @@ This component will create a "closed" Shadow DOM, offering stronger encapsulatio
 ```
     
 <a id="create.4"></a>
-### **4\. Using Your Components in index.html**
+### **4\. Using Your Components in index.html** [⬆️](#-table-of-contents "⬆ Back to Table of Contents")
 
 Now, reference your components using their HTML tags and the data-component-src attribute:
 
@@ -419,12 +416,12 @@ Now, reference your components using their HTML tags and the data-component-src 
 ```
     
 
-**📐 Component Definition & Capabilities**
+**📐 Component Definition & Capabilities** [⬆](#-table-of-contents "⬆ Back to Table of Contents")
 -------------------------------------------
 
 The datastar-components.js plugin intelligently parses your component's HTML file and handles various aspects to create a fully functional Custom Element.
 
-### **1\. Template Usage: Defining Your Component Structure**
+### **1\. Template Usage: Defining Your Component Structure** [⬆️](#-table-of-contents "⬆ Back to Table of Contents")
 
 All component content **must** be wrapped within a tag. The type of template determines how your component's DOM and styles are managed.
 
@@ -526,7 +523,7 @@ All component content **must** be wrapped within a tag. The type of template det
         
     
 
-### **4\. Props: Passing Data Down ⬇️**
+### **4\. Props: Passing Data Down** [⬆️](#-table-of-contents "⬆ Back to Table of Contents")
 
 The plugin makes passing data into your components straightforward and reactive using data-prop-\* attributes.
 
@@ -606,7 +603,7 @@ The plugin makes passing data into your components straightforward and reactive 
     ```
     
 
-### **5\. Slots: Projecting Content 🧩**
+### **5\. Slots: Projecting Content** [⬆️](#-table-of-contents "⬆ Back to Table of Contents")
 
 Leverage standard Web Component slots to allow parent elements to inject content into specific areas of your component.
 
@@ -660,7 +657,7 @@ Leverage standard Web Component slots to allow parent elements to inject content
     ```
     
 
-### **6\. Scoped IDs for Accessibility and Internal Linking (this.generateScopedId)**
+### **6\. Scoped IDs for Accessibility and Internal Linking (this.generateScopedId)** [⬆️](#-table-of-contents "⬆ Back to Table of Contents")
 
 To prevent ID conflicts when using multiple instances of the same component, the plugin provides a generateScopedId method on the component instance. This is crucial for accessibility (e.g., ) and internal JavaScript targeting.
 
@@ -703,7 +700,7 @@ To prevent ID conflicts when using multiple instances of the same component, the
     Now, if you have multiple my-form-component instances, each input and its label will have a globally unique and correctly associated ID (e.g., my-form-component-1-username-input, my-form-component-2-username-input).
     
 
-### **7\. Content Ready Lifecycle Hook (contentReadyCallback)**
+### **7\. Content Ready Lifecycle Hook (contentReadyCallback)** [⬆️](#-table-of-contents "⬆ Back to Table of Contents")
 
 The connectedCallback fires when a custom element is added to the DOM, but its internal HTML from data-component-src might not be fully loaded and attached yet. The contentReadyCallback provides a reliable point to execute JavaScript that depends on the component's full DOM structure and Datastar reactivity being available.
 
@@ -749,7 +746,7 @@ The connectedCallback fires when a custom element is added to the DOM, but its i
     This ensures that your chart initialization code runs only after the element is part of the live DOM within your component.
     
 
-### **8\. Form Association (Form-Associated Custom Elements)**
+### **8\. Form Association (Form-Associated Custom Elements)** [⬆️](#-table-of-contents "⬆ Back to Table of Contents")
 
 Seamlessly integrate your custom components with native HTML forms. By adding a `data-form-associated` attribute to your component's root `<template>`, your custom element can participate in form submissions, `FormData` collection, and native form behaviors like `reset()`.
 
@@ -815,7 +812,7 @@ Seamlessly integrate your custom components with native HTML forms. By adding a 
     In this example, when the form is submitted, `formData` will correctly contain `custom_field_name: "current value of my-input-component"`. The `reset` button will also correctly revert `my-input-component` to its initial `value="Initial Value"`.
     
 
-### **9\. Adopted Callback Integration**
+### **9\. Adopted Callback Integration** [⬆️](#-table-of-contents "⬆ Back to Table of Contents")
 
 The `adoptedCallback` is a Web Component lifecycle hook that fires when the custom element is adopted into a new document. This typically happens when elements are moved between different `window` contexts, such as from the main document into an `<iframe>` or vice-versa.
 
@@ -836,7 +833,7 @@ The `datastar-components` plugin now leverages this callback to ensure that if a
     *   **Re-establish in `adoptedCallback`**: Re-attach those document-specific listeners or re-initialize any document-bound resources when the component enters a _new_ document. Use the `registerCleanup` method for robust cleanup patterns.
         
 
-### **10\. Advanced Error Handling (Fallback UI & Recovery)**
+### **10\. Advanced Error Handling (Fallback UI & Recovery)** [⬆️](#-table-of-contents "⬆ Back to Table of Contents")
 
 The plugin provides a robust mechanism for handling errors during component loading, parsing, or script execution, allowing you to define a graceful fallback UI. This significantly improves the resilience and user experience of your application by preventing broken layouts when a component fails.
 
@@ -916,7 +913,7 @@ The plugin provides a robust mechanism for handling errors during component load
     When `my-failing-component`'s script fails, its content will be replaced by the "Oops! This feature could not be loaded." message from `my-error-fallback.html`.
     
 
-### **11\. Enhanced Theming and CSS Variable Management**
+### **11\. Enhanced Theming and CSS Variable Management** [⬆️](#-table-of-contents "⬆ Back to Table of Contents")
 
 The `datastar-components` plugin now provides convenient utility methods on the component instance (`this`) for setting and getting CSS Custom Properties (CSS variables). This streamlines dynamic theming and styling directly from your component's JavaScript logic, enabling reactive style changes.
 
@@ -1007,7 +1004,7 @@ The `datastar-components` plugin now provides convenient utility methods on the 
     *   **Runtime Control**: Adjust styles programmatically without needing to manipulate classes or re-inject stylesheets.
         
 
-### **12\. Composing Components**
+### **12\. Composing Components** [⬆️](#-table-of-contents "⬆ Back to Table of Contents")
 
 Datastar Components are designed for composition, allowing you to build complex user interfaces by nesting components within each other. The reactivity and prop system seamlessly extend through these nested structures, making it easy to manage data flow and interactions across your component tree.
 
@@ -1152,9 +1149,9 @@ Datastar Components are designed for composition, allowing you to build complex 
     *   **CSS Variable Inheritance**: `my-user-profile-card` sets CSS variables like `--avatar-bg`, `--avatar-size` which are then consumed by the nested `my-avatar-component`, allowing the parent component to influence the child's styling.
         
 
-**⚡ Performance Optimizations** The plugin is built with performance in mind:
+**⚡ Performance Optimizations**  [⬆](#-table-of-contents "⬆ Back to Table of Contents")
 -----------------------------------------------------------------------------
-
+The plugin is built with performance in mind:
 *   **Conditional Component Loading (`data-load-if`)**: Control when a component is loaded and rendered based on the state of a Datastar signal. This is useful for improving initial page load performance by deferring the loading of components that are not immediately visible or necessary. It also enables dynamic UI patterns where components appear or disappear based on user interaction or application state.
     
     *   **Usage**: Add the `data-load-if` attribute to your component tag, specifying a Datastar signal that evaluates to `true` or `false`. The component will only be fetched and mounted when the condition is `true`.
@@ -1414,7 +1411,7 @@ Datastar Components are designed for composition, allowing you to build complex 
     When you click "Toggle Component Visibility," the my-cleanup-component will be removed from the DOM, and you will see console messages confirming that its timer was cleared and event listener removed.
 
 
-**💧 Server-Side Rendering (SSR) & Hydration Readiness**
+**💧 Server-Side Rendering (SSR) & Hydration Readiness** [⬆](#-table-of-contents "⬆ Back to Table of Contents")
 ----------------------------------------------------------
 
 The `datastar-components` plugin is designed to work seamlessly with Server-Side Rendered (SSR) content, enabling a smooth hydration process:
@@ -1464,7 +1461,7 @@ The `datastar-components` plugin is designed to work seamlessly with Server-Side
     *   **Benefit**: You get the SEO and initial performance benefits of SSR for both the component's internal DOM and its slotted content, with seamless client-side interactivity powered by Datastar's hydration process.
         
 
-**📚 Integration with Third-Party Libraries**
+**📚 Integration with Third-Party Libraries** [⬆](#-table-of-contents "⬆ Back to Table of Contents")
 ----------------------------------------------
 Datastar Components provide reliable lifecycle hooks and contextual access to the component instance, making it straightforward to integrate and manage third-party JavaScript libraries. The key is to initialize the library when the component's content is ready and clean up any resources when the component is removed.
 
@@ -1588,7 +1585,7 @@ Datastar Components provide reliable lifecycle hooks and contextual access to th
     This example shows how `contentReadyCallback` ensures `MockMarkdownEditor` is initialized only when `<textarea>` and `<div class="markdown-output">` are available, and `registerCleanup` ensures `editorInstance.destroy()` is called when `my-markdown-editor` is removed from the DOM.
     
 
-**📖 Integrating with Documentation Tools (e.g., Storybook)**
+**📖 Integrating with Documentation Tools (e.g., Storybook)** [⬆](#-table-of-contents "⬆ Back to Table of Contents")
 -------------------------------------------------------------
 
 Storybook is an open-source tool for developing UI components in isolation, enabling you to build, document, and test your UI components independently from your main application. Integrating `datastar-components` with Storybook allows you to showcase your HTML-first Web Components in a dedicated development environment.
@@ -1747,7 +1744,7 @@ While `datastar-components.js` provides the fundamental primitives, setting up S
 By adopting this approach, you can create a rich, interactive documentation site for your `datastar-components` components, making them easier to understand, test, and reuse throughout your projects.
 
 
-**🤝 Contribution & Feedback**
+**🤝 Contribution & Feedback** [⬆](#-table-of-contents "⬆ Back to Table of Contents")
 ------------------------------
 
 This plugin is designed to make Datastar development with Web Components powerful and straightforward. If you have suggestions, find issues, or would like to contribute, please feel free to open an issue or pull request!
