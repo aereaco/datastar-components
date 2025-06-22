@@ -38,7 +38,7 @@ The datastar-components plugin empowers you to build reusable, reactive Web Comp
 
 *   **📦 Installation & Setup**
     
-    *   [1\. Include the Libraries](#installation.1)
+    *   [1\. Include the Libraries](#1-include-the-libraries)
         
     *   [2\. Set Up Your Development Server](#installation.2)
         
