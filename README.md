@@ -120,6 +120,8 @@ The datastar-components plugin empowers you to build reusable, reactive Web Comp
 
 *   [Step 2 - Creating Stories for Datastar Components](#2-creating-stories-for-datastar-components)
 
+*   [Benefits of Integration Pattern]()
+
 #### [**🤝 Community Engagement**]()
 
 *   [Our Contributions](#contributions)
@@ -1783,7 +1785,7 @@ While `datastar-components.js` provides the fundamental primitives, setting up S
 
 ### **Key Steps for Storybook Integration**
 
-### 1\. Storybook Setup [↑]()
+### Step 1 - Storybook Setup [↑]()
     
 *   **Install Storybook:** Follow the official Storybook documentation to set up Storybook for Web Components (e.g., `@storybook/web-components-webpack5` or `@storybook/web-components-vite`).
     
@@ -1841,7 +1843,7 @@ While `datastar-components.js` provides the fundamental primitives, setting up S
         // Other Storybook global decorators or parameters can go here
         ```
                 
-### 2\. Creating Stories for Datastar Components [↑]()
+### Step 2 - Creating Stories for Datastar Components [↑]()
 
 Instead of manually constructing the complex `data-component-src` and `data-prop-*` attributes in every story, you can use the `storybook-datastar-component-wrapper.js` (provided above) to simplify story creation.
     
@@ -1918,7 +1920,7 @@ Instead of manually constructing the complex `data-component-src` and `data-prop
     ```
         
 
-### Benefits of this Integration Pattern [↑]()
+### Benefits of Integration Pattern [↑]()
 
 *   **Simplified Story Creation:** Developers write less boilerplate HTML for each story.
     
