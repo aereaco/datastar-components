@@ -114,7 +114,7 @@ The datastar-components plugin empowers you to build reusable, reactive Web Comp
     
 #### [**📖 Integrating with Documentation Tools (e.g., Storybook)**](#-integrating-with-documentation-tools-eg-storybook-1)
 
-*   [Key Steps for Storybook Integration](#key-steps-for-storybook-integration)
+*   [Key Steps for Storybook Integration](#key-steps-for-storybook-integration-)
 
 *   [Step 1 - Storybook Setup](#step-1---storybook-setup-)
 
