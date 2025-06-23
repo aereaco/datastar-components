@@ -1634,7 +1634,7 @@ A critical aspect of SSR hydration is how content projected into slots is handle
         
     5.  Hydrate these `data-text` directives, ensuring that when the `user.name` or `user.email` signals change (e.g., after client-side data fetch), the pre-rendered text updates reactively.
             
-### Benefit [↑]()
+### Hydration Benefits [↑]()
 
 You get the SEO and initial performance benefits of SSR for both the component's internal DOM and its slotted content, with seamless client-side interactivity powered by Datastar's hydration process.
 
