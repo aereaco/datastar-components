@@ -140,7 +140,7 @@ The datastar-components plugin empowers you to build reusable, reactive Web Comp
 
 To get started with the datastar-components plugin, follow these steps to set up your environment and create your first components.
 
-### Step 1 - Include the Libraries [↑]()
+### Step 1 - Include the Libraries [↑](#-installation--setup)
 
 Ensure datastar.js is loaded **before** datastar-components.js. It's recommended to load them as ES Modules.
 
@@ -209,7 +209,7 @@ Ensure datastar.js is loaded **before** datastar-components.js. It's recommended
 </html>
 ```
 
-### Step 2 - Set Up Your Development Server [↑]()
+### Step 2 - Set Up Your Development Server [↑](#-installation--setup)
 
 You'll need a simple web server to serve your component HTML files. Here’s a quick setup using Deno or Node.js with Express.
 
