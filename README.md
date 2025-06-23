@@ -1785,6 +1785,21 @@ While `datastar-components.js` provides the fundamental primitives, setting up S
 
 ### **Key Steps for Storybook Integration** [↑](#-integrating-with-documentation-tools-eg-storybook)
 
+To properly integrate `datastar-components` with Storybook, it's essential to understand how `datastar-components` works.
+
+**`datastar-components`** is a powerful plugin that extends the core **Datastar** hypermedia framework, enabling you to build reusable **HTML-first Web Components**. Unlike traditional JavaScript frameworks where you define component templates in JS/JSX, `datastar-components` allows you to define your component's structure and reactivity directly within an HTML file.
+
+Here's how it generally operates:
+
+1.  **HTML as the Source of Truth:** Each `datastar-component` is fundamentally an HTML file (`.html`). This file contains the component's markup, its properties defined via `data-prop-*` attributes, and event handlers (`data-on-*`).
+2.  **Dynamic Loading:** When a `<datastar-component>` custom element is used in your main application (or in Storybook), it doesn't immediately render content. Instead, it uses its `src` attribute to dynamically fetch the corresponding HTML component file.
+3.  **Client-Side Hydration and Reactivity:** Once the HTML template is fetched, `datastar-components` integrates it into the shadow DOM of the custom element. It then leverages Datastar's reactivity system to bind data from the component's properties (`data-prop-*`) to the template and manage state changes, events, and dynamic updates without needing a complex JavaScript build step for component logic.
+4.  **No Build Step for Components:** A key advantage is that your `.html` components don't require compilation or a complex build process for their core functionality, making them highly portable and easy to share.
+
+This HTML-first approach means that integrating with tools like Storybook requires special attention to how these HTML files are served and how Datastar's reactivity is initialized within Storybook's isolated environment.
+
+Now, let's look at the key steps to achieve this seamless integration:
+
 ### Step 1 - Storybook Setup [↑](#-integrating-with-documentation-tools-eg-storybook)
     
 *   **Install Storybook:** Follow the official Storybook documentation to set up Storybook for Web Components (e.g., `@storybook/web-components-webpack5` or `@storybook/web-components-vite`).
