@@ -36,17 +36,17 @@ The datastar-components plugin empowers you to build reusable, reactive Web Comp
 **📙 Table of Contents**
 ------------------------
 
-#### [**📦 Installation & Setup**](#)
+#### [**📦 Installation & Setup**](#-installation--setup-1)
     
-*   [Step 1 - Include the Libraries](#step-1---include-the-libraries)
+*   [Step 1 - Include the Libraries](#step-1---include-the-libraries-)
         
-*   [Step 2 - Set Up Your Development Server](#step-2---set-up-your-development-server)
+*   [Step 2 - Set Up Your Development Server](#step-2---set-up-your-development-server-)
         
-#### [**👷‍♂️ Creating Your First Component**](#)
+#### [**👷‍♂️ Creating Your First Component**](#%EF%B8%8F-creating-your-first-components)
     
-*   [Seamless DatastarJS Integration](#seamless-datastarjs-integration)
+*   [Seamless DatastarJS Integration](#seamless-datastarjs-integration-)
         
-*   [1st Component - Light DOM](#1st-component---light-dom-mylightcounterhtml)
+*   [1st Component - Light DOM](#1st-component---light-dom-my-light-counterhtml-)
         
 *   [2nd Component - Shadow DOM (Open)](#2nd-component---shadow-dom-open-myshadowopencounterhtml)
         
