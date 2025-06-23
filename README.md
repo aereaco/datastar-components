@@ -294,7 +294,7 @@ You'll need a simple web server to serve your component HTML files. Here’s a q
 
 Let's create a few simple interactive components showcasing different template usages.
 
-### Seamless DatastarJS Integration [↑]()
+### Seamless DatastarJS Integration [↑](#%EF%B8%8F-creating-your-first-component)
 
 The `datastar-components` plugin fundamentally integrates with DatastarJS by treating the HTML content of your components as a Datastar-enabled template. This means you can use all of Datastar's declarative attributes (e.g., `data-data`, `data-text`, `data-on`, `data-if`, `data-for`) directly within your component's HTML, without needing to manually initialize or bind Datastar within each component's JavaScript.
 
@@ -302,7 +302,7 @@ When a component is loaded and connected to the DOM, the plugin automatically pe
 
 Furthermore, any reactive `data-prop-*` attributes passed to your component from its parent are automatically converted into Datastar signals and made available within the component's scope via the `$props` object, ensuring seamless reactive data flow.
 
-### 1st Component - Light DOM (my-light-counter.html) [↑]()
+### 1st Component - Light DOM (my-light-counter.html) [↑](#%EF%B8%8F-creating-your-first-component)
 
 This component will render its content directly into the main DOM. Its styles might be affected by global styles.
 
@@ -344,7 +344,7 @@ This component will render its content directly into the main DOM. Its styles mi
 </template>
 ```
 
-### 2nd Component - Shadow DOM (Open)  (my-shadow-open-counter.html) [↑]()
+### 2nd Component - Shadow DOM (Open)  (my-shadow-open-counter.html) [↑](#%EF%B8%8F-creating-your-first-component)
 
 This component will create an "open" Shadow DOM, encapsulating its styles and DOM. Its internal DOM can be accessed from the outside via JavaScript.
 
@@ -386,7 +386,7 @@ This component will create an "open" Shadow DOM, encapsulating its styles and DO
 </template>
 ```
 
-### 3rd Component - Shadow DOM (Closed) (my-shadow-closed-counter.html) [↑]()
+### 3rd Component - Shadow DOM (Closed) (my-shadow-closed-counter.html) [↑](#%EF%B8%8F-creating-your-first-component)
 
 This component will create a "closed" Shadow DOM, offering stronger encapsulation as its internal DOM is not directly accessible from outside JavaScript.
 
@@ -426,7 +426,7 @@ This component will create a "closed" Shadow DOM, offering stronger encapsulatio
 </template>
 ```
 
-### Using Your Components in index.html [↑]()
+### Using Your Components in index.html [↑](#%EF%B8%8F-creating-your-first-component)
 
 Now, reference your components using their HTML tags and the data-component-src attribute:
 
