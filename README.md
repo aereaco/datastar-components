@@ -10,27 +10,27 @@ The datastar-components plugin empowers you to build reusable, reactive Web Comp
 
 *   **HTML-First Component Definition:** Define your components using intuitive HTML templates, supporting both Light DOM and Shadow DOM for flexible encapsulation.
     
-*   [**Seamless DatastarJS Integration**](#): Full reactivity with DatastarJS signals and actions directly within your components.
+*   [**Seamless DatastarJS Integration**](#seamless-datastarjs-integration-): Full reactivity with DatastarJS signals and actions directly within your components.
     
-*   [**Smart CSS Management**](#): Efficiently handles component-specific styles using Constructable Stylesheets for Shadow DOM and intelligent rewriting for Light DOM.
+*   [**Smart CSS Management**](#styles-css-management-): Efficiently handles component-specific styles using Constructable Stylesheets for Shadow DOM and intelligent rewriting for Light DOM.
     
-*   [**Robust JavaScript Execution**](#): Execute all types of \<script> tags (module, classic, external, inline) sequentially and reliably within your component's scope.
+*   [**Robust JavaScript Execution**](#javascript-execution-seamlessly-dynamic-): Execute all types of \<script> tags (module, classic, external, inline) sequentially and reliably within your component's scope.
     
-*   [**Reactive Prop System**](#): Pass dynamic data from parent to child components using `data-prop-*` attributes with automatic reactivity.
+*   [**Reactive Prop System**](#props-passing-data-down-): Pass dynamic data from parent to child components using `data-prop-*` attributes with automatic reactivity.
     
-*   [**Standard Slot Support**](#): Easily project content into designated areas of your components using native <slot> elements.
+*   [**Standard Slot Support**](#slots-projecting-content-): Easily project content into designated areas of your components using native <slot> elements.
     
-*   [**Advanced Error Handling & Fallback UI**](#): Provides detailed error reporting and allows for defining fallback HTML snippets to render if components fail to load or initialize.
+*   [**Advanced Error Handling & Fallback UI**](#advanced-error-handling-fallback-ui--recovery-): Provides detailed error reporting and allows for defining fallback HTML snippets to render if components fail to load or initialize.
     
-*   [**Native Form Integration (Form-Associated Custom Elements)**](#): Integrate your custom components directly into native HTML forms for submission and validation.
+*   [**Native Form Integration (Form-Associated Custom Elements)**](#form-association-form-associated-custom-elements-): Integrate your custom components directly into native HTML forms for submission and validation.
     
-*   [**Enhanced Lifecycle Management (incl. Cleanup & Adoption)**](#): Offers reliable lifecycle hooks including disconnectedCallback for resource cleanup and adoptedCallback for document transitions.
+*   **Enhanced Lifecycle Management**: Offers reliable lifecycle hooks including disconnectedCallback for resource cleanup and adoptedCallback for document transitions.
     
-*   [**Dynamic Theming with CSS Variables**](#): Utilities for setting and getting CSS Custom Properties to streamline component-specific and application-wide theming.
+*   [**Dynamic Theming with CSS Variables**](#enhanced-theming-and-css-variable-management-): Utilities for setting and getting CSS Custom Properties to streamline component-specific and application-wide theming.
     
-*   [**Optimized Performance**](#): Features like conditional loading, intelligent caching, and efficient DOM scanning ensure your application remains fast and responsive.
+*   **Optimized Performance**: Features like conditional loading, intelligent caching, and efficient DOM scanning ensure your application remains fast and responsive.
     
-*   [**SSR & Hydration Readiness**](#): Automatically detects server-rendered content and hydrates it, providing fast initial loads and seamless interactivity.
+*   [**SSR & Hydration Readiness**](#-server-side-rendering-ssr--hydration-readiness): Automatically detects server-rendered content and hydrates it, providing fast initial loads and seamless interactivity.
     
 
 **📙 Table of Contents**
