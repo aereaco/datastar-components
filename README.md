@@ -54,43 +54,43 @@ The datastar-components plugin empowers you to build reusable, reactive Web Comp
         
 *   [Using Your Components in index.html](#using-your-components-in-indexhtml-)
         
-#### [**📐 Functionality & Capabilities**]()
+#### [**📐 Functionality & Capabilities**](#-functionality--capabilities-1)
     
-*   [Template Usage](#bookmark=id.fl0yfkp1bebw "null")
+*   [Template Usage](#template-usage-defining-your-component-structure-)
         
-*   [Styles (CSS) Management](#bookmark=id.ff7eqbtwr0d8 "null")
+*   [Styles (CSS) Management](#styles-css-management-)
         
-*   [JavaScript Execution](#bookmark=id.x68ovd9hxo1r "null")
+*   [JavaScript Execution](#javascript-execution-seamlessly-dynamic-)
         
-*   [Props: Passing Data Down](#bookmark=id.gimzbp633i7w "null")
+*   [Props: Passing Data Down](#props-passing-data-down-)
         
-*   [Slots: Projecting Content](#bookmark=id.7wvh6r5e27oj "null")
+*   [Slots: Projecting Content](#slots-projecting-content-)
         
-*   [Scoped IDs for Accessibility and Internal Linking](#bookmark=id.qsimpoifigx2 "null")
+*   [Scoped IDs for Accessibility and Internal Linking](#scoped-ids-for-accessibility-and-internal-linking-thisgeneratescopedid-)
 
-*   [Conditional Component Loading (data-load-if)](#)
+*   [Conditional Component Loading (data-load-if)](#conditional-component-loading-data-load-if-)
   
-*   [Form Association (Form-Associated Custom Elements)](#bookmark=id.txv4swu4z5qu "null")
+*   [Form Association (Form-Associated Custom Elements)](#form-association-form-associated-custom-elements-)
         
-*   [Composing Components](#bookmark=id.yal9aywefoaq "null")
+*   [Composing Components](#composing-components-)
         
-#### [**⚡ Performance & Optimizations**]()
+#### [**⚡ Performance & Optimizations**](#-performance--optimizations-1)
 
-*   [Optimized Network Requests](#optimized-network-requests)
+*   [Optimized Network Requests](#optimized-network-requests-)
 
-*   [Efficient DOM Scanning](#efficient-dom-scanning)
+*   [Efficient DOM Scanning](#efficient-dom-scanning-)
 
-*   [Native Caching](#native-caching)
+*   [Native Caching](#native-caching-)
 
-*   [Enhanced Theming and CSS Variable Management](#bookmark=id.rvct815m947 "null")
+*   [Enhanced Theming and CSS Variable Management](#enhanced-theming-and-css-variable-management-)
 
-*   [Advanced Error Handling (Fallback UI & Recovery)](#bookmark=id.7lbm7xo0exjl "null")
+*   [Advanced Error Handling (Fallback UI & Recovery)](#advanced-error-handling-fallback-ui--recovery-)
 
-*   [Adopted Callback Integration](#bookmark=id.m8chzbso7ic "null")
+*   [Adopted Callback Integration](#adopted-callback-integration-)
 
-*   [Content Ready Lifecycle Hook](#bookmark=id.vi02bmicb3lx "null")
+*   [Content Ready Lifecycle Hook](#content-ready-lifecycle-hook-contentreadycallback-)
 
-*   [Opinionated Lifecycle Integration for Cleanup](#opinionated-lifecycle-integration-for-cleanup)
+*   [Opinionated Lifecycle Integration for Cleanup](#opinionated-lifecycle-integration-for-cleanup--)
 
 #### [**💧 Server-Side Rendering (SSR) & Hydration Readiness**]()
 
@@ -469,7 +469,7 @@ Now, reference your components using their HTML tags and the data-component-src 
 
 The `datastar-components` plugin intelligently parses your component's HTML template file and handles various aspects to create a fully functional Custom Element. Below are features used to facilitate easy development and examples on how to use them effectively.
 
-### Template Usage: Defining Your Component Structure [↑]()
+### Template Usage: Defining Your Component Structure [↑](#-functionality--capabilities)
 
 All component content **must** be wrapped within a tag. The type of template determines how your component's DOM and styles are managed.
 
@@ -569,7 +569,7 @@ All component content **must** be wrapped within a tag. The type of template det
         </div>
         ``` 
         
-### Styles (CSS) Management [↑]()
+### Styles (CSS) Management [↑](#-functionality--capabilities)
 
 The plugin provides smart CSS handling to ensure your components look consistent and perform well.
 
@@ -579,7 +579,7 @@ The plugin provides smart CSS handling to ensure your components look consistent
   * **\<link rel="stylesheet"\> Tags**:
       * External stylesheets are also handled and cached similarly to \<style\> tags, ensuring optimized loading.
 
-### JavaScript Execution: Seamlessly Dynamic [↑]()
+### JavaScript Execution: Seamlessly Dynamic [↑](#-functionality--capabilities)
 
 One of the most powerful features is the plugin's robust JavaScript handling. You simply include your \<script\> tags in your component's HTML, and the plugin takes care of the rest, executing them **sequentially** and reliably.
 
@@ -675,7 +675,7 @@ One of the most powerful features is the plugin's robust JavaScript handling. Yo
     </body>
     ```
 
-### Props: Passing Data Down [↑]()
+### Props: Passing Data Down [↑](#-functionality--capabilities)
 
 The plugin makes passing data into your components straightforward and reactive using data-prop-\* attributes.
 
@@ -754,7 +754,7 @@ The plugin makes passing data into your components straightforward and reactive 
     </html>    
     ```    
 
-### Slots: Projecting Content [↑]()
+### Slots: Projecting Content [↑](#-functionality--capabilities)
 
 Leverage standard Web Component slots to allow parent elements to inject content into specific areas of your component.
 
@@ -805,7 +805,7 @@ Leverage standard Web Component slots to allow parent elements to inject content
     </html>
     ```    
 
-### Scoped IDs for Accessibility and Internal Linking (this.generateScopedId) [↑]()
+### Scoped IDs for Accessibility and Internal Linking (this.generateScopedId) [↑](#-functionality--capabilities)
 
 To prevent ID conflicts when using multiple instances of the same component, the plugin provides a generateScopedId method on the component instance. This is crucial for accessibility (e.g., ) and internal JavaScript targeting.
 
@@ -847,7 +847,7 @@ To prevent ID conflicts when using multiple instances of the same component, the
     
     Now, if you have multiple my-form-component instances, each input and its label will have a globally unique and correctly associated ID (e.g., my-form-component-1-username-input, my-form-component-2-username-input).
 
-### Conditional Component Loading (`data-load-if`) [↑]()
+### Conditional Component Loading (`data-load-if`) [↑](#-functionality--capabilities)
 
 Control when a component is loaded and rendered based on the state of a Datastar signal. This is useful for improving initial page load performance by deferring the loading of components that are not immediately visible or necessary. It also enables dynamic UI patterns where components appear or disappear based on user interaction or application state.
     
@@ -967,7 +967,7 @@ Control when a component is loaded and rendered based on the state of a Datastar
         </div>
         ```  
  
-### Form Association (Form-Associated Custom Elements) [↑]()
+### Form Association (Form-Associated Custom Elements) [↑](#-functionality--capabilities)
 
 Seamlessly integrate your custom components with native HTML forms. By adding a `data-form-associated` attribute to your component's root `<template>`, your custom element can participate in form submissions, `FormData` collection, and native form behaviors like `reset()`.
 
@@ -1033,7 +1033,7 @@ Seamlessly integrate your custom components with native HTML forms. By adding a 
     In this example, when the form is submitted, `formData` will correctly contain `custom_field_name: "current value of my-input-component"`. The `reset` button will also correctly revert `my-input-component` to its initial `value="Initial Value"`.
 
 
-### Composing Components [↑]()
+### Composing Components [↑](#-functionality--capabilities)
 
 Datastar Components are designed for composition, allowing you to build complex user interfaces by nesting components within each other. The reactivity and prop system seamlessly extend through these nested structures, making it easy to manage data flow and interactions across your component tree.
 
