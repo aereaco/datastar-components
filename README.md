@@ -102,7 +102,7 @@ The datastar-components plugin empowers you to build reusable, reactive Web Comp
 
 *   [Handling Hydration of Slot Content](#handling-hydration-of-slot-content-)
 
-*   [Hydration Benefits](#benefits-)
+*   [Hydration Benefits](#hydration-benefits-)
     
 #### [**📚 Integration with Third-Party Libraries**](#-integration-with-third-party-libraries-1)
 
