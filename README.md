@@ -76,11 +76,11 @@ The datastar-components plugin empowers you to build reusable, reactive Web Comp
         
 #### [**⚡ Performance & Optimizations**](#-performance--optimizations-1)
 
-*   [Optimized Network Requests](#optimized-network-requests-)
+*   [Optimized Network Requests](#optimized-network-requests--)
 
-*   [Efficient DOM Scanning](#efficient-dom-scanning-)
+*   [Efficient DOM Scanning](#efficient-dom-scanning--)
 
-*   [Native Caching](#native-caching-)
+*   [Native Caching](#native-caching--)
 
 *   [Enhanced Theming and CSS Variable Management](#enhanced-theming-and-css-variable-management-)
 
@@ -116,19 +116,19 @@ The datastar-components plugin empowers you to build reusable, reactive Web Comp
 
 *   [Key Steps for Storybook Integration](#key-steps-for-storybook-integration)
 
-*   [Step 1 - Storybook Setup](https://github.com/aereaco/datastar-components/tree/main?tab=readme-ov-file#1-storybook-setup-)
+*   [Step 1 - Storybook Setup](#step-1---storybook-setup-)
 
-*   [Step 2 - Creating Stories for Datastar Components](#2-creating-stories-for-datastar-components)
+*   [Step 2 - Creating Stories for Datastar Components](#step-2---creating-stories-for-datastar-components-)
 
-*   [Benefits of Integration Pattern]()
+*   [Benefits of Integration Pattern](#benefits-of-integration-pattern-)
 
-#### [**🤝 Community Engagement**]()
+#### [**🤝 Community Engagement**](#-community-engagement-1)
 
-*   [Our Contributions](#contributions)
+*   [Our Contributions](#our-contribution-)
 
-*   [Feedback & Support](#feedback--support)
+*   [Feedback & Support](#feedback--support-)
 
-*   [Acknowledgments](#acknowledgments)
+*   [Acknowledgments](#acknowledgments-)
 
 
 <br>
@@ -1190,19 +1190,19 @@ Datastar Components are designed for composition, allowing you to build complex 
 -----------------------------------------------------------------------------
 The plugin is built with performance in mind, ensuring that your application remains responsive and efficient even as it scales with more components and complex interactions.
           
-### Optimized Network Requests  [↑]()
+### Optimized Network Requests  [↑](#-performance--optimizations)
 
 Prevents redundant fetch calls for component source files and avoids re-defining Custom Elements that are already in the process of being defined.
     
-### Efficient DOM Scanning  [↑]()
+### Efficient DOM Scanning  [↑](#-performance--optimizations)
 
 Utilizes a MutationObserver to watch for newly added elements that might be Datastar components, minimizing performance overhead compared to continuous DOM polling.
     
-### Native Caching  [↑]()
+### Native Caching  [↑](#-performance--optimizations)
 
 Leverages browser-native caching for ES Modules (JavaScript) and Constructable Stylesheets (CSS), ensuring assets are fetched and parsed only once.
 
-### Enhanced Theming and CSS Variable Management [↑]()
+### Enhanced Theming and CSS Variable Management [↑](#-performance--optimizations)
 
 The `datastar-components` plugin now provides convenient utility methods on the component instance (`this`) for setting and getting CSS Custom Properties (CSS variables). This streamlines dynamic theming and styling directly from your component's JavaScript logic, enabling reactive style changes.
 
@@ -1292,7 +1292,7 @@ The `datastar-components` plugin now provides convenient utility methods on the 
         
     *   **Runtime Control**: Adjust styles programmatically without needing to manipulate classes or re-inject stylesheets.
       
-### Advanced Error Handling (Fallback UI & Recovery) [↑]()
+### Advanced Error Handling (Fallback UI & Recovery) [↑](#-performance--optimizations)
 
 The plugin provides a robust mechanism for handling errors during component loading, parsing, or script execution, allowing you to define a graceful fallback UI. This significantly improves the resilience and user experience of your application by preventing broken layouts when a component fails.
 
@@ -1371,7 +1371,7 @@ The plugin provides a robust mechanism for handling errors during component load
     
     When `my-failing-component`'s script fails, its content will be replaced by the "Oops! This feature could not be loaded." message from `my-error-fallback.html`.
 
-### Adopted Callback Integration [↑]()
+### Adopted Callback Integration [↑](#-performance--optimizations)
 
 The `adoptedCallback` is a Web Component lifecycle hook that fires when the custom element is adopted into a new document. This typically happens when elements are moved between different `window` contexts, such as from the main document into an `<iframe>` or vice-versa.
 
@@ -1392,7 +1392,7 @@ The `datastar-components` plugin now leverages this callback to ensure that if a
     *   **Re-establish in `adoptedCallback`**: Re-attach those document-specific listeners or re-initialize any document-bound resources when the component enters a _new_ document. Use the `registerCleanup` method for robust cleanup patterns.
 
 
-### Content Ready Lifecycle Hook (contentReadyCallback) [↑]()
+### Content Ready Lifecycle Hook (contentReadyCallback) [↑](#-performance--optimizations)
 
 The connectedCallback fires when a custom element is added to the DOM, but its internal HTML from data-component-src might not be fully loaded and attached yet. The contentReadyCallback provides a reliable point to execute JavaScript that depends on the component's full DOM structure and Datastar reactivity being available.
 
@@ -1437,7 +1437,7 @@ The connectedCallback fires when a custom element is added to the DOM, but its i
 
     This ensures that your chart initialization code runs only after the element is part of the live DOM within your component.
 
-### Opinionated Lifecycle Integration for Cleanup  [↑]()
+### Opinionated Lifecycle Integration for Cleanup  [↑](#-performance--optimizations)
 
 Proper cleanup of resources when a component is removed from the DOM is crucial for preventing memory leaks and ensuring your application remains performant over time. The plugin provides a simple, opinionated pattern to manage this by leveraging the disconnectedCallback lifecycle hook. When your component is initialized (e.g., in an init function exported from a module script, or directly within inline scripts), you can register cleanup functions using componentInstance.registerCleanup(yourCleanupFunction). These registered functions will automatically be executed by the plugin when the component's disconnectedCallback is triggered, ensuring resources are freed.
     
