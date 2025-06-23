@@ -48,7 +48,7 @@ The datastar-components plugin empowers you to build reusable, reactive Web Comp
         
 *   [1st Component - Light DOM](#1st-component---light-dom-my-light-counterhtml-)
         
-*   [2nd Component - Shadow DOM (Open)]([#2nd-component---shadow-dom-open--my-shadow-open-counterhtml-)
+*   [2nd Component - Shadow DOM (Open)](#2nd-component---shadow-dom-open--my-shadow-open-counterhtml-)
         
 *   [3rd Component - Shadow DOM (Closed)](#3rd-component---shadow-dom-closed-my-shadow-closed-counterhtml-)
         
