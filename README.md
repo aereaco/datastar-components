@@ -8,95 +8,139 @@ The datastar-components plugin empowers you to build reusable, reactive Web Comp
 **✨ Key Features**
 ------------------
 
-*   [**HTML-First Component Definition**](#bookmark=id.fl0yfkp1bebw "null"): Define your components using intuitive HTML templates, supporting both Shadow DOM and Light DOM for flexible encapsulation.
+*   **HTML-First Component Definition:** Define your components using intuitive HTML templates, supporting both Light DOM and Shadow DOM for flexible encapsulation.
     
-*   **Seamless DatastarJS Integration**: Full reactivity with DatastarJS signals and actions directly within your components.
+*   [**Seamless DatastarJS Integration**](#): Full reactivity with DatastarJS signals and actions directly within your components.
     
-*   [**Smart CSS Management**](#bookmark=id.ff7eqbtwr0d8 "null"): Efficiently handles component-specific styles using Constructable Stylesheets for Shadow DOM and intelligent rewriting for Light DOM.
+*   [**Smart CSS Management**](#): Efficiently handles component-specific styles using Constructable Stylesheets for Shadow DOM and intelligent rewriting for Light DOM.
     
-*   [**Robust JavaScript Execution**](#bookmark=id.x68ovd9hxo1r "null"): Execute all types of \<script> tags (module, classic, external, inline) sequentially and reliably within your component's scope.
+*   [**Robust JavaScript Execution**](#): Execute all types of \<script> tags (module, classic, external, inline) sequentially and reliably within your component's scope.
     
-*   [**Reactive Prop System**](#bookmark=id.gimzbp633i7w "null"): Pass dynamic data from parent to child components using data-prop-\* attributes with automatic reactivity.
+*   [**Reactive Prop System**](#): Pass dynamic data from parent to child components using `data-prop-*` attributes with automatic reactivity.
     
-*   [**Standard Slot Support**](#bookmark=id.7wvh6r5e27oj "null"): Easily project content into designated areas of your components using native <slot> elements.
+*   [**Standard Slot Support**](#): Easily project content into designated areas of your components using native <slot> elements.
     
-*   [**Advanced Error Handling & Fallback UI**](#bookmark=id.7lbm7xo0exjl "null"): Provides detailed error reporting and allows for defining fallback HTML snippets to render if components fail to load or initialize.
+*   [**Advanced Error Handling & Fallback UI**](#): Provides detailed error reporting and allows for defining fallback HTML snippets to render if components fail to load or initialize.
     
-*   [**Native Form Integration (Form-Associated Custom Elements)**](#bookmark=id.txv4swu4z5qu "null"): Integrate your custom components directly into native HTML forms for submission and validation.
+*   [**Native Form Integration (Form-Associated Custom Elements)**](#): Integrate your custom components directly into native HTML forms for submission and validation.
     
-*   [**Enhanced Lifecycle Management (incl. Cleanup & Adoption)**](#bookmark=id.m8chzbso7ic "null"): Offers reliable lifecycle hooks including disconnectedCallback for resource cleanup and adoptedCallback for document transitions.
+*   [**Enhanced Lifecycle Management (incl. Cleanup & Adoption)**](#): Offers reliable lifecycle hooks including disconnectedCallback for resource cleanup and adoptedCallback for document transitions.
     
-*   [**Dynamic Theming with CSS Variables**](#bookmark=id.rvct815m947 "null"): Utilities for setting and getting CSS Custom Properties to streamline component-specific and application-wide theming.
+*   [**Dynamic Theming with CSS Variables**](#): Utilities for setting and getting CSS Custom Properties to streamline component-specific and application-wide theming.
     
-*   [**Optimized Performance**](#bookmark=id.g57iaur3e0uo "null"): Features like conditional loading, intelligent caching, and efficient DOM scanning ensure your application remains fast and responsive.
+*   [**Optimized Performance**](#): Features like conditional loading, intelligent caching, and efficient DOM scanning ensure your application remains fast and responsive.
     
-*   [**SSR & Hydration Readiness**](#bookmark=id.tixxbzcskyzx "null"): Automatically detects server-rendered content and hydrates it, providing fast initial loads and seamless interactivity.
+*   [**SSR & Hydration Readiness**](#): Automatically detects server-rendered content and hydrates it, providing fast initial loads and seamless interactivity.
     
 
 **📙 Table of Contents**
 ------------------------
 
-### **📦 Installation & Setup**
+#### [**📦 Installation & Setup**](#)
     
-   *   [1\. Include the Libraries](#1-include-the-libraries-)
+*   [Step 1 - Include the Libraries](#step-1---include-the-libraries)
         
-   *   [2\. Set Up Your Development Server](#2-set-up-your-development-server-)
+*   [Step 2 - Set Up Your Development Server](#step-2---set-up-your-development-server)
         
-*   **👷‍♂️ Creating Your First Component**
+#### [**👷‍♂️ Creating Your First Component**](#)
     
-    *   [Seamless DatastarJS Integration](#create.a)
+*   [Seamless DatastarJS Integration](#seamless-datastarjs-integration)
         
-    *   [1\. Light DOM Component](#create.1)
+*   [1st Component - Light DOM](#1st-component---light-dom-mylightcounterhtml)
         
-    *   [2\. Shadow DOM (Open) Component](#create.2)
+*   [2nd Component - Shadow DOM (Open)](#2nd-component---shadow-dom-open-myshadowopencounterhtml)
         
-    *   [3\. Shadow DOM (Closed) Component](#create.3)
+*   [3rd Component - Shadow DOM (Closed)](#3rd-component---shadow-dom-closed-myshadowclosedcounterhtml)
         
-    *   [4\. Using Your Components in index.html](#create.4)
+*   [Using Your Components in index.html](#using-your-components-in-indexhtml)
         
-*   [**📐 Component Definition & Capabilities**](#bookmark=id.e5d1ioulebjm "null")
+#### [**📐 Functionality & Capabilities**]()
     
-    *   [1\. Template Usage](#bookmark=id.fl0yfkp1bebw "null")
+*   [Template Usage](#bookmark=id.fl0yfkp1bebw "null")
         
-    *   [2\. Styles (CSS) Management](#bookmark=id.ff7eqbtwr0d8 "null")
+*   [Styles (CSS) Management](#bookmark=id.ff7eqbtwr0d8 "null")
         
-    *   [3\. JavaScript Execution](#bookmark=id.x68ovd9hxo1r "null")
+*   [JavaScript Execution](#bookmark=id.x68ovd9hxo1r "null")
         
-    *   [4\. Props: Passing Data Down](#bookmark=id.gimzbp633i7w "null")
+*   [Props: Passing Data Down](#bookmark=id.gimzbp633i7w "null")
         
-    *   [5\. Slots: Projecting Content](#bookmark=id.7wvh6r5e27oj "null")
+*   [Slots: Projecting Content](#bookmark=id.7wvh6r5e27oj "null")
         
-    *   [6\. Scoped IDs for Accessibility and Internal Linking](#bookmark=id.qsimpoifigx2 "null")
+*   [Scoped IDs for Accessibility and Internal Linking](#bookmark=id.qsimpoifigx2 "null")
+
+*   [Conditional Component Loading (data-load-if)](#)
+  
+*   [Form Association (Form-Associated Custom Elements)](#bookmark=id.txv4swu4z5qu "null")
         
-    *   [7\. Content Ready Lifecycle Hook](#bookmark=id.vi02bmicb3lx "null")
+*   [Composing Components](#bookmark=id.yal9aywefoaq "null")
         
-    *   [8\. Form Association (Form-Associated Custom Elements)](#bookmark=id.txv4swu4z5qu "null")
-        
-    *   [9\. Adopted Callback Integration](#bookmark=id.m8chzbso7ic "null")
-        
-    *   [10\. Advanced Error Handling (Fallback UI & Recovery)](#bookmark=id.7lbm7xo0exjl "null")
-        
-    *   [11\. Enhanced Theming and CSS Variable Management](#bookmark=id.rvct815m947 "null")
-        
-    *   [12\. Composing Components](#bookmark=id.yal9aywefoaq "null")
-        
-*   [**⚡ Performance Optimizations**](#bookmark=id.g57iaur3e0uo "null")
+#### [**⚡ Performance & Optimizations**]()
+
+*   [Optimized Network Requests](#optimized-network-requests)
+
+*   [Efficient DOM Scanning](#efficient-dom-scanning)
+
+*   [Native Caching](#native-caching)
+
+*   [Enhanced Theming and CSS Variable Management](#bookmark=id.rvct815m947 "null")
+
+*   [Advanced Error Handling (Fallback UI & Recovery)](#bookmark=id.7lbm7xo0exjl "null")
+
+*   [Adopted Callback Integration](#bookmark=id.m8chzbso7ic "null")
+
+*   [Content Ready Lifecycle Hook](#bookmark=id.vi02bmicb3lx "null")
+
+*   [Opinionated Lifecycle Integration for Cleanup](#opinionated-lifecycle-integration-for-cleanup)
+
+#### [**💧 Server-Side Rendering (SSR) & Hydration Readiness**]()
+
+*   [Automatic Hydration Detection](#automatic-hydration-detection)
+
+*   [Preventing FOUC & Performance](#preventing-fouc--performance)
+
+*   [Seamless Transition](#seamless-transition)
+
+*   [Handling Hydration of Slot Content](#handling-hydration-of-slot-content)
+
+*   [Benefits](#benefits)
     
-*   [**💧 Server-Side Rendering (SSR) & Hydration Readiness**](#bookmark=id.tixxbzcskyzx "null")
+#### [**📚 Integration with Third-Party Libraries**]()
+
+*   [Key Principles](#key-principles)
+
+*   [Example 1: Charting Library (Recharts-like)](#)
+
+*   [Example 2: Simple Markdown Editor (Conceptual)](#)
     
-*   [**📚 Integration with Third-Party Libraries**](#bookmark=id.bhxals948z33 "null")
-    
-*   [**📖 Integrating with Documentation Tools (e.g., Storybook)**](#bookmark=id.storybook-integration "null")
-    
-*   [**🤝 Contribution & Feedback**](#bookmark=id.civp5gtfwmil "null")
+#### [**📖 Integrating with Documentation Tools (e.g., Storybook)**]()
+
+*   [Key Steps for Storybook Integration](#1-include-the-libraries)
+
+*   [Step 1 - Storybook Setup](#1-storybook-setup)
+
+*   [Step 2 - Creating Stories for Datastar Components](#2-creating-stories-for-datastar-components)
+
+#### [**🤝 Community Engagement**]()
+
+*   [Our Contributions](#contributions)
+
+*   [Feedback & Support](#feedback--support)
+
+*   [Acknowledgments](#acknowledgments)
+
+
+<br>
+
+---
+<p align="right"><a href="#-table-of-contents">⬆️ Back to Top</a></p><br><br>
     
 
-📦 **Installation & Setup** [⬆](#-table-of-contents "⬆ Back to Table of Contents")▲ꜛ↑
+📦 **Installation & Setup**
 -----------------------------
 
 To get started with the datastar-components plugin, follow these steps to set up your environment and create your first components.
 
-### **1\. Include the Libraries** [▲ꜛ↑](#-table-of-contents "⬆ Back to Table of Contents")
+### Step 1 - Include the Libraries [↑]()
 
 Ensure datastar.js is loaded **before** datastar-components.js. It's recommended to load them as ES Modules.
 
@@ -165,9 +209,9 @@ Ensure datastar.js is loaded **before** datastar-components.js. It's recommended
     </script>  
 </body>  
 </html>
-```    
+```
 
-### **2\. Set Up Your Development Server** [⬆️](#-table-of-contents "⬆ Back to Table of Contents")
+### Step 2 - Set Up Your Development Server [↑]()
 
 You'll need a simple web server to serve your component HTML files. Here’s a quick setup using Deno or Node.js with Express.
 
@@ -240,14 +284,19 @@ You'll need a simple web server to serve your component HTML files. Here’s a q
         ```       
     
     Your index.html and component .html files can be accessed via http://localhost:3000/.
+
+<br>
+
+---
+<p align="right"><a href="#-table-of-contents">⬆️ Back to Top</a></p><br><br>
     
 
-**👷‍♂️ Creating Your First Component** [⬆](#-table-of-contents "⬆ Back to Table of Contents")
+**👷‍♂️ Creating Your First Components**
 -------------------------------------
 
 Let's create a few simple interactive components showcasing different template usages.
 
-### **Seamless DatastarJS Integration** [⬆️](#-table-of-contents "⬆ Back to Table of Contents")
+### Seamless DatastarJS Integration [↑]()
 
 The `datastar-components` plugin fundamentally integrates with DatastarJS by treating the HTML content of your components as a Datastar-enabled template. This means you can use all of Datastar's declarative attributes (e.g., `data-data`, `data-text`, `data-on`, `data-if`, `data-for`) directly within your component's HTML, without needing to manually initialize or bind Datastar within each component's JavaScript.
 
@@ -255,7 +304,7 @@ When a component is loaded and connected to the DOM, the plugin automatically pe
 
 Furthermore, any reactive `data-prop-*` attributes passed to your component from its parent are automatically converted into Datastar signals and made available within the component's scope via the `$props` object, ensuring seamless reactive data flow.
 
-### **1\. Light DOM Component (my-light-counter.html)** [⬆️](#-table-of-contents "⬆ Back to Table of Contents")
+### 1st Component - Light DOM (my-light-counter.html) [↑]()
 
 This component will render its content directly into the main DOM. Its styles might be affected by global styles.
 
@@ -296,9 +345,8 @@ This component will render its content directly into the main DOM. Its styles mi
     </div>  
 </template>
 ```
-    
-<a id="create.2"></a>
-### **2\. Shadow DOM (Open) Component (my-shadow-open-counter.html)** [⬆️](#-table-of-contents "⬆ Back to Table of Contents")
+
+### 2nd Component - Shadow DOM (Open)  (my-shadow-open-counter.html) [↑]()
 
 This component will create an "open" Shadow DOM, encapsulating its styles and DOM. Its internal DOM can be accessed from the outside via JavaScript.
 
@@ -339,10 +387,8 @@ This component will create an "open" Shadow DOM, encapsulating its styles and DO
     </div>  
 </template>
 ```
-    
-    
-<a id="create.3"></a>
-### **3\. Shadow DOM (Closed) Component (my-shadow-closed-counter.html)** [⬆️](#-table-of-contents "⬆ Back to Table of Contents")
+
+### 3rd Component - Shadow DOM (Closed) (my-shadow-closed-counter.html) [↑]()
 
 This component will create a "closed" Shadow DOM, offering stronger encapsulation as its internal DOM is not directly accessible from outside JavaScript.
 
@@ -381,9 +427,8 @@ This component will create a "closed" Shadow DOM, offering stronger encapsulatio
     </div>  
 </template>
 ```
-    
-<a id="create.4"></a>
-### **4\. Using Your Components in index.html** [⬆️](#-table-of-contents "⬆ Back to Table of Contents")
+
+### Using Your Components in index.html [↑]()
 
 Now, reference your components using their HTML tags and the data-component-src attribute:
 
@@ -414,14 +459,19 @@ Now, reference your components using their HTML tags and the data-component-src 
 </body>  
 </html>
 ```
-    
 
-**📐 Component Definition & Capabilities** [⬆](#-table-of-contents "⬆ Back to Table of Contents")
+<br>
+
+---
+<p align="right"><a href="#-table-of-contents">⬆️ Back to Top</a></p><br><br>
+
+
+**📐 Functionality & Capabilities**
 -------------------------------------------
 
-The datastar-components.js plugin intelligently parses your component's HTML file and handles various aspects to create a fully functional Custom Element.
+The `datastar-components` plugin intelligently parses your component's HTML template file and handles various aspects to create a fully functional Custom Element. Below are features used to facilitate easy development and examples on how to use them effectively.
 
-### **1\. Template Usage: Defining Your Component Structure** [⬆️](#-table-of-contents "⬆ Back to Table of Contents")
+### Template Usage: Defining Your Component Structure [↑]()
 
 All component content **must** be wrapped within a tag. The type of template determines how your component's DOM and styles are managed.
 
@@ -521,9 +571,113 @@ All component content **must** be wrapped within a tag. The type of template det
         </div>
         ``` 
         
-    
+### Styles (CSS) Management [↑]()
 
-### **4\. Props: Passing Data Down** [⬆️](#-table-of-contents "⬆ Back to Table of Contents")
+The plugin provides smart CSS handling to ensure your components look consistent and perform well.
+
+  * **\<style\> Tags**:
+      * **Shadow DOM**: Automatically converts into efficient [**Constructable Stylesheets**](https://www.google.com/search?q=https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleSheet%23constructable_stylesheet_example)\*\*. This means styles are parsed once and reused across all instances of the same component, significantly boosting performance.
+      * **Light DOM**: Styles are injected directly. The plugin intelligently rewrites :host selectors to your component's actual tag name (e.g., my-component), helping to scope styles and prevent accidental leaks into the parent document.
+  * **\<link rel="stylesheet"\> Tags**:
+      * External stylesheets are also handled and cached similarly to \<style\> tags, ensuring optimized loading.
+
+### JavaScript Execution: Seamlessly Dynamic [↑]()
+
+One of the most powerful features is the plugin's robust JavaScript handling. You simply include your \<script\> tags in your component's HTML, and the plugin takes care of the rest, executing them **sequentially** and reliably.
+
+  * **All Script Types Supported**:
+
+      * **External ES Modules**: \<script type="module" src="./my-module.js"\>\</script\>
+      * **Inline ES Modules**: \<script type="module"\>console.log('Inline module\!');\</script\>
+      * **External Classic Scripts**: \<script src="[https://cdn.example.com/some-lib.js](https://cdn.example.com/some-lib.js)"\>\</script\>
+      * **Inline Classic Scripts**: \<script\>alert('Hello from classic script\!');\</script\>
+
+  * **Guaranteed Sequential Order**: The plugin ensures that all scripts, regardless of type or source, run in the exact order they appear in your component's HTML. This eliminates common race conditions and simplifies your component's logic.
+
+  * **Datastar Action Integration (registerDatastarActions)**: For **module scripts only**, you can easily expose functions as Datastar actions. This allows you to call your component's internal JavaScript logic directly from Datastar attributes like ds-on:click="myAction()".
+
+    **Example: Component with JavaScript Actions** my-interactive-card.html:
+
+    ```html
+    <template shadowroot="open">  
+        <style>  
+            :host {  
+                display: block; border: 1px solid #aaddff; padding: 15px; border-radius: 8px;  
+                background-color: #e0faff; text-align: center;  
+            }  
+            .status { font-weight: bold; color: #007bff; }  
+            .action-button { background-color: #28a745; }  
+            .action-button:hover { background-color: #218838; }  
+        </style>
+
+        <script type="module" src="./card-logic.js"></script>
+
+        <div ds-data="{ message: 'Ready', clickCount: 0 }">  
+            <h3 ds-text="message"></h3>  
+            <p>Clicks: <span ds-text="clickCount"></span></p>  
+            <button ds-on:click="performAction()">Click Me!</button>  
+            <script>  
+                // You can also place inline classic scripts here.  
+                // They will run after any preceding scripts, and before any following scripts.  
+                console.log("Inline script inside my-interactive-card.html executed.");  
+            </script>  
+        </div>  
+    </template>
+    ```
+
+    components/card-logic.js:
+
+    ```javascript
+    // components/card-logic.js  
+    // Important: Adjust path to datastar-components.js if needed based on your project structure  
+    import { registerDatastarActions } from '/path/to/datastar-components.js';
+
+    export function performAction() {  
+        // 'this' refers to the component instance (DatastarComponent)  
+        // Access Datastar signals via 'this.Datastar.signalName' or 'this.Datastar.getSignal()'  
+        // For simplicity, we'll assume a global Datastar instance for the example here.  
+        // In a real app, you might pass Datastar into your component's context or access global `window.Datastar`.
+
+        // This function will be called as a Datastar action.  
+        // `this.getSignal('message')` would be the preferred way if Datastar context is setup within the component.  
+        // For this example, let's directly manipulate the 'message' and 'clickCount' signals  
+        // assuming standard Datastar setup where 'message' and 'clickCount' are accessible in the component's scope.  
+        if (window.Datastar) {  
+            const currentMessage = window.Datastar.getSignal('message').peek();  
+            const currentClickCount = window.Datastar.getSignal('clickCount').peek();
+
+            window.Datastar.getSignal('message').set(  
+                currentMessage === 'Ready' ? 'Action Performed!' : 'Ready'  
+            );  
+            window.Datastar.getSignal('clickCount').set(currentClickCount + 1);  
+            console.log("Action performed by card-logic.js!");  
+        } else {  
+            console.warn("Datastar not available in card-logic.js for direct signal manipulation.");  
+        }  
+    }
+
+    // Register this function to be available as a Datastar action  
+    document.addEventListener('DOMContentLoaded', () => {  
+        if (window.Datastar && window.DatastarComponents) {  
+            window.DatastarComponents.registerDatastarActions({  
+                performAction: performAction // The key 'performAction' is how you'll call it in HTML  
+            });  
+        }  
+    });
+    ```
+
+    Usage in index.html:
+
+    ```html
+    <body>  
+        <div class="app-container">  
+            <h2>Interactive Card with JS Actions</h2>  
+            <my-interactive-card data-component-src="/components/my-interactive-card.html"></my-interactive-card>  
+        </div>  
+    </body>
+    ```
+
+### Props: Passing Data Down [↑]()
 
 The plugin makes passing data into your components straightforward and reactive using data-prop-\* attributes.
 
@@ -600,10 +754,9 @@ The plugin makes passing data into your components straightforward and reactive 
         </div>  
     </body>  
     </html>    
-    ```
-    
+    ```    
 
-### **5\. Slots: Projecting Content** [⬆️](#-table-of-contents "⬆ Back to Table of Contents")
+### Slots: Projecting Content [↑]()
 
 Leverage standard Web Component slots to allow parent elements to inject content into specific areas of your component.
 
@@ -633,8 +786,6 @@ Leverage standard Web Component slots to allow parent elements to inject content
             <slot name="card-footer">Default Footer</slot>  
         </footer>
     ```
-        
-    
 
 *   Usage in index.html:
 
@@ -654,10 +805,9 @@ Leverage standard Web Component slots to allow parent elements to inject content
         </div>  
     </body>  
     </html>
-    ```
-    
+    ```    
 
-### **6\. Scoped IDs for Accessibility and Internal Linking (this.generateScopedId)** [⬆️](#-table-of-contents "⬆ Back to Table of Contents")
+### Scoped IDs for Accessibility and Internal Linking (this.generateScopedId) [↑]()
 
 To prevent ID conflicts when using multiple instances of the same component, the plugin provides a generateScopedId method on the component instance. This is crucial for accessibility (e.g., ) and internal JavaScript targeting.
 
@@ -698,55 +848,128 @@ To prevent ID conflicts when using multiple instances of the same component, the
         
     
     Now, if you have multiple my-form-component instances, each input and its label will have a globally unique and correctly associated ID (e.g., my-form-component-1-username-input, my-form-component-2-username-input).
-    
 
-### **7\. Content Ready Lifecycle Hook (contentReadyCallback)** [⬆️](#-table-of-contents "⬆ Back to Table of Contents")
+### Conditional Component Loading (`data-load-if`) [↑]()
 
-The connectedCallback fires when a custom element is added to the DOM, but its internal HTML from data-component-src might not be fully loaded and attached yet. The contentReadyCallback provides a reliable point to execute JavaScript that depends on the component's full DOM structure and Datastar reactivity being available.
-
-*   **Usage**: Define a method named contentReadyCallback() directly on your component instance (e.g., within an init function exported from a module script). The plugin will automatically call this method after the component's HTML is injected, styles are applied, scripts are run, and Datastar reactivity is initialized on its content.
+Control when a component is loaded and rendered based on the state of a Datastar signal. This is useful for improving initial page load performance by deferring the loading of components that are not immediately visible or necessary. It also enables dynamic UI patterns where components appear or disappear based on user interaction or application state.
     
-*   Example: In my-chart-component.html:
+*   **Usage**: Add the `data-load-if` attribute to your component tag, specifying a Datastar signal that evaluates to `true` or `false`. The component will only be fetched and mounted when the condition is `true`.
     
-    ```html
-    <template shadowroot="open">  
-        <style>/* ... styles ... */</style>  
-        <canvas class="chart-canvas"></canvas>  
-        <script type="module" src="./my-chart-component-logic.js"></script>  
-    </template>
-    ```        
+*   **Expanded Use Cases & Examples**:
     
-    In my-chart-component-logic.js:
-    
-    ```javascript
-    export function init(componentInstance) {  
-        // Define the contentReadyCallback method  
-        componentInstance.contentReadyCallback = () => {  
-            console.log(`${componentInstance.tagName} - Content and Datastar ready! Initializing chart...`);
-    
-            // Example: Initialize a third-party charting library  
-            if (window.ChartJS) { // Assuming ChartJS is globally available  
-                const ctx = componentInstance.root.querySelector('.chart-canvas').getContext('2d');  
-                new window.ChartJS(ctx, {  
-                    type: 'bar',  
-                    data: {  
-                        labels: ['Red', 'Blue', 'Yellow'],  
-                        datasets: [{  
-                            label: '# of Votes',  
-                            data: [12, 19, 3],  
-                            backgroundColor: ['red', 'blue', 'yellow']  
-                        }]  
-                    }  
-                });  
-            }  
-        };  
-    }
-    ```
-
-    This ensures that your chart initialization code runs only after the element is part of the live DOM within your component.
-    
-
-### **8\. Form Association (Form-Associated Custom Elements)** [⬆️](#-table-of-contents "⬆ Back to Table of Contents")
+    *   **Lazy Loading a Complex Dialog/Modal**: Load a heavy modal component only when the user explicitly triggers it, improving initial page responsiveness.
+        
+        **`my-complex-modal.html`**:
+        
+        ```html
+        <template shadowroot="open">
+            <style>
+                :host { /* ...modal styles... */ }
+            </style>
+            <div class="modal-backdrop"></div>
+            <div class="modal-content">
+                <h3>Complex Modal Title</h3>
+                <p>This modal contains a lot of dynamic content and possibly other nested components.</p>
+                <slot></slot>
+                <button data-on:click="element.emit('close-modal')">Close</button>
+            </div>
+        </template>
+        ```
+        
+        **`index.html`**:
+        
+        ```html
+        <div data-data="{ isModalOpen: false }">
+            <button data-on:click="isModalOpen = true">Open Complex Modal</button>
+        
+            <!-- The modal component is only loaded and rendered when isModalOpen is true -->
+            <my-complex-modal
+                data-component-src="/components/my-complex-modal.html"
+                data-load-if="isModalOpen"
+                data-on:close-modal="isModalOpen = false"
+            ></my-complex-modal>
+        </div>
+        ```
+        
+    *   **User Permission-Based Loading**: Display a component only if the current user has a specific permission or role.
+        
+        **`user-dashboard-widget.html`**:
+        
+        ```html
+        <template shadowroot="open">
+            <style>/* ...widget styles... */</style>
+            <div class="widget">
+                <h4>Admin Tools</h4>
+                <p>Access restricted administrative features here.</p>
+                <!-- Other admin features components -->
+            </div>
+        </template>
+        ```
+        
+        **`index.html`**:
+        
+        ```html
+        <div data-data="{ userRole: 'guest' }"> <!-- Imagine this signal comes from an auth system -->
+            <button data-on:click="userRole = (userRole === 'guest' ? 'admin' : 'guest')">Toggle User Role</button>
+            <p>Current Role: <span data-text="userRole"></span></p>
+        
+            <!-- Admin widget only loads if userRole is 'admin' -->
+            <user-dashboard-widget
+                data-component-src="/components/user-dashboard-widget.html"
+                data-load-if="userRole === 'admin'"
+            ></user-dashboard-widget>
+        </div>
+        ```
+        
+    *   **Tabbed Interface (Lazy Tab Content)**: Load the content of inactive tabs only when they become active, improving the initial load of multi-tab interfaces.
+        
+        **`tab-content-dashboard.html`**:
+        
+        ```html
+        <template shadowroot="open">
+            <style>/* ...dashboard specific styles... */</style>
+            <h3>Your Dashboard</h3>
+            <p>Welcome to your personalized dashboard! Here's an overview of your activity.</p>
+            <!-- Potentially other nested components like charts or feeds -->
+        </template>
+        ```
+        
+        **`tab-content-settings.html`**:
+        
+        ```html
+        <template shadowroot="open">
+            <style>/* ...settings specific styles... */</style>
+            <h3>Account Settings</h3>
+            <p>Manage your profile, preferences, and security settings.</p>
+            <!-- Complex forms or user management components -->
+        </template>
+        ```
+        
+        **`index.html`**:
+        
+        ```html
+        <div data-data="{ activeTab: 'dashboard' }">
+            <nav class="tabs">
+                <button data-on:click="activeTab = 'dashboard'" data-class:active="activeTab === 'dashboard'">Dashboard</button>
+                <button data-on:click="activeTab = 'settings'" data-class:active="activeTab === 'settings'">Settings</button>
+            </nav>
+        
+            <div class="tab-content">
+                <!-- Tab content components loaded only when their tab is active -->
+                <tab-content-dashboard
+                    data-component-src="/components/tab-content-dashboard.html"
+                    data-load-if="activeTab === 'dashboard'"
+                ></tab-content-dashboard>
+        
+                <tab-content-settings
+                    data-component-src="/components/tab-content-settings.html"
+                    data-load-if="activeTab === 'settings'"
+                ></tab-content-settings>
+            </div>
+        </div>
+        ```  
+ 
+### Form Association (Form-Associated Custom Elements) [↑]()
 
 Seamlessly integrate your custom components with native HTML forms. By adding a `data-form-associated` attribute to your component's root `<template>`, your custom element can participate in form submissions, `FormData` collection, and native form behaviors like `reset()`.
 
@@ -810,201 +1033,9 @@ Seamlessly integrate your custom components with native HTML forms. By adding a 
     ```        
     
     In this example, when the form is submitted, `formData` will correctly contain `custom_field_name: "current value of my-input-component"`. The `reset` button will also correctly revert `my-input-component` to its initial `value="Initial Value"`.
-    
 
-### **9\. Adopted Callback Integration** [⬆️](#-table-of-contents "⬆ Back to Table of Contents")
 
-The `adoptedCallback` is a Web Component lifecycle hook that fires when the custom element is adopted into a new document. This typically happens when elements are moved between different `window` contexts, such as from the main document into an `<iframe>` or vice-versa.
-
-The `datastar-components` plugin now leverages this callback to ensure that if a component is moved, its Datastar reactivity is correctly re-initialized within the new document's context. This is crucial for maintaining functionality and preventing unexpected behavior in highly dynamic applications that manipulate the DOM across document boundaries.
-
-*   **How it's handled by the plugin**: When `adoptedCallback` is triggered, the plugin will:
-    
-    1.  Log a console message indicating the component has been adopted.
-        
-    2.  Re-run `Datastar.init(this.root)` on the component's root to re-scan for Datastar directives and re-establish reactivity in the new document context.
-        
-    3.  Re-setup props reactivity (`setupPropsReactivity`) to ensure any `data-prop-*` attributes are correctly observed and their corresponding signals updated in the new context.
-        
-*   **Usage considerations for developers**: While the plugin handles the core Datastar re-initialization, if your component's internal JavaScript performs actions that tie into the document directly (e.g., adding global event listeners to `document`, or interacting with global objects unique to a document), you may need to:
-    
-    *   **Clean up in `disconnectedCallback`**: Remove any document-specific listeners or references when the component leaves its _original_ document.
-        
-    *   **Re-establish in `adoptedCallback`**: Re-attach those document-specific listeners or re-initialize any document-bound resources when the component enters a _new_ document. Use the `registerCleanup` method for robust cleanup patterns.
-        
-
-### **10\. Advanced Error Handling (Fallback UI & Recovery)** [⬆️](#-table-of-contents "⬆ Back to Table of Contents")
-
-The plugin provides a robust mechanism for handling errors during component loading, parsing, or script execution, allowing you to define a graceful fallback UI. This significantly improves the resilience and user experience of your application by preventing broken layouts when a component fails.
-
-*   **How it Works**: When an error occurs during the fetching, parsing, or initial script execution of a component defined via `data-component-src`, the plugin will check for an optional `data-component-error-src` attribute on the custom element tag.
-    
-    *   If `data-component-error-src` is present, the plugin will attempt to fetch the HTML content from this URL.
-        
-    *   The fetched fallback HTML (or a generic error message if the fallback also fails or isn't provided) will then replace the content of the problematic component's root (either its Shadow DOM or its Light DOM children).
-        
-    *   A `component-fallback-rendered` custom event is dispatched, allowing your application to monitor and react to fallback scenarios centrally.
-        
-*   **Usage (`data-component-error-src` attribute)**: Simply add the `data-component-error-src` attribute to your custom element, pointing to an HTML file that contains the desired fallback UI. This fallback HTML should be a self-contained snippet, often wrapped in a `<template>` tag if it has styles or scripts you want managed.
-    
-*   **Example**:
-    
-    `my-failing-component.html` (Simulated failing component):
-    
-    ```html
-    <template shadowroot="open">
-        <style>
-            :host { display: block; border: 2px dashed #ff0000; padding: 20px; background-color: #ffe6e6; }
-            p { color: #cc0000; font-weight: bold; }
-        </style>
-        <p>This component will fail to load its script!</p>
-        <script type="module">
-            // This script intentionally causes an error to demonstrate fallback
-            throw new Error("Simulated component script failure!");
-        </script>
-    </template>
-    ```
-
-    `my-error-fallback.html` (Fallback UI):
-
-    ```html
-    <template>
-        <style>
-            .fallback-card {
-                background-color: #fff3cd;
-                border: 1px solid #ffc107;
-                border-radius: 8px;
-                padding: 15px;
-                text-align: center;
-                color: #856404;
-                font-family: sans-serif;
-            }
-            .fallback-card p { margin: 0; }
-        </style>
-        <div class="fallback-card">
-            <p>⚠️ Oops! This feature could not be loaded.</p>
-            <p>Please try refreshing the page or contact support.</p>
-        </div>
-    </template>
-    ```
-    
-    `index.html` (Using the component with a fallback):
-        
-    ```html
-    <body>
-        <div class="app-container">
-            <h2>Component with Fallback Example</h2>
-            <my-failing-component
-                data-component-src="/components/my-failing-component.html"
-                data-component-error-src="/components/my-error-fallback.html"
-            ></my-failing-component>
-        </div>
-    
-        <script type="module">
-            // ... (your existing initDatastarComponents call) ...
-            window.addEventListener('component-fallback-rendered', (event) => {
-                console.warn('Fallback UI was rendered for:', event.detail.tagName, 'Original Error:', event.detail.originalError);
-                // You can add analytics logging here or display a global notification
-            });
-        </script>
-    </body>
-    ```      
-    
-    When `my-failing-component`'s script fails, its content will be replaced by the "Oops! This feature could not be loaded." message from `my-error-fallback.html`.
-    
-
-### **11\. Enhanced Theming and CSS Variable Management** [⬆️](#-table-of-contents "⬆ Back to Table of Contents")
-
-The `datastar-components` plugin now provides convenient utility methods on the component instance (`this`) for setting and getting CSS Custom Properties (CSS variables). This streamlines dynamic theming and styling directly from your component's JavaScript logic, enabling reactive style changes.
-
-*   **`this.setCssVariable(name, value, [element])`**: Sets a CSS custom property on a specified element. If `element` is omitted, it defaults to the component's root (`this.root`).
-    
-    *   `name`: The name of the CSS variable (e.g., `'--primary-color'`).
-        
-    *   `value`: The value to set (e.g., `'#007bff'`, `'16px'`, `'var(--global-spacing)'`).
-        
-    *   `element` (optional): The target `HTMLElement` or `ShadowRoot`.
-        
-    
-    **Example (Inside component script, e.g., `my-theme-switcher.js`):**
-    
-    ```javascript
-    export function init(componentInstance) {
-        // Assume a signal 'selectedThemeColor' exists in the component's Datastar scope
-        const dsScope = Datastar.scope(componentInstance);
-    
-        // Reactively update a CSS variable on the component's host element
-        Datastar.effect(() => {
-            const color = dsScope.selectedThemeColor.peek();
-            componentInstance.setCssVariable('--component-background', color);
-            componentInstance.setCssVariable('--component-text-color', 'white');
-            console.log(`Updated --component-background to ${color}`);
-        });
-    
-        // Example: Set a variable on a child element
-        const headerElement = componentInstance.root.querySelector('.component-header');
-        if (headerElement) {
-            componentInstance.setCssVariable('--header-font-size', '20px', headerElement);
-        }
-    }
-    ```
-    
-*   **`this.getCssVariable(name, [element])`**: Retrieves the computed value of a CSS custom property from a specified element. If `element` is omitted, it defaults to the component's root (`this.root`). This is useful for reading values that might be inherited or set by parent styles.
-    
-    *   `name`: The name of the CSS variable (e.g., `'--global-spacing'`).
-        
-    *   `element` (optional): The target `HTMLElement` or `ShadowRoot`.
-        
-    
-    **Example (Inside component script):**
-    
-    ```javascript
-    export function init(componentInstance) {
-        componentInstance.contentReadyCallback = () => {
-            // Read a global CSS variable applied to the body or :root
-            const bodyColor = componentInstance.getCssVariable('--body-background-color', document.body);
-            console.log(`Global body background color: ${bodyColor}`);
-    
-            // Read a variable applied directly to the component's host
-            const myBorderWidth = componentInstance.getCssVariable('--component-border-width');
-            console.log(`Component border width: ${myBorderWidth}`);
-        };
-    }
-    ```        
-    
-*   **Using CSS Variables in Component HTML/CSS**: You can then use these variables in your component's `<style>` tags:
-    
-    ```html
-    <template shadowroot="open">
-        <style>
-            :host {
-                display: block;
-                background-color: var(--component-background, #f0f0f0); /* Fallback value */
-                color: var(--component-text-color, #333);
-                border: var(--component-border-width, 1px) solid currentColor;
-                padding: 15px;
-                border-radius: 8px;
-            }
-            .component-header {
-                font-size: var(--header-font-size, 18px);
-                margin-bottom: 10px;
-            }
-        </style>
-        <div class="component-header">Themed Content</div>
-        <p>This text adapts to the theme.</p>
-    </template>
-    ```
-    
-*   **Benefits**:
-    
-    *   **Dynamic Theming**: Easily change colors, fonts, spacing, etc., based on user preferences, light/dark mode, or application state.
-        
-    *   **Encapsulated Styles**: Work with CSS variables even within Shadow DOM, maintaining encapsulation while allowing external control.
-        
-    *   **Runtime Control**: Adjust styles programmatically without needing to manipulate classes or re-inject stylesheets.
-        
-
-### **12\. Composing Components** [⬆️](#-table-of-contents "⬆ Back to Table of Contents")
+### Composing Components [↑]()
 
 Datastar Components are designed for composition, allowing you to build complex user interfaces by nesting components within each other. The reactivity and prop system seamlessly extend through these nested structures, making it easy to manage data flow and interactions across your component tree.
 
@@ -1147,588 +1178,749 @@ Datastar Components are designed for composition, allowing you to build complex 
     *   **Event Bubbling**: The `edit-profile` event emitted by `my-user-profile-card` can be caught by `index.html` (`data-on:edit-profile`).
         
     *   **CSS Variable Inheritance**: `my-user-profile-card` sets CSS variables like `--avatar-bg`, `--avatar-size` which are then consumed by the nested `my-avatar-component`, allowing the parent component to influence the child's styling.
-        
 
-**⚡ Performance Optimizations**  [⬆](#-table-of-contents "⬆ Back to Table of Contents")
+<br>
+
+---
+<p align="right"><a href="#-table-of-contents">⬆️ Back to Top</a></p><br><br>
+
+
+
+**⚡ Performance & Optimizations** 
 -----------------------------------------------------------------------------
-The plugin is built with performance in mind:
-*   **Conditional Component Loading (`data-load-if`)**: Control when a component is loaded and rendered based on the state of a Datastar signal. This is useful for improving initial page load performance by deferring the loading of components that are not immediately visible or necessary. It also enables dynamic UI patterns where components appear or disappear based on user interaction or application state.
+The plugin is built with performance in mind, ensuring that your application remains responsive and efficient even as it scales with more components and complex interactions.
+          
+### Optimized Network Requests  [↑]()
+
+Prevents redundant fetch calls for component source files and avoids re-defining Custom Elements that are already in the process of being defined.
     
-    *   **Usage**: Add the `data-load-if` attribute to your component tag, specifying a Datastar signal that evaluates to `true` or `false`. The component will only be fetched and mounted when the condition is `true`.
+### Efficient DOM Scanning  [↑]()
+
+Utilizes a MutationObserver to watch for newly added elements that might be Datastar components, minimizing performance overhead compared to continuous DOM polling.
+    
+### Native Caching  [↑]()
+
+Leverages browser-native caching for ES Modules (JavaScript) and Constructable Stylesheets (CSS), ensuring assets are fetched and parsed only once.
+
+### Enhanced Theming and CSS Variable Management [↑]()
+
+The `datastar-components` plugin now provides convenient utility methods on the component instance (`this`) for setting and getting CSS Custom Properties (CSS variables). This streamlines dynamic theming and styling directly from your component's JavaScript logic, enabling reactive style changes.
+
+*   **`this.setCssVariable(name, value, [element])`**: Sets a CSS custom property on a specified element. If `element` is omitted, it defaults to the component's root (`this.root`).
+    
+    *   `name`: The name of the CSS variable (e.g., `'--primary-color'`).
         
-    *   **Expanded Use Cases & Examples**:
+    *   `value`: The value to set (e.g., `'#007bff'`, `'16px'`, `'var(--global-spacing)'`).
         
-        *   **Lazy Loading a Complex Dialog/Modal**: Load a heavy modal component only when the user explicitly triggers it, improving initial page responsiveness.
-            
-            **`my-complex-modal.html`**:
-            
-            ```html
-            <template shadowroot="open">
-                <style>
-                    :host { /* ...modal styles... */ }
-                </style>
-                <div class="modal-backdrop"></div>
-                <div class="modal-content">
-                    <h3>Complex Modal Title</h3>
-                    <p>This modal contains a lot of dynamic content and possibly other nested components.</p>
-                    <slot></slot>
-                    <button data-on:click="element.emit('close-modal')">Close</button>
-                </div>
-            </template>
-            ```
-            
-            **`index.html`**:
-            
-            ```html
-            <div data-data="{ isModalOpen: false }">
-                <button data-on:click="isModalOpen = true">Open Complex Modal</button>
-            
-                <!-- The modal component is only loaded and rendered when isModalOpen is true -->
-                <my-complex-modal
-                    data-component-src="/components/my-complex-modal.html"
-                    data-load-if="isModalOpen"
-                    data-on:close-modal="isModalOpen = false"
-                ></my-complex-modal>
-            </div>
-            ```
-            
-        *   **User Permission-Based Loading**: Display a component only if the current user has a specific permission or role.
-            
-            **`user-dashboard-widget.html`**:
-            
-            ```html
-            <template shadowroot="open">
-                <style>/* ...widget styles... */</style>
-                <div class="widget">
-                    <h4>Admin Tools</h4>
-                    <p>Access restricted administrative features here.</p>
-                    <!-- Other admin features components -->
-                </div>
-            </template>
-            ```
-            
-            **`index.html`**:
-            
-            ```html
-            <div data-data="{ userRole: 'guest' }"> <!-- Imagine this signal comes from an auth system -->
-                <button data-on:click="userRole = (userRole === 'guest' ? 'admin' : 'guest')">Toggle User Role</button>
-                <p>Current Role: <span data-text="userRole"></span></p>
-            
-                <!-- Admin widget only loads if userRole is 'admin' -->
-                <user-dashboard-widget
-                    data-component-src="/components/user-dashboard-widget.html"
-                    data-load-if="userRole === 'admin'"
-                ></user-dashboard-widget>
-            </div>
-            ```
-            
-        *   **Tabbed Interface (Lazy Tab Content)**: Load the content of inactive tabs only when they become active, improving the initial load of multi-tab interfaces.
-            
-            **`tab-content-dashboard.html`**:
-            
-            ```html
-            <template shadowroot="open">
-                <style>/* ...dashboard specific styles... */</style>
-                <h3>Your Dashboard</h3>
-                <p>Welcome to your personalized dashboard! Here's an overview of your activity.</p>
-                <!-- Potentially other nested components like charts or feeds -->
-            </template>
-            ```
-            
-            **`tab-content-settings.html`**:
-            
-            ```html
-            <template shadowroot="open">
-                <style>/* ...settings specific styles... */</style>
-                <h3>Account Settings</h3>
-                <p>Manage your profile, preferences, and security settings.</p>
-                <!-- Complex forms or user management components -->
-            </template>
-            ```
-            
-            **`index.html`**:
-            
-            ```html
-            <div data-data="{ activeTab: 'dashboard' }">
-                <nav class="tabs">
-                    <button data-on:click="activeTab = 'dashboard'" data-class:active="activeTab === 'dashboard'">Dashboard</button>
-                    <button data-on:click="activeTab = 'settings'" data-class:active="activeTab === 'settings'">Settings</button>
-                </nav>
-            
-                <div class="tab-content">
-                    <!-- Tab content components loaded only when their tab is active -->
-                    <tab-content-dashboard
-                        data-component-src="/components/tab-content-dashboard.html"
-                        data-load-if="activeTab === 'dashboard'"
-                    ></tab-content-dashboard>
-            
-                    <tab-content-settings
-                        data-component-src="/components/tab-content-settings.html"
-                        data-load-if="activeTab === 'settings'"
-                    ></tab-content-settings>
-                </div>
-            </div>
-            ```
-            
-*   **Optimized Network Requests**: Prevents redundant fetch calls for component source files and avoids re-defining Custom Elements that are already in the process of being defined.
-    
-*   **Efficient DOM Scanning**: Utilizes a MutationObserver to watch for newly added elements that might be Datastar components, minimizing performance overhead compared to continuous DOM polling.
-    
-*   **Native Caching**: Leverages browser-native caching for ES Modules (JavaScript) and Constructable Stylesheets (CSS), ensuring assets are fetched and parsed only once.
-    
-*   **Opinionated Lifecycle Integration for Cleanup**: Proper cleanup of resources when a component is removed from the DOM is crucial for preventing memory leaks and ensuring your application remains performant over time. The plugin provides a simple, opinionated pattern to manage this by leveraging the disconnectedCallback lifecycle hook. When your component is initialized (e.g., in an init function exported from a module script, or directly within inline scripts), you can register cleanup functions using componentInstance.registerCleanup(yourCleanupFunction). These registered functions will automatically be executed by the plugin when the component's disconnectedCallback is triggered, ensuring resources are freed.
-    
-    *   **Why is this important?**
-        
-        *   **Memory Leaks**: If event listeners, timers (setTimeout, setInterval), or other global resources are not explicitly removed or cleared when a component is no longer in use, they can prevent the browser's garbage cleaner from reclaiming memory associated with that component, leading to slow performance and potential crashes.
-            
-        *   **Resource Management**: Ensures that background processes, network connections, or subscriptions initiated by your component are properly terminated when the component is no longer needed.
-            
-    *   **How to use registerCleanup**: You will have access to the registerCleanup method on the componentInstance (or directly via element if using an inline script within the template). Call this method and pass a function that contains the logic to clean up specific resources.
-        
-    *   **Example: Component with Cleanup** my-cleanup-component.html:
+    *   `element` (optional): The target `HTMLElement` or `ShadowRoot`.
         
     
-        ```html
-        <template shadowroot="open">  
-            <style>  
-                :host {  
-                    display: block;  
-                    border: 1.5px solid #77dd77;  
-                    padding: 15px;  
-                    border-radius: 8px;  
-                    background-color: #e6ffe6;  
-                    text-align: center;  
-                    margin-bottom: 20px;  
-                }  
-                .message {  
-                    font-size: 1.1em;  
-                    color: #336633;  
-                }  
-                .timer {  
-                    font-weight: bold;  
-                    color: #008000;  
-                }  
-                button {  
-                    background-color: #4CAF50;  
-                    margin-top: 10px;  
-                }  
-                button:hover {  
-                    background-color: #45a049;  
-                }  
-            </style>
-        
-            <div data-data="{ counter: 0 }">  
-                <p class="message">This component has a timer and event listener.</p>  
-                <p class="timer">Timer Count: <span data-text="counter"></span></p>  
-                <button data-on:click="toggleVisibility = !toggleVisibility">Remove Component (from parent)</button>  
-            </div>  
-            <script type="module" src="./cleanup-logic.js"></script>  
-        </template>
-        ```
+    **Example (Inside component script, e.g., `my-theme-switcher.js`):**
     
-        components/cleanup-logic.js:
+    ```javascript
+    export function init(componentInstance) {
+        // Assume a signal 'selectedThemeColor' exists in the component's Datastar scope
+        const dsScope = Datastar.scope(componentInstance);
     
-        ```javascript
-        // components/cleanup-logic.js  
-        export function init(componentInstance) {  
-            let intervalId;  
-            let buttonClickListener;
-        
-            console.log(`${componentInstance.tagName} (ID: ${componentInstance._dsInstanceId}) initialized.`);
-        
-            // Example 1: Set up a periodic timer  
-            let localCounter = 0;  
-            intervalId = setInterval(() => {  
-                localCounter++;  
-                console.log(`${componentInstance.tagName} (ID: ${componentInstance._dsInstanceId}) - Timer tick: ${localCounter}`);  
-                // Update a Datastar signal if needed, assuming it's available in scope  
-                const dsScope = Datastar.scope(componentInstance);  
-                if (dsScope && dsScope.counter) {  
-                    dsScope.counter.set(localCounter);  
-                }  
-            }, 1000);
-        
-            // Register a cleanup function for the timer  
-            componentInstance.registerCleanup(() => {  
-                clearInterval(intervalId);  
-                console.log(`${componentInstance.tagName} (ID: ${componentInstance._dsInstanceId}) - Timer cleared.`);  
-            });
-        
-            // Example 2: Add an event listener to the document  
-            // (This listener is just an example; usually you'd listen on elements within the component's root)  
-            buttonClickListener = () => {  
-                console.log(`${componentInstance.tagName} (ID: ${componentInstance._dsInstanceId}) - Button clicked in component's internal logic!`);  
-            };  
-            const internalButton = componentInstance.root.querySelector('button');  
-            if (internalButton) {  
-                internalButton.addEventListener('click', buttonClickListener);  
-            }
-        
-            // Register a cleanup function for the event listener  
-            componentInstance.registerCleanup(() => {  
-                if (internalButton) {  
-                    internalButton.removeEventListener('click', buttonClickListener);  
-                    console.log(`${componentInstance.tagName} (ID: ${componentInstance._dsInstanceId}) - Button click listener removed.`);  
-                }  
-            });
-        
-            // Example 3: You can also register cleanup for any external libraries or other resources.  
-            // For instance, if you initialized a chart or a map:  
-            componentInstance.registerCleanup(() => {  
-                // chartInstance.destroy(); // example cleanup for a charting library  
-                // mapInstance.remove();   // example cleanup for a map library  
-                console.log(`${componentInstance.tagName} (ID: ${componentInstance._dsInstanceId}) - Other resources cleaned up.`);  
-            });  
+        // Reactively update a CSS variable on the component's host element
+        Datastar.effect(() => {
+            const color = dsScope.selectedThemeColor.peek();
+            componentInstance.setCssVariable('--component-background', color);
+            componentInstance.setCssVariable('--component-text-color', 'white');
+            console.log(`Updated --component-background to ${color}`);
+        });
+    
+        // Example: Set a variable on a child element
+        const headerElement = componentInstance.root.querySelector('.component-header');
+        if (headerElement) {
+            componentInstance.setCssVariable('--header-font-size', '20px', headerElement);
         }
-        ```
+    }
+    ```
+    
+*   **`this.getCssVariable(name, [element])`**: Retrieves the computed value of a CSS custom property from a specified element. If `element` is omitted, it defaults to the component's root (`this.root`). This is useful for reading values that might be inherited or set by parent styles.
+    
+    *   `name`: The name of the CSS variable (e.g., `'--global-spacing'`).
+        
+    *   `element` (optional): The target `HTMLElement` or `ShadowRoot`.
         
     
-        index.html to demonstrate loading/unloading:
+    **Example (Inside component script):**
     
-        ```html
-        <body>  
-            <div class="app-container" data-data="{ toggleVisibility: true }">  
-                <h1>Welcome to Your Datastar Components App!</h1>
+    ```javascript
+    export function init(componentInstance) {
+        componentInstance.contentReadyCallback = () => {
+            // Read a global CSS variable applied to the body or :root
+            const bodyColor = componentInstance.getCssVariable('--body-background-color', document.body);
+            console.log(`Global body background color: ${bodyColor}`);
+    
+            // Read a variable applied directly to the component's host
+            const myBorderWidth = componentInstance.getCssVariable('--component-border-width');
+            console.log(`Component border width: ${myBorderWidth}`);
+        };
+    }
+    ```        
+    
+*   **Using CSS Variables in Component HTML/CSS**: You can then use these variables in your component's `<style>` tags:
+    
+    ```html
+    <template shadowroot="open">
+        <style>
+            :host {
+                display: block;
+                background-color: var(--component-background, #f0f0f0); /* Fallback value */
+                color: var(--component-text-color, #333);
+                border: var(--component-border-width, 1px) solid currentColor;
+                padding: 15px;
+                border-radius: 8px;
+            }
+            .component-header {
+                font-size: var(--header-font-size, 18px);
+                margin-bottom: 10px;
+            }
+        </style>
+        <div class="component-header">Themed Content</div>
+        <p>This text adapts to the theme.</p>
+    </template>
+    ```
+    
+*   **Benefits**:
+    
+    *   **Dynamic Theming**: Easily change colors, fonts, spacing, etc., based on user preferences, light/dark mode, or application state.
         
-                <div data-if="toggleVisibility">  
-                    <h2>Component with Cleanup Example</h2>  
-                    <my-cleanup-component data-component-src="/components/my-cleanup-component.html"></my-cleanup-component>  
-                </div>  
-                <button data-on:click="toggleVisibility = !toggleVisibility">Toggle Component Visibility</button>
+    *   **Encapsulated Styles**: Work with CSS variables even within Shadow DOM, maintaining encapsulation while allowing external control.
         
-            </div>  
-            <!-- Other components and scripts -->  
-            <script type="module">  
-                import { initDatastarComponents } from '/path/to/datastar-components.js'; // Adjust path  
-                document.addEventListener('DOMContentLoaded', () => {  
-                    initDatastarComponents(window.Datastar);  
+    *   **Runtime Control**: Adjust styles programmatically without needing to manipulate classes or re-inject stylesheets.
+      
+### Advanced Error Handling (Fallback UI & Recovery) [↑]()
+
+The plugin provides a robust mechanism for handling errors during component loading, parsing, or script execution, allowing you to define a graceful fallback UI. This significantly improves the resilience and user experience of your application by preventing broken layouts when a component fails.
+
+*   **How it Works**: When an error occurs during the fetching, parsing, or initial script execution of a component defined via `data-component-src`, the plugin will check for an optional `data-component-error-src` attribute on the custom element tag.
+    
+    *   If `data-component-error-src` is present, the plugin will attempt to fetch the HTML content from this URL.
+        
+    *   The fetched fallback HTML (or a generic error message if the fallback also fails or isn't provided) will then replace the content of the problematic component's root (either its Shadow DOM or its Light DOM children).
+        
+    *   A `component-fallback-rendered` custom event is dispatched, allowing your application to monitor and react to fallback scenarios centrally.
+        
+*   **Usage (`data-component-error-src` attribute)**: Simply add the `data-component-error-src` attribute to your custom element, pointing to an HTML file that contains the desired fallback UI. This fallback HTML should be a self-contained snippet, often wrapped in a `<template>` tag if it has styles or scripts you want managed.
+    
+*   **Example**:
+    
+    `my-failing-component.html` (Simulated failing component):
+    
+    ```html
+    <template shadowroot="open">
+        <style>
+            :host { display: block; border: 2px dashed #ff0000; padding: 20px; background-color: #ffe6e6; }
+            p { color: #cc0000; font-weight: bold; }
+        </style>
+        <p>This component will fail to load its script!</p>
+        <script type="module">
+            // This script intentionally causes an error to demonstrate fallback
+            throw new Error("Simulated component script failure!");
+        </script>
+    </template>
+    ```
+
+    `my-error-fallback.html` (Fallback UI):
+
+    ```html
+    <template>
+        <style>
+            .fallback-card {
+                background-color: #fff3cd;
+                border: 1px solid #ffc107;
+                border-radius: 8px;
+                padding: 15px;
+                text-align: center;
+                color: #856404;
+                font-family: sans-serif;
+            }
+            .fallback-card p { margin: 0; }
+        </style>
+        <div class="fallback-card">
+            <p>⚠️ Oops! This feature could not be loaded.</p>
+            <p>Please try refreshing the page or contact support.</p>
+        </div>
+    </template>
+    ```
+    
+    `index.html` (Using the component with a fallback):
+        
+    ```html
+    <body>
+        <div class="app-container">
+            <h2>Component with Fallback Example</h2>
+            <my-failing-component
+                data-component-src="/components/my-failing-component.html"
+                data-component-error-src="/components/my-error-fallback.html"
+            ></my-failing-component>
+        </div>
+    
+        <script type="module">
+            // ... (your existing initDatastarComponents call) ...
+            window.addEventListener('component-fallback-rendered', (event) => {
+                console.warn('Fallback UI was rendered for:', event.detail.tagName, 'Original Error:', event.detail.originalError);
+                // You can add analytics logging here or display a global notification
+            });
+        </script>
+    </body>
+    ```      
+    
+    When `my-failing-component`'s script fails, its content will be replaced by the "Oops! This feature could not be loaded." message from `my-error-fallback.html`.
+
+### Adopted Callback Integration [↑]()
+
+The `adoptedCallback` is a Web Component lifecycle hook that fires when the custom element is adopted into a new document. This typically happens when elements are moved between different `window` contexts, such as from the main document into an `<iframe>` or vice-versa.
+
+The `datastar-components` plugin now leverages this callback to ensure that if a component is moved, its Datastar reactivity is correctly re-initialized within the new document's context. This is crucial for maintaining functionality and preventing unexpected behavior in highly dynamic applications that manipulate the DOM across document boundaries.
+
+*   **How it's handled by the plugin**: When `adoptedCallback` is triggered, the plugin will:
+    
+    1.  Log a console message indicating the component has been adopted.
+        
+    2.  Re-run `Datastar.init(this.root)` on the component's root to re-scan for Datastar directives and re-establish reactivity in the new document context.
+        
+    3.  Re-setup props reactivity (`setupPropsReactivity`) to ensure any `data-prop-*` attributes are correctly observed and their corresponding signals updated in the new context.
+        
+*   **Usage considerations for developers**: While the plugin handles the core Datastar re-initialization, if your component's internal JavaScript performs actions that tie into the document directly (e.g., adding global event listeners to `document`, or interacting with global objects unique to a document), you may need to:
+    
+    *   **Clean up in `disconnectedCallback`**: Remove any document-specific listeners or references when the component leaves its _original_ document.
+        
+    *   **Re-establish in `adoptedCallback`**: Re-attach those document-specific listeners or re-initialize any document-bound resources when the component enters a _new_ document. Use the `registerCleanup` method for robust cleanup patterns.
+
+
+### Content Ready Lifecycle Hook (contentReadyCallback) [↑]()
+
+The connectedCallback fires when a custom element is added to the DOM, but its internal HTML from data-component-src might not be fully loaded and attached yet. The contentReadyCallback provides a reliable point to execute JavaScript that depends on the component's full DOM structure and Datastar reactivity being available.
+
+*   **Usage**: Define a method named contentReadyCallback() directly on your component instance (e.g., within an init function exported from a module script). The plugin will automatically call this method after the component's HTML is injected, styles are applied, scripts are run, and Datastar reactivity is initialized on its content.
+    
+*   Example: In my-chart-component.html:
+    
+    ```html
+    <template shadowroot="open">  
+        <style>/* ... styles ... */</style>  
+        <canvas class="chart-canvas"></canvas>  
+        <script type="module" src="./my-chart-component-logic.js"></script>  
+    </template>
+    ```        
+    
+    In my-chart-component-logic.js:
+    
+    ```javascript
+    export function init(componentInstance) {  
+        // Define the contentReadyCallback method  
+        componentInstance.contentReadyCallback = () => {  
+            console.log(`${componentInstance.tagName} - Content and Datastar ready! Initializing chart...`);
+    
+            // Example: Initialize a third-party charting library  
+            if (window.ChartJS) { // Assuming ChartJS is globally available  
+                const ctx = componentInstance.root.querySelector('.chart-canvas').getContext('2d');  
+                new window.ChartJS(ctx, {  
+                    type: 'bar',  
+                    data: {  
+                        labels: ['Red', 'Blue', 'Yellow'],  
+                        datasets: [{  
+                            label: '# of Votes',  
+                            data: [12, 19, 3],  
+                            backgroundColor: ['red', 'blue', 'yellow']  
+                        }]  
+                    }  
                 });  
-            </script>  
-        </body>
-        ```
+            }  
+        };  
+    }
+    ```
+
+    This ensures that your chart initialization code runs only after the element is part of the live DOM within your component.
+
+### Opinionated Lifecycle Integration for Cleanup  [↑]()
+
+Proper cleanup of resources when a component is removed from the DOM is crucial for preventing memory leaks and ensuring your application remains performant over time. The plugin provides a simple, opinionated pattern to manage this by leveraging the disconnectedCallback lifecycle hook. When your component is initialized (e.g., in an init function exported from a module script, or directly within inline scripts), you can register cleanup functions using componentInstance.registerCleanup(yourCleanupFunction). These registered functions will automatically be executed by the plugin when the component's disconnectedCallback is triggered, ensuring resources are freed.
     
-    When you click "Toggle Component Visibility," the my-cleanup-component will be removed from the DOM, and you will see console messages confirming that its timer was cleared and event listener removed.
+*   **Why is this important?**
+    
+    *   **Memory Leaks**: If event listeners, timers (setTimeout, setInterval), or other global resources are not explicitly removed or cleared when a component is no longer in use, they can prevent the browser's garbage cleaner from reclaiming memory associated with that component, leading to slow performance and potential crashes.
+        
+    *   **Resource Management**: Ensures that background processes, network connections, or subscriptions initiated by your component are properly terminated when the component is no longer needed.
+        
+*   **How to use registerCleanup**: You will have access to the registerCleanup method on the componentInstance (or directly via element if using an inline script within the template). Call this method and pass a function that contains the logic to clean up specific resources.
+    
+*   **Example: Component with Cleanup** my-cleanup-component.html:
+    
+
+    ```html
+    <template shadowroot="open">  
+        <style>  
+            :host {  
+                display: block;  
+                border: 1.5px solid #77dd77;  
+                padding: 15px;  
+                border-radius: 8px;  
+                background-color: #e6ffe6;  
+                text-align: center;  
+                margin-bottom: 20px;  
+            }  
+            .message {  
+                font-size: 1.1em;  
+                color: #336633;  
+            }  
+            .timer {  
+                font-weight: bold;  
+                color: #008000;  
+            }  
+            button {  
+                background-color: #4CAF50;  
+                margin-top: 10px;  
+            }  
+            button:hover {  
+                background-color: #45a049;  
+            }  
+        </style>
+    
+        <div data-data="{ counter: 0 }">  
+            <p class="message">This component has a timer and event listener.</p>  
+            <p class="timer">Timer Count: <span data-text="counter"></span></p>  
+            <button data-on:click="toggleVisibility = !toggleVisibility">Remove Component (from parent)</button>  
+        </div>  
+        <script type="module" src="./cleanup-logic.js"></script>  
+    </template>
+    ```
+
+    components/cleanup-logic.js:
+
+    ```javascript
+    // components/cleanup-logic.js  
+    export function init(componentInstance) {  
+        let intervalId;  
+        let buttonClickListener;
+    
+        console.log(`${componentInstance.tagName} (ID: ${componentInstance._dsInstanceId}) initialized.`);
+    
+        // Example 1: Set up a periodic timer  
+        let localCounter = 0;  
+        intervalId = setInterval(() => {  
+            localCounter++;  
+            console.log(`${componentInstance.tagName} (ID: ${componentInstance._dsInstanceId}) - Timer tick: ${localCounter}`);  
+            // Update a Datastar signal if needed, assuming it's available in scope  
+            const dsScope = Datastar.scope(componentInstance);  
+            if (dsScope && dsScope.counter) {  
+                dsScope.counter.set(localCounter);  
+            }  
+        }, 1000);
+    
+        // Register a cleanup function for the timer  
+        componentInstance.registerCleanup(() => {  
+            clearInterval(intervalId);  
+            console.log(`${componentInstance.tagName} (ID: ${componentInstance._dsInstanceId}) - Timer cleared.`);  
+        });
+    
+        // Example 2: Add an event listener to the document  
+        // (This listener is just an example; usually you'd listen on elements within the component's root)  
+        buttonClickListener = () => {  
+            console.log(`${componentInstance.tagName} (ID: ${componentInstance._dsInstanceId}) - Button clicked in component's internal logic!`);  
+        };  
+        const internalButton = componentInstance.root.querySelector('button');  
+        if (internalButton) {  
+            internalButton.addEventListener('click', buttonClickListener);  
+        }
+    
+        // Register a cleanup function for the event listener  
+        componentInstance.registerCleanup(() => {  
+            if (internalButton) {  
+                internalButton.removeEventListener('click', buttonClickListener);  
+                console.log(`${componentInstance.tagName} (ID: ${componentInstance._dsInstanceId}) - Button click listener removed.`);  
+            }  
+        });
+    
+        // Example 3: You can also register cleanup for any external libraries or other resources.  
+        // For instance, if you initialized a chart or a map:  
+        componentInstance.registerCleanup(() => {  
+            // chartInstance.destroy(); // example cleanup for a charting library  
+            // mapInstance.remove();   // example cleanup for a map library  
+            console.log(`${componentInstance.tagName} (ID: ${componentInstance._dsInstanceId}) - Other resources cleaned up.`);  
+        });  
+    }
+    ```
+        
+    
+    index.html to demonstrate loading/unloading:
+
+    ```html
+    <body>  
+        <div class="app-container" data-data="{ toggleVisibility: true }">  
+            <h1>Welcome to Your Datastar Components App!</h1>
+    
+            <div data-if="toggleVisibility">  
+                <h2>Component with Cleanup Example</h2>  
+                <my-cleanup-component data-component-src="/components/my-cleanup-component.html"></my-cleanup-component>  
+            </div>  
+            <button data-on:click="toggleVisibility = !toggleVisibility">Toggle Component Visibility</button>
+    
+        </div>  
+        <!-- Other components and scripts -->  
+        <script type="module">  
+            import { initDatastarComponents } from '/path/to/datastar-components.js'; // Adjust path  
+            document.addEventListener('DOMContentLoaded', () => {  
+                initDatastarComponents(window.Datastar);  
+            });  
+        </script>  
+    </body>
+    ```
+    
+When you click "Toggle Component Visibility," the my-cleanup-component will be removed from the DOM, and you will see console messages confirming that its timer was cleared and event listener removed.
+
+<br>
+
+---
+<p align="right"><a href="#-table-of-contents">⬆️ Back to Top</a></p><br><br>
 
 
-**💧 Server-Side Rendering (SSR) & Hydration Readiness** [⬆](#-table-of-contents "⬆ Back to Table of Contents")
+**💧 Server-Side Rendering (SSR) & Hydration Readiness**
 ----------------------------------------------------------
 
 The `datastar-components` plugin is designed to work seamlessly with Server-Side Rendered (SSR) content, enabling a smooth hydration process:
 
 
-*   **Automatic Hydration Detection**: When a component element is added to the DOM (either initially or dynamically), the plugin intelligently checks if its content (especially its Shadow DOM, via [Declarative Shadow DOM](https://web.dev/declarative-shadow-dom/ "null")) has already been pre-rendered on the server.
-    
-*   **Preventing FOUC & Performance**: If pre-rendered content is detected, the plugin "hydrates" it. This means it attaches interactivity, applies styles (including Constructable Stylesheets), and initializes Datastar reactivity on the _existing_ DOM elements, rather than fetching and re-injecting HTML. This significantly improves initial page load performance, prevents flashes of unstyled content (FOUC), and is beneficial for SEO.
-    
-*   **Seamless Transition**: Developers can render components on the server, and the client-side plugin will take over without re-rendering, providing a robust user experience.
-    
-*   **Handling Hydration of Slot Content**: A critical aspect of SSR hydration is how content projected into slots is handled. If your SSR solution renders content directly within the custom element's light DOM (which will be projected into a `<slot>` in the component's template) and this slot content itself contains Datastar directives, the plugin ensures these directives are also hydrated.
-    
-    *   **How it Works for Slots**: When the plugin `Datastar.init(this.root)` is called during a component's connection/hydration, it scans the component's root (which could be the Shadow DOM or the Light DOM element itself). This scan implicitly includes any distributed nodes within `<slot>` elements. If the server has pre-rendered content into a component's slot that includes `data-*` attributes, Datastar will find these directives during its scan of the component's active DOM (which includes the projected slot content) and will hydrate their reactivity.
-        
-    *   **Example (Conceptual SSR Output)**: Imagine your server renders this HTML:
-        
-        ```html
-        <my-profile-widget data-component-src="/components/my-profile-widget.html">
-            <!-- This content is pre-rendered into a slot -->
-            <h4 slot="header" data-text="user.name">Loading Name...</h4>
-            <p data-text="user.email">Loading Email...</p>
-        </my-profile-widget>
-        ```   
-        
-        And `my-profile-widget.html` has:
-        
-        ```html
-        <template shadowroot="open">
-            <header><slot name="header"></slot></header>
-            <main><slot></slot></main>
-        </template>
-        ```    
-        
-        When `my-profile-widget` hydrates on the client, Datastar will:
-        
-        1.  Initialize reactivity on the component's shadow root.
-            
-        2.  Identify the `<slot name="header">` and the default `<slot>`.
-            
-        3.  Recognize that `<h4>` and `<p>` from the light DOM are projected into these slots.
-            
-        4.  Scan these projected nodes for `data-text="user.name"` and `data-text="user.email"`.
-            
-        5.  Hydrate these `data-text` directives, ensuring that when the `user.name` or `user.email` signals change (e.g., after client-side data fetch), the pre-rendered text updates reactively.
-            
-    *   **Benefit**: You get the SEO and initial performance benefits of SSR for both the component's internal DOM and its slotted content, with seamless client-side interactivity powered by Datastar's hydration process.
-        
+### Automatic Hydration Detection [↑]()
 
-**📚 Integration with Third-Party Libraries** [⬆](#-table-of-contents "⬆ Back to Table of Contents")
-----------------------------------------------
-Datastar Components provide reliable lifecycle hooks and contextual access to the component instance, making it straightforward to integrate and manage third-party JavaScript libraries. The key is to initialize the library when the component's content is ready and clean up any resources when the component is removed.
+When a component element is added to the DOM (either initially or dynamically), the plugin intelligently checks if its content (especially its Shadow DOM, via [Declarative Shadow DOM](https://web.dev/declarative-shadow-dom/ "null")) has already been pre-rendered on the server.
+    
+### Preventing FOUC & Performance [↑]()
 
-*   **Key Principles**:
+If pre-rendered content is detected, the plugin "hydrates" it. This means it attaches interactivity, applies styles (including Constructable Stylesheets), and initializes Datastar reactivity on the _existing_ DOM elements, rather than fetching and re-injecting HTML. This significantly improves initial page load performance, prevents flashes of unstyled content (FOUC), and is beneficial for SEO.
     
-    *   **Initialization**: Use `this.contentReadyCallback()` (or ensure your `init` function runs after content is attached) to guarantee the necessary DOM elements for the library are available.
-        
-    *   **Cleanup**: Use `this.registerCleanup()` to register functions that will be executed in `disconnectedCallback`, ensuring timers, event listeners, and library instances are properly destroyed to prevent memory leaks.
-        
-    *   **Context**: The `componentInstance` (often referred to as `element` in inline scripts or `this` in module `init` functions) provides access to the component's root (`element.root`), signals (`element.$signals`), props (`element.$props`), and utility methods (`element.registerCleanup`, `element.emit`, `element.setCssVariable`, `element.getCssVariable`).
-        
-*   **Example 1: Charting Library (Recharts-like)** (Already covered in Section 7, `my-chart-component.html` and `my-chart-component-logic.js`. This demonstrates `contentReadyCallback` and the assumption of a global library).
+### Seamless Transition [↑]()
+
+Developers can render components on the server, and the client-side plugin will take over without re-rendering, providing a robust user experience.
     
-*   **Example 2: Simple Markdown Editor (Conceptual)** Let's imagine a simple markdown editor library that takes a textarea and initializes itself.
+### Handling Hydration of Slot Content [↑]()
+
+A critical aspect of SSR hydration is how content projected into slots is handled. If your SSR solution renders content directly within the custom element's light DOM (which will be projected into a `<slot>` in the component's template) and this slot content itself contains Datastar directives, the plugin ensures these directives are also hydrated.
     
-    **`my-markdown-editor.html`**:
+*   **How it Works for Slots**: When the plugin `Datastar.init(this.root)` is called during a component's connection/hydration, it scans the component's root (which could be the Shadow DOM or the Light DOM element itself). This scan implicitly includes any distributed nodes within `<slot>` elements. If the server has pre-rendered content into a component's slot that includes `data-*` attributes, Datastar will find these directives during its scan of the component's active DOM (which includes the projected slot content) and will hydrate their reactivity.
+    
+*   **Example (Conceptual SSR Output)**: Imagine your server renders this HTML:
+    
+    ```html
+    <my-profile-widget data-component-src="/components/my-profile-widget.html">
+        <!-- This content is pre-rendered into a slot -->
+        <h4 slot="header" data-text="user.name">Loading Name...</h4>
+        <p data-text="user.email">Loading Email...</p>
+    </my-profile-widget>
+    ```   
+    
+    And `my-profile-widget.html` has:
     
     ```html
     <template shadowroot="open">
-        <style>
-            :host { display: block; padding: 15px; border: 1px solid #e0e0e0; border-radius: 8px; }
-            textarea { width: 100%; height: 150px; border: 1px solid #ccc; padding: 10px; font-family: monospace; }
-            .preview { border: 1px dashed #eee; padding: 10px; margin-top: 10px; background-color: #f9f9f9; }
-        </style>
-        <textarea data-data="{ editorContent: $props.initialContent }" data-on:input="element.value = editorContent"></textarea>
-        <div class="preview">
-            <h4>Rendered Markdown:</h4>
-            <div class="markdown-output"></div>
-        </div>
-        <script type="module" src="./markdown-editor-logic.js"></script>
+        <header><slot name="header"></slot></header>
+        <main><slot></slot></main>
     </template>
     ```    
     
-    **`markdown-editor-logic.js`**:
+    When `my-profile-widget` hydrates on the client, Datastar will:
     
-    ```javascript
-    // Assume a global `SimpleMarkdownEditor` library is available (e.g., loaded via <script src="..."> in index.html)
-    // For demonstration, we'll mock its behavior.
-    
-    class MockMarkdownEditor {
-        constructor(textareaElement, previewElement) {
-            this.textarea = textareaElement;
-            this.preview = previewElement;
-            this.textarea.addEventListener('input', this._renderPreview.bind(this));
-            this._renderPreview();
-            console.log('MockMarkdownEditor initialized.');
-        }
-    
-        _renderPreview() {
-            // In a real editor, this would convert markdown to HTML
-            this.preview.innerHTML = `<em>Preview:</em><br>` + this.textarea.value.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
-        }
-    
-        destroy() {
-            this.textarea.removeEventListener('input', this._renderPreview.bind(this));
-            this.textarea.value = '';
-            this.preview.innerHTML = '';
-            console.log('MockMarkdownEditor destroyed.');
-        }
-    }
-    
-    export function init(componentInstance) {
-        let editorInstance; // To hold the library instance
-    
-        componentInstance.contentReadyCallback = () => {
-            console.log(`${componentInstance.tagName} - Content and Datastar ready! Initializing Markdown Editor...`);
-            const textarea = componentInstance.root.querySelector('textarea');
-            const preview = componentInstance.root.querySelector('.markdown-output');
-    
-            if (textarea && preview) {
-                // Initialize the third-party library
-                editorInstance = new MockMarkdownEditor(textarea, preview);
-    
-                // Register cleanup for the editor instance
-                componentInstance.registerCleanup(() => {
-                    if (editorInstance) {
-                        editorInstance.destroy();
-                        editorInstance = null;
-                        console.log(`${componentInstance.tagName} - Markdown Editor cleaned up.`);
-                    }
-                });
-    
-                // Update component's internal 'value' if editor changes it
-                // For this mock, we bind Datastar on the textarea directly (data-on:input="element.value = editorContent")
-                // In a real editor, you'd listen to its specific 'change' event and update componentInstance.value
-            }
-        };
-    
-        // Ensure initial content from props is set to the textarea signal
-        const dsScope = Datastar.scope(componentInstance);
-        if (dsScope && dsScope.editorContent && componentInstance.$props.initialContent) {
-            dsScope.editorContent.set(componentInstance.$props.initialContent.peek());
-        }
-    }
-    ```
-    
-    **`index.html`**:
-    
-    ```html
-    <body>
-        <div class="app-container" data-data="{ myDocContent: 'Hello **World**!' }">
-            <h1>Third-Party Library Integration</h1>
-    
-            <h2>Markdown Editor</h2>
-            <my-markdown-editor
-                data-component-src="/components/my-markdown-editor.html"
-                data-attr:data-prop-initial-content="myDocContent"
-            ></my-markdown-editor>
-    
-            <button data-on:click="myDocContent = 'New **content** from parent!'">Remove Editor</button>
-        </div>
-        <script type="module">
-            import { initDatastarComponents } from '/path/to/datastar-components.js';
-            document.addEventListener('DOMContentLoaded', () => {
-                initDatastarComponents(window.Datastar);
-            });
-        </script>
-    </body>
-    ```
-    
-    This example shows how `contentReadyCallback` ensures `MockMarkdownEditor` is initialized only when `<textarea>` and `<div class="markdown-output">` are available, and `registerCleanup` ensures `editorInstance.destroy()` is called when `my-markdown-editor` is removed from the DOM.
-    
+    1.  Initialize reactivity on the component's shadow root.
+        
+    2.  Identify the `<slot name="header">` and the default `<slot>`.
+        
+    3.  Recognize that `<h4>` and `<p>` from the light DOM are projected into these slots.
+        
+    4.  Scan these projected nodes for `data-text="user.name"` and `data-text="user.email"`.
+        
+    5.  Hydrate these `data-text` directives, ensuring that when the `user.name` or `user.email` signals change (e.g., after client-side data fetch), the pre-rendered text updates reactively.
+            
+### Benefit [↑]()
 
-**📖 Integrating with Documentation Tools (e.g., Storybook)** [⬆](#-table-of-contents "⬆ Back to Table of Contents")
+You get the SEO and initial performance benefits of SSR for both the component's internal DOM and its slotted content, with seamless client-side interactivity powered by Datastar's hydration process.
+
+<br>
+
+---
+<p align="right"><a href="#-table-of-contents">⬆️ Back to Top</a></p><br><br>
+
+
+**📚 Integration with Third-Party Libraries**
+----------------------------------------------
+Datastar Components provide reliable lifecycle hooks and contextual access to the component instance, making it straightforward to integrate and manage third-party JavaScript libraries. The key is to initialize the library when the component's content is ready and clean up any resources when the component is removed.
+
+### Key Principles [↑]()
+    
+*   **Initialization**: Use `this.contentReadyCallback()` (or ensure your `init` function runs after content is attached) to guarantee the necessary DOM elements for the library are available.
+    
+*   **Cleanup**: Use `this.registerCleanup()` to register functions that will be executed in `disconnectedCallback`, ensuring timers, event listeners, and library instances are properly destroyed to prevent memory leaks.
+    
+*   **Context**: The `componentInstance` (often referred to as `element` in inline scripts or `this` in module `init` functions) provides access to the component's root (`element.root`), signals (`element.$signals`), props (`element.$props`), and utility methods (`element.registerCleanup`, `element.emit`, `element.setCssVariable`, `element.getCssVariable`).
+        
+### **Example 1: Charting Library (Recharts-like)** [↑]()
+
+(Already covered in Section 7, `my-chart-component.html` and `my-chart-component-logic.js`. This demonstrates `contentReadyCallback` and the assumption of a global library).
+    
+### **Example 2: Simple Markdown Editor (Conceptual)** [↑]()
+
+Let's imagine a simple markdown editor library that takes a textarea and initializes itself.
+    
+**`my-markdown-editor.html`**:
+
+```html
+<template shadowroot="open">
+    <style>
+        :host { display: block; padding: 15px; border: 1px solid #e0e0e0; border-radius: 8px; }
+        textarea { width: 100%; height: 150px; border: 1px solid #ccc; padding: 10px; font-family: monospace; }
+        .preview { border: 1px dashed #eee; padding: 10px; margin-top: 10px; background-color: #f9f9f9; }
+    </style>
+    <textarea data-data="{ editorContent: $props.initialContent }" data-on:input="element.value = editorContent"></textarea>
+    <div class="preview">
+        <h4>Rendered Markdown:</h4>
+        <div class="markdown-output"></div>
+    </div>
+    <script type="module" src="./markdown-editor-logic.js"></script>
+</template>
+```    
+    
+**`markdown-editor-logic.js`**:
+
+```javascript
+// Assume a global `SimpleMarkdownEditor` library is available (e.g., loaded via <script src="..."> in index.html)
+// For demonstration, we'll mock its behavior.
+
+class MockMarkdownEditor {
+    constructor(textareaElement, previewElement) {
+        this.textarea = textareaElement;
+        this.preview = previewElement;
+        this.textarea.addEventListener('input', this._renderPreview.bind(this));
+        this._renderPreview();
+        console.log('MockMarkdownEditor initialized.');
+    }
+
+    _renderPreview() {
+        // In a real editor, this would convert markdown to HTML
+        this.preview.innerHTML = `<em>Preview:</em><br>` + this.textarea.value.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+    }
+
+    destroy() {
+        this.textarea.removeEventListener('input', this._renderPreview.bind(this));
+        this.textarea.value = '';
+        this.preview.innerHTML = '';
+        console.log('MockMarkdownEditor destroyed.');
+    }
+}
+
+export function init(componentInstance) {
+    let editorInstance; // To hold the library instance
+
+    componentInstance.contentReadyCallback = () => {
+        console.log(`${componentInstance.tagName} - Content and Datastar ready! Initializing Markdown Editor...`);
+        const textarea = componentInstance.root.querySelector('textarea');
+        const preview = componentInstance.root.querySelector('.markdown-output');
+
+        if (textarea && preview) {
+            // Initialize the third-party library
+            editorInstance = new MockMarkdownEditor(textarea, preview);
+
+            // Register cleanup for the editor instance
+            componentInstance.registerCleanup(() => {
+                if (editorInstance) {
+                    editorInstance.destroy();
+                    editorInstance = null;
+                    console.log(`${componentInstance.tagName} - Markdown Editor cleaned up.`);
+                }
+            });
+
+            // Update component's internal 'value' if editor changes it
+            // For this mock, we bind Datastar on the textarea directly (data-on:input="element.value = editorContent")
+            // In a real editor, you'd listen to its specific 'change' event and update componentInstance.value
+        }
+    };
+
+    // Ensure initial content from props is set to the textarea signal
+    const dsScope = Datastar.scope(componentInstance);
+    if (dsScope && dsScope.editorContent && componentInstance.$props.initialContent) {
+        dsScope.editorContent.set(componentInstance.$props.initialContent.peek());
+    }
+}
+```
+    
+**`index.html`**:
+
+```html
+<body>
+    <div class="app-container" data-data="{ myDocContent: 'Hello **World**!' }">
+        <h1>Third-Party Library Integration</h1>
+
+        <h2>Markdown Editor</h2>
+        <my-markdown-editor
+            data-component-src="/components/my-markdown-editor.html"
+            data-attr:data-prop-initial-content="myDocContent"
+        ></my-markdown-editor>
+
+        <button data-on:click="myDocContent = 'New **content** from parent!'">Remove Editor</button>
+    </div>
+    <script type="module">
+        import { initDatastarComponents } from '/path/to/datastar-components.js';
+        document.addEventListener('DOMContentLoaded', () => {
+            initDatastarComponents(window.Datastar);
+        });
+    </script>
+</body>
+```
+    
+This example shows how `contentReadyCallback` ensures `MockMarkdownEditor` is initialized only when `<textarea>` and `<div class="markdown-output">` are available, and `registerCleanup` ensures `editorInstance.destroy()` is called when `my-markdown-editor` is removed from the DOM.
+
+<br>
+
+---
+<p align="right"><a href="#-table-of-contents">⬆️ Back to Top</a></p><br><br>
+
+**📖 Integrating with Documentation Tools (e.g., Storybook)**
 -------------------------------------------------------------
 
 Storybook is an open-source tool for developing UI components in isolation, enabling you to build, document, and test your UI components independently from your main application. Integrating `datastar-components` with Storybook allows you to showcase your HTML-first Web Components in a dedicated development environment.
 
 While `datastar-components.js` provides the fundamental primitives, setting up Storybook to correctly render components that dynamically load HTML templates and use Datastar reactivity requires specific configuration and patterns.
 
-### **Key Steps for Storybook Integration:**
+### **Key Steps for Storybook Integration**
 
-1.  **Storybook Setup:**
+### 1\. Storybook Setup [↑]()
     
-    *   **Install Storybook:** Follow the official Storybook documentation to set up Storybook for Web Components (e.g., `@storybook/web-components-webpack5` or `@storybook/web-components-vite`).
-        
-    *   **Serve Component Files:** Configure Storybook to serve your component `.html` files. In your `.storybook/main.js`, add your components directory to `staticDirs`:
-        
-        ```javascript
-        // .storybook/main.js
-        module.exports = {
-            stories: ['../src/**/*.stories.@(js|jsx|ts|tsx)'],
-            addons: ['@storybook/addon-essentials', '@storybook/addon-actions'], // Add actions addon for event logging
-            staticDirs: ['../components'], // Point to where your .html component files are
-            framework: {
-            name: '@storybook/web-components-webpack5', // Or vite/other framework
-            options: {},
-            },
-        };
-        ```            
-        
-    *   **Initialize Datastar Components Plugin:** Ensure `datastar.js` and `datastar-components.js` are loaded and initialized within the Storybook preview iframe. The most common way is via `.storybook/preview-head.html` or `.storybook/preview.js`.
-        
-        *   **Option A: `preview-head.html` (Recommended for global libraries)** Create a file named `.storybook/preview-head.html` in your Storybook configuration directory:
-            
-            ```html
-            <!-- .storybook/preview-head.html -->
-            <script src="https://cdn.jsdelivr.net/npm/datastar@1.0.0-beta.11/dist/datastar.js" type="module"></script>
-            <script src="/path/to/your/datastar-components.js" type="module"></script>
-            <script type="module">
-                import { initDatastarComponents } from '/path/to/your/datastar-components.js'; // Use absolute path from staticDirs root
-                document.addEventListener('DOMContentLoaded', () => {
-                initDatastarComponents(window.Datastar);
-                console.log("[Storybook] Datastar Components Plugin initialized in preview iframe.");
-                });
-            </script>
-            ```
-            
-                
-            
-            (Adjust `/path/to/your/datastar-components.js` based on your `staticDirs` configuration).
-            
-        *   **Option B: `preview.js` (If using NPM imports)** If you're bundling `datastar` and `datastar-components` as part of your build process:
-            
-            ```javascript
-            // .storybook/preview.js
-            import { initDatastarComponents } from '../path/to/your/datastar-components.js';
-            import { Datastar } from 'datastar'; // Assuming datastar is an npm dependency
-            
-            if (Datastar) { // Check if Datastar global is available or import it
-                document.addEventListener('DOMContentLoaded', () => {
-                initDatastarComponents(Datastar); // Pass the Datastar instance
-                });
-            } else {
-                console.warn("Datastar global or import not found. Ensure it's loaded before the plugin.");
-            }
-            
-            // Other Storybook global decorators or parameters can go here
-            ```
-                
-            
-2.  **Creating Stories for Datastar Components:** Instead of manually constructing the complex `data-component-src` and `data-prop-*` attributes in every story, you can use the `storybook-datastar-component-wrapper.js` (provided above) to simplify story creation.
+*   **Install Storybook:** Follow the official Storybook documentation to set up Storybook for Web Components (e.g., `@storybook/web-components-webpack5` or `@storybook/web-components-vite`).
     
-    *   **Import the Wrapper:** Ensure the `storybook-datastar-component-wrapper.js` is imported in your Storybook stories. You'll typically place this wrapper file in a `src/storybook-helpers` or similar directory.
+*   **Serve Component Files:** Configure Storybook to serve your component `.html` files. In your `.storybook/main.js`, add your components directory to `staticDirs`:
+    
+    ```javascript
+    // .storybook/main.js
+    module.exports = {
+        stories: ['../src/**/*.stories.@(js|jsx|ts|tsx)'],
+        addons: ['@storybook/addon-essentials', '@storybook/addon-actions'], // Add actions addon for event logging
+        staticDirs: ['../components'], // Point to where your .html component files are
+        framework: {
+        name: '@storybook/web-components-webpack5', // Or vite/other framework
+        options: {},
+        },
+    };
+    ```            
+    
+*   **Initialize Datastar Components Plugin:** Ensure `datastar.js` and `datastar-components.js` are loaded and initialized within the Storybook preview iframe. The most common way is via `.storybook/preview-head.html` or `.storybook/preview.js`.
+    
+    *   **Option A: `preview-head.html` (Recommended for global libraries)** Create a file named `.storybook/preview-head.html` in your Storybook configuration directory:
         
-        ```javascript
-        // src/stories/my-greeting-card.stories.js
-        import { html } from 'lit';
-        import { action } from '@storybook/addon-actions';
-        import '../storybook-helpers/storybook-datastar-component-wrapper.js'; // Adjust path
+        ```html
+        <!-- .storybook/preview-head.html -->
+        <script src="https://cdn.jsdelivr.net/npm/datastar@1.0.0-beta.11/dist/datastar.js" type="module"></script>
+        <script src="/path/to/your/datastar-components.js" type="module"></script>
+        <script type="module">
+            import { initDatastarComponents } from '/path/to/your/datastar-components.js'; // Use absolute path from staticDirs root
+            document.addEventListener('DOMContentLoaded', () => {
+            initDatastarComponents(window.Datastar);
+            console.log("[Storybook] Datastar Components Plugin initialized in preview iframe.");
+            });
+        </script>
         ```
         
-    *   **Define Stories using the Wrapper:**
+            
+        
+        (Adjust `/path/to/your/datastar-components.js` based on your `staticDirs` configuration).
+        
+    *   **Option B: `preview.js` (If using NPM imports)** If you're bundling `datastar` and `datastar-components` as part of your build process:
         
         ```javascript
-        // src/stories/MyGreetingCard.stories.js (example)
-        export default {
-            title: 'Components/MyGreetingCard',
-            // Define argTypes for Storybook controls
-            argTypes: {
-            salutation: { control: 'text', defaultValue: 'Hello' },
-            recipient: { control: 'text', defaultValue: 'Storybook User' },
-            sender: { control: 'text', defaultValue: 'Storybook' },
-            // Action for events emitted by the component
-            onProfileEdit: { action: 'profileEdit' },
-            },
-            parameters: {
-            // Optional: configure layout for Storybook
-            layout: 'centered',
-            },
-        };
+        // .storybook/preview.js
+        import { initDatastarComponents } from '../path/to/your/datastar-components.js';
+        import { Datastar } from 'datastar'; // Assuming datastar is an npm dependency
         
-        // Template using the wrapper
-        const Template = (args) => html`
-            <storybook-datastar-component-wrapper
-            src="/components/my-greeting-card.html"
-            .props="${{ // Pass props as an object
-                salutation: args.salutation,
-                recipient: args.recipient,
-                sender: args.sender,
-            }}"
-            .args="${args}" // Pass all args to the wrapper for event handling
-            .slotContent="${html`<p>This is slotted content!</p>`}" // Example of passing slot content
-            ></storybook-datastar-component-wrapper>
-        `;
+        if (Datastar) { // Check if Datastar global is available or import it
+            document.addEventListener('DOMContentLoaded', () => {
+            initDatastarComponents(Datastar); // Pass the Datastar instance
+            });
+        } else {
+            console.warn("Datastar global or import not found. Ensure it's loaded before the plugin.");
+        }
         
-        export const Default = Template.bind({});
-        Default.args = {
-            salutation: 'Hi',
-            recipient: 'Developer',
-            sender: 'The Wrapper',
-        };
-        
-        export const Formal = Template.bind({});
-        Formal.args = {
-            salutation: 'Greetings',
-            recipient: 'Esteemed Colleague',
-            sender: 'Your AI',
-        };
-        
-        // Example for a component with conditional loading (data-load-if)
-        // src/stories/MyLazyComponent.stories.js
-        export const LazyLoaded = (args) => html`
-            <storybook-datastar-component-wrapper
-            src="/components/my-complex-modal.html"
-            .props="${{ /* any props */ }}"
-            .loadIf="${args.isVisible}" // Controls data-load-if
-            >
-            <p>Content for the lazy loaded modal.</p>
-            </storybook-datastar-component-wrapper>
-        `;
-        LazyLoaded.args = { isVisible: false };
-        LazyLoaded.argTypes = { isVisible: { control: 'boolean' } };
+        // Other Storybook global decorators or parameters can go here
         ```
+                
+### 2\. Creating Stories for Datastar Components [↑]()
+
+Instead of manually constructing the complex `data-component-src` and `data-prop-*` attributes in every story, you can use the `storybook-datastar-component-wrapper.js` (provided above) to simplify story creation.
+    
+*   **Import the Wrapper:** Ensure the `storybook-datastar-component-wrapper.js` is imported in your Storybook stories. You'll typically place this wrapper file in a `src/storybook-helpers` or similar directory.
+    
+    ```javascript
+    // src/stories/my-greeting-card.stories.js
+    import { html } from 'lit';
+    import { action } from '@storybook/addon-actions';
+    import '../storybook-helpers/storybook-datastar-component-wrapper.js'; // Adjust path
+    ```
+    
+*   **Define Stories using the Wrapper:**
+    
+    ```javascript
+    // src/stories/MyGreetingCard.stories.js (example)
+    export default {
+        title: 'Components/MyGreetingCard',
+        // Define argTypes for Storybook controls
+        argTypes: {
+        salutation: { control: 'text', defaultValue: 'Hello' },
+        recipient: { control: 'text', defaultValue: 'Storybook User' },
+        sender: { control: 'text', defaultValue: 'Storybook' },
+        // Action for events emitted by the component
+        onProfileEdit: { action: 'profileEdit' },
+        },
+        parameters: {
+        // Optional: configure layout for Storybook
+        layout: 'centered',
+        },
+    };
+    
+    // Template using the wrapper
+    const Template = (args) => html`
+        <storybook-datastar-component-wrapper
+        src="/components/my-greeting-card.html"
+        .props="${{ // Pass props as an object
+            salutation: args.salutation,
+            recipient: args.recipient,
+            sender: args.sender,
+        }}"
+        .args="${args}" // Pass all args to the wrapper for event handling
+        .slotContent="${html`<p>This is slotted content!</p>`}" // Example of passing slot content
+        ></storybook-datastar-component-wrapper>
+    `;
+    
+    export const Default = Template.bind({});
+    Default.args = {
+        salutation: 'Hi',
+        recipient: 'Developer',
+        sender: 'The Wrapper',
+    };
+    
+    export const Formal = Template.bind({});
+    Formal.args = {
+        salutation: 'Greetings',
+        recipient: 'Esteemed Colleague',
+        sender: 'Your AI',
+    };
+    
+    // Example for a component with conditional loading (data-load-if)
+    // src/stories/MyLazyComponent.stories.js
+    export const LazyLoaded = (args) => html`
+        <storybook-datastar-component-wrapper
+        src="/components/my-complex-modal.html"
+        .props="${{ /* any props */ }}"
+        .loadIf="${args.isVisible}" // Controls data-load-if
+        >
+        <p>Content for the lazy loaded modal.</p>
+        </storybook-datastar-component-wrapper>
+    `;
+    LazyLoaded.args = { isVisible: false };
+    LazyLoaded.argTypes = { isVisible: { control: 'boolean' } };
+    ```
         
 
-### **Benefits of this Integration Pattern:**
+### Benefits of this Integration Pattern [↑]()
 
 *   **Simplified Story Creation:** Developers write less boilerplate HTML for each story.
     
@@ -1743,29 +1935,60 @@ While `datastar-components.js` provides the fundamental primitives, setting up S
 
 By adopting this approach, you can create a rich, interactive documentation site for your `datastar-components` components, making them easier to understand, test, and reuse throughout your projects.
 
+---
+<p align="right"><a href="#-table-of-contents">⬆️ Back to Top</a></p><br><br>
 
-**🤝 Contribution & Feedback** [⬆](#-table-of-contents "⬆ Back to Table of Contents")
+
+
+
+**🤝 Community Engagement**
 ------------------------------
 
-This plugin is designed to make Datastar development with Web Components powerful and straightforward. If you have suggestions, find issues, or would like to contribute, please feel free to open an issue or pull request!
+At **Aerea**, we're dedicated to fostering **open-source communities** and strive to encourage participation in thier projects by providing tools and resources that empower developers.
 
-This plugin is a contribution to the community from
+This plugin is designed to make developing Web Components with `Datastar` easy, powerful, straightforward and robust.
+
+### Our Contribution
+
+🎁This plugin is a direct contribution to the community from:
 
 [Vernon Young, Founder & CEO](https://aerea.co/vernon)
 
 [**Aerea Co. | Chicago, IL** | https://aerea.co](https://aerea.co) 
 
-Hoping to build a better future with you, one component at a time!
+<br>
 
-**Acknowledgments**
+### Feedback & Support
+We believe in the power of community and collaboration. Your feedback is crucial for the evolution of the `datastar-components` plugin. Whether you're a developer, designer, or just curious about how to use this plugin, we want to hear from you! We welcome all contributions, whether you're improving documentation, fixing bugs, or adding new features. Your feedback is invaluable in making this plugin better for everyone.
 
-💖Special thanks to the **Datastar** community for their support and contributions. :)
+**Here's how you can contribute or get support:**
 
-[**Datastar** | The hypermedia framework | https://data-star.dev/](https://data-star.dev/) 
+* **Report Issues & Bugs:** If you find a bug or have a suggestion, please open an issue on our [GitHub Issues page](https://github.com/aereaco/datastar-components/issues).
+* **Questions, Feedback & Discussions:** For general questions, feedback, or to discuss new ideas, head over to our [GitHub Discussions page](https://github.com/aereaco/datastar-components/discussions).
 
-[**DatastarJS GitHub** | https://github.com/starfederation/datastar](https://github.com/starfederation/datastar)
+<br>
 
-[**DatastarJS Discord** | https://discord.gg/9Z2c5a6](https://discord.gg/9Z2c5a6)
+### Acknowledgments
 
-[**DatastarJS Documentation** | https://docs.data-star.dev/](https://docs.data-star.dev/)
+💖Special thanks to the **Datastar** team for their contributions and support.
 
+* [**Datastar** | The hypermedia framework | https://data-star.dev/](https://data-star.dev/) 
+
+* [**Datastar GitHub** | https://github.com/starfederation/datastar](https://github.com/starfederation/datastar)
+
+* [**Datastar Discord** | https://discord.gg/9Z2c5a6](https://discord.gg/9Z2c5a6)
+
+* [**Datastar Documentation** | https://docs.data-star.dev/](https://docs.data-star.dev/)
+
+<br><br>
+
+Hoping to build a better future together, one component at a time!
+
+<br><br>
+
+---
+<p align="center"><a href="#-table-of-contents">⬆️ Back to Top</a></p>
+
+---
+
+<p align="center">© 2025 Aerea Co. All rights reserved.</p>
