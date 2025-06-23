@@ -152,35 +152,11 @@ Ensure datastar.js is loaded **before** datastar-components.js. It's recommended
     <meta name="viewport" content="width=device-width, initial-scale=1.0">  
     <title>My Datastar Components App</title>
 
-    <script src="https://cdn.jsdelivr.net/npm/datastar@1.0.0-beta.11/dist/datastar.js" type="module"></script>  
-        
-    <script src="/path/to/datastar-components.js" type="module"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/datastar@1.0.0-beta.11/dist/datastar.js"></script>  
 
-    <style>  
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 20px; background-color: #f0f2f5; color: #333; }  
-        .app-container { max-width: 960px; margin: 40px auto; padding: 30px; background-color: #fff; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); }  
-        h1, h2 { color: #007bff; }  
-        button {  
-            padding: 10px 20px;  
-            background-color: #007bff;  
-            color: white;  
-            border: none;  
-            border-radius: 6px;  
-            cursor: pointer;  
-            font-size: 1em;  
-            transition: background-color 0.2s ease;  
-        }  
-        button:hover { background-color: #0056b3; }  
-    </style>  
-</head>  
-<body>  
-    <div class="app-container">  
-        <h1>Welcome to Your Datastar Components App!</h1>  
-        <div>
-
-    <script type="module">  
+    <script type="module" defer>  
         // Import the initialization function from your plugin  
-        import { initDatastarComponents } from '/path/to/datastar-components.js';
+        import { initDatastarComponents } from './path/to/datastar-components.js';
 
         // Initialize the plugin once the DOM is ready  
         document.addEventListener('DOMContentLoaded', () => {  
@@ -206,7 +182,29 @@ Ensure datastar.js is loaded **before** datastar-components.js. It's recommended
             console.warn('Caught component fallback rendered:', event.detail);
             // You might log this to a monitoring system or visually indicate a degraded state.
         });
-    </script>  
+    </script>
+
+    <style>  
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 20px; background-color: #f0f2f5; color: #333; }  
+        .app-container { max-width: 960px; margin: 40px auto; padding: 30px; background-color: #fff; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); }  
+        h1, h2 { color: #007bff; }  
+        button {  
+            padding: 10px 20px;  
+            background-color: #007bff;  
+            color: white;  
+            border: none;  
+            border-radius: 6px;  
+            cursor: pointer;  
+            font-size: 1em;  
+            transition: background-color 0.2s ease;  
+        }  
+        button:hover { background-color: #0056b3; }  
+    </style>  
+</head>  
+<body>  
+    <div class="app-container">  
+        <h1>Welcome to Your Datastar Components App!</h1>  
+        <div> 
 </body>  
 </html>
 ```
