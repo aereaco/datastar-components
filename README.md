@@ -1585,19 +1585,19 @@ When you click "Toggle Component Visibility," the my-cleanup-component will be r
 The `datastar-components` plugin is designed to work seamlessly with Server-Side Rendered (SSR) content, enabling a smooth hydration process:
 
 
-### Automatic Hydration Detection [↑]()
+### Automatic Hydration Detection [↑](#-server-side-rendering-ssr--hydration-readiness)
 
 When a component element is added to the DOM (either initially or dynamically), the plugin intelligently checks if its content (especially its Shadow DOM, via [Declarative Shadow DOM](https://web.dev/declarative-shadow-dom/ "null")) has already been pre-rendered on the server.
     
-### Preventing FOUC & Performance [↑]()
+### Preventing FOUC & Performance [↑](#-server-side-rendering-ssr--hydration-readiness)
 
 If pre-rendered content is detected, the plugin "hydrates" it. This means it attaches interactivity, applies styles (including Constructable Stylesheets), and initializes Datastar reactivity on the _existing_ DOM elements, rather than fetching and re-injecting HTML. This significantly improves initial page load performance, prevents flashes of unstyled content (FOUC), and is beneficial for SEO.
     
-### Seamless Transition [↑]()
+### Seamless Transition [↑](#-server-side-rendering-ssr--hydration-readiness)
 
 Developers can render components on the server, and the client-side plugin will take over without re-rendering, providing a robust user experience.
     
-### Handling Hydration of Slot Content [↑]()
+### Handling Hydration of Slot Content [↑](#-server-side-rendering-ssr--hydration-readiness)
 
 A critical aspect of SSR hydration is how content projected into slots is handled. If your SSR solution renders content directly within the custom element's light DOM (which will be projected into a `<slot>` in the component's template) and this slot content itself contains Datastar directives, the plugin ensures these directives are also hydrated.
     
@@ -1634,7 +1634,7 @@ A critical aspect of SSR hydration is how content projected into slots is handle
         
     5.  Hydrate these `data-text` directives, ensuring that when the `user.name` or `user.email` signals change (e.g., after client-side data fetch), the pre-rendered text updates reactively.
             
-### Hydration Benefits [↑]()
+### Hydration Benefits [↑](#-server-side-rendering-ssr--hydration-readiness)
 
 You get the SEO and initial performance benefits of SSR for both the component's internal DOM and its slotted content, with seamless client-side interactivity powered by Datastar's hydration process.
 
