@@ -36,11 +36,11 @@ The datastar-components plugin empowers you to build reusable, reactive Web Comp
 **📙 Table of Contents**
 ------------------------
 
-*   **📦 Installation & Setup**
+### **📦 Installation & Setup**
     
-    *   [1\. Include the Libraries](#1-include-the-libraries-)
+   *   [1\. Include the Libraries](#1-include-the-libraries-)
         
-    *   [2\. Set Up Your Development Server](#2-set-up-your-development-server-)
+   *   [2\. Set Up Your Development Server](#2-set-up-your-development-server-)
         
 *   **👷‍♂️ Creating Your First Component**
     
@@ -91,12 +91,12 @@ The datastar-components plugin empowers you to build reusable, reactive Web Comp
 *   [**🤝 Contribution & Feedback**](#bookmark=id.civp5gtfwmil "null")
     
 
-📦 **Installation & Setup** [⬆](#-table-of-contents "⬆ Back to Table of Contents")
+📦 **Installation & Setup** [⬆](#-table-of-contents "⬆ Back to Table of Contents")▲ꜛ↑
 -----------------------------
 
 To get started with the datastar-components plugin, follow these steps to set up your environment and create your first components.
 
-### **1\. Include the Libraries** [⬆️](#-table-of-contents "⬆ Back to Table of Contents")
+### **1\. Include the Libraries** [▲ꜛ↑](#-table-of-contents "⬆ Back to Table of Contents")
 
 Ensure datastar.js is loaded **before** datastar-components.js. It's recommended to load them as ES Modules.
 
