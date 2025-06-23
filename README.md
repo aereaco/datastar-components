@@ -1783,9 +1783,9 @@ Storybook is an open-source tool for developing UI components in isolation, enab
 
 While `datastar-components.js` provides the fundamental primitives, setting up Storybook to correctly render components that dynamically load HTML templates and use Datastar reactivity requires specific configuration and patterns.
 
-### **Key Steps for Storybook Integration**
+### **Key Steps for Storybook Integration** [↑](#-integrating-with-documentation-tools-eg-storybook)
 
-### Step 1 - Storybook Setup [↑]()
+### Step 1 - Storybook Setup [↑](#-integrating-with-documentation-tools-eg-storybook)
     
 *   **Install Storybook:** Follow the official Storybook documentation to set up Storybook for Web Components (e.g., `@storybook/web-components-webpack5` or `@storybook/web-components-vite`).
     
@@ -1843,7 +1843,7 @@ While `datastar-components.js` provides the fundamental primitives, setting up S
         // Other Storybook global decorators or parameters can go here
         ```
                 
-### Step 2 - Creating Stories for Datastar Components [↑]()
+### Step 2 - Creating Stories for Datastar Components [↑](#-integrating-with-documentation-tools-eg-storybook)
 
 Instead of manually constructing the complex `data-component-src` and `data-prop-*` attributes in every story, you can use the `storybook-datastar-component-wrapper.js` (provided above) to simplify story creation.
     
@@ -1920,7 +1920,7 @@ Instead of manually constructing the complex `data-component-src` and `data-prop
     ```
         
 
-### Benefits of Integration Pattern [↑]()
+### Benefits of Integration Pattern [↑](#-integrating-with-documentation-tools-eg-storybook)
 
 *   **Simplified Story Creation:** Developers write less boilerplate HTML for each story.
     
@@ -1948,7 +1948,7 @@ At **Aerea**, we're dedicated to fostering **open-source communities** and striv
 
 This plugin is designed to make developing Web Components with `Datastar` easy, powerful, straightforward and robust.
 
-### Our Contribution
+### Our Contribution [↑](#-community-engagement)
 
 🎁This plugin is a direct contribution to the community from:
 
@@ -1958,7 +1958,7 @@ This plugin is designed to make developing Web Components with `Datastar` easy, 
 
 <br>
 
-### Feedback & Support
+### Feedback & Support [↑](#-community-engagement)
 We believe in the power of community and collaboration. Your feedback is crucial for the evolution of the `datastar-components` plugin. Whether you're a developer, designer, or just curious about how to use this plugin, we want to hear from you! We welcome all contributions, whether you're improving documentation, fixing bugs, or adding new features. Your feedback is invaluable in making this plugin better for everyone.
 
 **Here's how you can contribute or get support:**
@@ -1968,7 +1968,7 @@ We believe in the power of community and collaboration. Your feedback is crucial
 
 <br>
 
-### Acknowledgments
+### Acknowledgments [↑](#-community-engagement)
 
 💖Special thanks to the **Datastar** team for their contributions and support.
 
