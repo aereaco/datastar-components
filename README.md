@@ -92,31 +92,31 @@ The datastar-components plugin empowers you to build reusable, reactive Web Comp
 
 *   [Opinionated Lifecycle Integration for Cleanup](#opinionated-lifecycle-integration-for-cleanup--)
 
-#### [**💧 Server-Side Rendering (SSR) & Hydration Readiness**]()
+#### [**💧 Server-Side Rendering (SSR) & Hydration Readiness**](#-server-side-rendering-ssr--hydration-readiness-1)
 
-*   [Automatic Hydration Detection](#automatic-hydration-detection)
+*   [Automatic Hydration Detection](#automatic-hydration-detection-)
 
-*   [Preventing FOUC & Performance](#preventing-fouc--performance)
+*   [Preventing FOUC & Performance](#preventing-fouc--performance-)
 
-*   [Seamless Transition](#seamless-transition)
+*   [Seamless Transition](#seamless-transition-)
 
-*   [Handling Hydration of Slot Content](#handling-hydration-of-slot-content)
+*   [Handling Hydration of Slot Content](#handling-hydration-of-slot-content-)
 
-*   [Benefits](#benefits)
+*   [Benefits](#benefits-)
     
-#### [**📚 Integration with Third-Party Libraries**]()
+#### [**📚 Integration with Third-Party Libraries**](#-integration-with-third-party-libraries-1)
 
-*   [Key Principles](#key-principles)
+*   [Key Principles](#key-principles-)
 
-*   [Example 1: Charting Library (Recharts-like)](#)
+*   [Example 1: Charting Library (Recharts-like)](#example-1-charting-library-recharts-like-)
 
-*   [Example 2: Simple Markdown Editor (Conceptual)](#)
+*   [Example 2: Simple Markdown Editor (Conceptual)](#example-2-simple-markdown-editor-conceptual-)
     
-#### [**📖 Integrating with Documentation Tools (e.g., Storybook)**]()
+#### [**📖 Integrating with Documentation Tools (e.g., Storybook)**](#-integrating-with-documentation-tools-eg-storybook-1)
 
-*   [Key Steps for Storybook Integration](#1-include-the-libraries)
+*   [Key Steps for Storybook Integration](#key-steps-for-storybook-integration)
 
-*   [Step 1 - Storybook Setup](#1-storybook-setup)
+*   [Step 1 - Storybook Setup](https://github.com/aereaco/datastar-components/tree/main?tab=readme-ov-file#1-storybook-setup-)
 
 *   [Step 2 - Creating Stories for Datastar Components](#2-creating-stories-for-datastar-components)
 
