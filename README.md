@@ -1648,7 +1648,7 @@ You get the SEO and initial performance benefits of SSR for both the component's
 ----------------------------------------------
 Datastar Components provide reliable lifecycle hooks and contextual access to the component instance, making it straightforward to integrate and manage third-party JavaScript libraries. The key is to initialize the library when the component's content is ready and clean up any resources when the component is removed.
 
-### Key Principles [↑]()
+### Key Principles [↑](#-integration-with-third-party-libraries)
     
 *   **Initialization**: Use `this.contentReadyCallback()` (or ensure your `init` function runs after content is attached) to guarantee the necessary DOM elements for the library are available.
     
@@ -1656,11 +1656,11 @@ Datastar Components provide reliable lifecycle hooks and contextual access to th
     
 *   **Context**: The `componentInstance` (often referred to as `element` in inline scripts or `this` in module `init` functions) provides access to the component's root (`element.root`), signals (`element.$signals`), props (`element.$props`), and utility methods (`element.registerCleanup`, `element.emit`, `element.setCssVariable`, `element.getCssVariable`).
         
-### **Example 1: Charting Library (Recharts-like)** [↑]()
+### **Example 1: Charting Library (Recharts-like)** [↑](#-integration-with-third-party-libraries)
 
 (Already covered in Section 7, `my-chart-component.html` and `my-chart-component-logic.js`. This demonstrates `contentReadyCallback` and the assumption of a global library).
     
-### **Example 2: Simple Markdown Editor (Conceptual)** [↑]()
+### **Example 2: Simple Markdown Editor (Conceptual)** [↑](#-integration-with-third-party-libraries)
 
 Let's imagine a simple markdown editor library that takes a textarea and initializes itself.
     
