@@ -344,10 +344,10 @@ This component will render its content directly into the main DOM. Its styles mi
     </style>
 
     <div data-data="{ count: 0 }">
-        <p>Light DOM Count: <span class="counter-display" data-text="count"></span></p>
+        <p>Light DOM Count: <span class="counter-display" data-text="$count"></span></p>
         <div class="controls">
-            <button data-on:click="count--">➖ Decrement</button>
-            <button data-on:click="count++">➕ Increment</button>
+            <button data-on:click="$count--">➖ Decrement</button>
+            <button data-on:click="$count++">➕ Increment</button>
         </div>
     </div>
 </template>
@@ -387,10 +387,10 @@ This component will create an "open" Shadow DOM, encapsulating its styles and DO
     </style>
 
     <div data-data="{ count: 0 }">
-        <p>Shadow (Open) Count: <span class="counter-display" data-text="count"></span></p>
+        <p>Shadow (Open) Count: <span class="counter-display" data-text="$count"></span></p>
         <div class="controls">
-            <button data-on:click="count--">➖ Decrement</button>
-            <button data-on:click="count++">➕ Increment</button>
+            <button data-on:click="$count--">➖ Decrement</button>
+            <button data-on:click="$count++">➕ Increment</button>
         </div>
     </div>
 </template>
@@ -537,8 +537,8 @@ All component content **must** be wrapped within a tag. The type of template det
         </style>
         <div data-data="{ count: 0 }">
             <h3>Shadow DOM Counter (Open)</h3>
-            <p>Count: <span data-text="count"></span></p>
-            <button data-on:click="count++">Increment</button>
+            <p>Count: <span data-text="$count"></span></p>
+            <button data-on:click="$count++">Increment</button>
             <slot></slot>
         </div>
     </template>
@@ -1540,7 +1540,7 @@ Proper cleanup of resources when a component is removed from the DOM is crucial 
     
         <div data-data="{ counter: 0 }">
             <p class="message">This component has a timer and event listener.</p>
-            <p class="timer">Timer Count: <span data-text="counter"></span></p>
+            <p class="timer">Timer Count: <span data-text="$counter"></span></p>
             <button data-on:click="toggleVisibility = !toggleVisibility">Remove Component (from parent)</button>
         </div>
         <script type="module" src="./cleanup-logic.js"></script>
