@@ -305,7 +305,7 @@ Let's create a few simple interactive components showcasing different template u
 
 ### Seamless DatastarJS Integration [↑](#%EF%B8%8F-creating-your-first-component "null")
 
-The `datastar-components` plugin fundamentally integrates with DatastarJS by treating the HTML content of your components as a Datastar-enabled template. This means you can use all of Datastar's declarative attributes (e.g., `data-data`, `data-text`, `data-on`, `data-if`, `data-for`) directly within your component's HTML, without needing to manually initialize or bind Datastar within each component's JavaScript.
+The `datastar-components` plugin fundamentally integrates with DatastarJS by treating the HTML content of your components as a Datastar-enabled template. This means you can use all of Datastar's declarative attributes (e.g., `data-signals`, `data-text`, `data-on`, `data-if`, `data-for`) directly within your component's HTML, without needing to manually initialize or bind Datastar within each component's JavaScript.
 
 When a component is loaded and connected to the DOM, the plugin automatically performs a Datastar scan on the component's root (either its Shadow DOM or the component element itself in Light DOM). This scan discovers all `data-*` directives and brings them to life, creating reactive signals, binding event listeners, and managing DOM updates as specified. This "HTML-first" approach allows you to build highly interactive and dynamic components primarily with markup, reducing the need for imperative JavaScript.
 
@@ -343,7 +343,7 @@ This component will render its content directly into the main DOM. Its styles mi
         }
     </style>
 
-    <div data-data="{ count: 0 }">
+    <div data-signals="{ count: 0 }">
         <p>Light DOM Count: <span class="counter-display" data-text="$count"></span></p>
         <div class="controls">
             <button data-on:click="$count--">➖ Decrement</button>
@@ -386,7 +386,7 @@ This component will create an "open" Shadow DOM, encapsulating its styles and DO
         }
     </style>
 
-    <div data-data="{ count: 0 }">
+    <div data-signals="{ count: 0 }">
         <p>Shadow (Open) Count: <span class="counter-display" data-text="$count"></span></p>
         <div class="controls">
             <button data-on:click="$count--">➖ Decrement</button>
@@ -429,7 +429,7 @@ This component will create a "closed" Shadow DOM, offering stronger encapsulatio
         }
     </style>
 
-    <div data-data="{ value: 'Secret Data' }">
+    <div data-signals="{ value: 'Secret Data' }">
         <p>Value: <span>[hidden]</span></p>
         <button data-on:click="console.log(value)">Try to Log</button>
         <slot></slot>
@@ -501,7 +501,7 @@ All component content **must** be wrapped within a tag. The type of template det
                 margin: 0;
             }
         </style>
-        <div data-data="{ message: 'Hello from Light DOM!' }">
+        <div data-signals="{ message: 'Hello from Light DOM!' }">
             <p data-text="message"></p>
             <slot></slot>
         </div>
@@ -535,7 +535,7 @@ All component content **must** be wrapped within a tag. The type of template det
                 color: green;
             }
         </style>
-        <div data-data="{ count: 0 }">
+        <div data-signals="{ count: 0 }">
             <h3>Shadow DOM Counter (Open)</h3>
             <p>Count: <span data-text="$count"></span></p>
             <button data-on:click="$count++">Increment</button>
@@ -574,7 +574,7 @@ All component content **must** be wrapped within a tag. The type of template det
             }
         </style>
     
-        <div data-data="{ value: 'Secret Data' }">
+        <div data-signals="{ value: 'Secret Data' }">
             <p>Value: <span>[hidden]</span></p>
             <button data-on:click="console.log(value)">Try to Log</button>
             <slot></slot>
@@ -647,7 +647,7 @@ One of the most powerful features is the plugin's robust JavaScript handling. Yo
     
         <script type="module" src="./card-logic.js"></script>
     
-        <div data-data="{ message: 'Ready', clickCount: 0 }">
+        <div data-signals="{ message: 'Ready', clickCount: 0 }">
             <h3 data-text="message"></h3>
             <p>Clicks: <span data-text="clickCount"></span></p>
             <button data-on:click="performAction()">Click Me!</button>
@@ -671,7 +671,7 @@ One of the most powerful features is the plugin's robust JavaScript handling. Yo
     export function performAction(ctx) { // ctx is the Datastar context for this component
         // Access component instance methods via 'ctx.element' or 'this' if properly bound.
         // For simplicity and directness within Datastar expressions, you can often use signal names directly.
-        // Assuming 'message' and 'clickCount' are defined with data-data="{ message: 'Ready', clickCount: 0 }"
+        // Assuming 'message' and 'clickCount' are defined with data-signals="{ message: 'Ready', clickCount: 0 }"
         ctx.message.set(ctx.message.peek() === 'Ready' ? 'Action Performed!' : 'Ready');
         ctx.clickCount.set(ctx.clickCount.peek() + 1);
     
@@ -746,7 +746,7 @@ The plugin makes passing data into your components straightforward and reactive 
             }
         </style>
     
-        <div data-data="{ internalMessage: 'How are you?' }">
+        <div data-signals="{ internalMessage: 'How are you?' }">
             <!-- Access props via $props.propName or directly by propName -->
             <p class="greeting" data-text="`${salutation}, ${recipient}!`"></p>
             <p class="from-text">From: <span data-text="sender"></span></p>
@@ -767,12 +767,12 @@ The plugin makes passing data into your components straightforward and reactive 
                 data-prop-sender="The Plugin"
             ></my-greeting-card>
     
-            <button data-data="{ currentSender: 'The Plugin' }"
+            <button data-signals="{ currentSender: 'The Plugin' }"
                     data-on:click="currentSender = (currentSender === 'The Plugin' ? 'Your App' : 'The Plugin')">
                 Change Sender from Parent (Not Reactive Example)
                 </button>
             <br><br>
-            <div data-data="{ dynamicSalutation: 'Hi' }">
+            <div data-signals="{ dynamicSalutation: 'Hi' }">
                 <button data-on:click="dynamicSalutation = (dynamicSalutation === 'Hi' ? 'Greetings' : 'Hi')">
                     Toggle Salutation
                 </button>
@@ -918,7 +918,7 @@ Control when a component is loaded and rendered based on the state of a Datastar
         **`index.html`**:
         
         ```html
-        <div data-data="{ isModalOpen: false }">
+        <div data-signals="{ isModalOpen: false }">
             <button data-on:click="isModalOpen = true">Open Complex Modal</button>
         
             <!-- The modal component is only loaded and rendered when isModalOpen is true -->
@@ -950,7 +950,7 @@ Control when a component is loaded and rendered based on the state of a Datastar
         **`index.html`**:
         
         ```html
-        <div data-data="{ userRole: 'guest' }"> <!-- Imagine this signal comes from an auth system -->
+        <div data-signals="{ userRole: 'guest' }"> <!-- Imagine this signal comes from an auth system -->
             <button data-on:click="userRole = (userRole === 'guest' ? 'admin' : 'guest')">Toggle User Role</button>
             <p>Current Role: <span data-text="userRole"></span></p>
         
@@ -992,7 +992,7 @@ Control when a component is loaded and rendered based on the state of a Datastar
         **`index.html`**:
         
         ```html
-        <div data-data="{ activeTab: 'dashboard' }">
+        <div data-signals="{ activeTab: 'dashboard' }">
             <nav class="tabs">
                 <button data-on:click="activeTab = 'dashboard'" data-class:active="activeTab === 'dashboard'">Dashboard</button>
                 <button data-on:click="activeTab = 'settings'" data-class:active="activeTab === 'settings'">Settings</button>
@@ -1064,7 +1064,7 @@ Seamlessly integrate your custom components with native HTML forms. By adding a 
 *   **Main HTML Usage Example:**
     
     ```html
-    <form data-data="{ formData: null }" data-on:submit="event.preventDefault(); formData = new FormData($event.target);">
+    <form data-signals="{ formData: null }" data-on:submit="event.preventDefault(); formData = new FormData($event.target);">
         <label for="myCustomInput">Custom Value:</label>
         <!-- Assign a `name` attribute to your component for it to be included in FormData -->
         <my-input-component id="myCustomInput" name="custom_field_name" value="Initial Value"
@@ -1162,7 +1162,7 @@ Datastar Components are designed for composition, allowing you to build complex 
                 line-height: 1.6;
             }
         </style>
-        <div data-data="{ userEmail: $props.email, bio: $props.userBio }">
+        <div data-signals="{ userEmail: $props.email, bio: $props.userBio }">
             <h3>User Profile</h3>
             <!-- Nested my-avatar-component -->
             <my-avatar-component
@@ -1186,7 +1186,7 @@ Datastar Components are designed for composition, allowing you to build complex 
     
     ```html
     <body>
-        <div class="app-container" data-data="{ profileName: 'Alice Johnson', profileEmail: 'alice@example.com', profileBio: 'Software Engineer', profileInitials: 'AJ', profileAvatar: 'https://placehold.co/60x60/FF5733/FFFFFF?text=AJ' }">
+        <div class="app-container" data-signals="{ profileName: 'Alice Johnson', profileEmail: 'alice@example.com', profileBio: 'Software Engineer', profileInitials: 'AJ', profileAvatar: 'https://placehold.co/60x60/FF5733/FFFFFF?text=AJ' }">
             <h1>Composed Components Example</h1>
     
             <my-user-profile-card
@@ -1538,7 +1538,7 @@ Proper cleanup of resources when a component is removed from the DOM is crucial 
             }
         </style>
     
-        <div data-data="{ counter: 0 }">
+        <div data-signals="{ counter: 0 }">
             <p class="message">This component has a timer and event listener.</p>
             <p class="timer">Timer Count: <span data-text="$counter"></span></p>
             <button data-on:click="toggleVisibility = !toggleVisibility">Remove Component (from parent)</button>
@@ -1608,7 +1608,7 @@ Proper cleanup of resources when a component is removed from the DOM is crucial 
     
     ```html
     <body>
-        <div class="app-container" data-data="{ toggleVisibility: true }">
+        <div class="app-container" data-signals="{ toggleVisibility: true }">
             <h1>Welcome to Your Datastar Components App!</h1>
     
             <div data-if="toggleVisibility">
@@ -1736,7 +1736,7 @@ Let's imagine a simple markdown editor library that takes a textarea and initial
         textarea { width: 100%; height: 150px; border: 1px solid #ccc; padding: 10px; font-family: monospace; }
         .preview { border: 1px dashed #eee; padding: 10px; margin-top: 10px; background-color: #f9f9f9; }
     </style>
-    <textarea data-data="{ editorContent: $props.initialContent }" data-on:input="element.value = editorContent"></textarea>
+    <textarea data-signals="{ editorContent: $props.initialContent }" data-on:input="element.value = editorContent"></textarea>
     <div class="preview">
         <h4>Rendered Markdown:</h4>
         <div class="markdown-output"></div>
@@ -1812,7 +1812,7 @@ export function init(componentInstance) {
 
 ```html
 <body>
-    <div class="app-container" data-data="{ myDocContent: 'Hello **World**!' }">
+    <div class="app-container" data-signals="{ myDocContent: 'Hello **World**!' }">
         <h1>Third-Party Library Integration</h1>
 
         <h2>Markdown Editor</h2>
