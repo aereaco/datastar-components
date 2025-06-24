@@ -49,7 +49,7 @@ The datastar-components plugin empowers you to build reusable, reactive Web Comp
     
 *   [1st Component - Light DOM](#1st-component---light-dom-my-light-counterhtml- "null")
     
-*   [2nd Component - Shadow DOM (Open)](#2nd-component---shadow-dom-open--my-shadow-open-counterhtml- "null")
+*   [2nd Component - Shadow DOM (Open)](#2nd-component---shadow-dom-open-my-shadow-open-counterhtml- "null")
     
 *   [3rd Component - Shadow DOM (Closed)](#3rd-component---shadow-dom-closed-my-shadow-closed-counterhtml- "null")
     
@@ -79,11 +79,11 @@ The datastar-components plugin empowers you to build reusable, reactive Web Comp
 
 #### [**⚡ Performance & Optimizations**](#-performance--optimizations-1 "null")
 
-*   [Optimized Network Requests](#optimized-network-requests-- "null")
+*   [Optimized Network Requests](#optimized-network-requests- "null")
     
-*   [Efficient DOM Scanning](#efficient-dom-scanning-- "null")
+*   [Efficient DOM Scanning](#efficient-dom-scanning- "null")
     
-*   [Native Caching](#native-caching-- "null")
+*   [Native Caching](#native-caching- "null")
     
 *   [Enhanced Theming and CSS Variable Management](#enhanced-theming-and-css-variable-management- "null")
     
@@ -93,7 +93,7 @@ The datastar-components plugin empowers you to build reusable, reactive Web Comp
     
 *   [Content Ready Lifecycle Hook (contentReadyCallback)](#content-ready-lifecycle-hook-contentreadycallback- "null")
     
-*   [Opinionated Lifecycle Integration for Cleanup](#opinionated-lifecycle-integration-for-cleanup-- "null")
+*   [Opinionated Lifecycle Integration for Cleanup](#opinionated-lifecycle-integration-for-cleanup- "null")
     
 
 #### [**💧 Server-Side Rendering (SSR) & Hydration Readiness**](#-server-side-rendering-ssr--hydration-readiness-1 "null")
