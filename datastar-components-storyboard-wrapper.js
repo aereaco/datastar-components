@@ -18,7 +18,7 @@ export class StorybookDatastarComponentWrapper extends LitElement {
 
   /**
    * An object where keys are prop names (camelCase) and values are the prop values.
-   * These are converted to `data-prop-*` attributes on the rendered component.
+   * These are converted to `data-component-prop-*` attributes on the rendered component.
    * @type {Object.<string, any>}
    */
   @property({ type: Object })
@@ -26,16 +26,14 @@ export class StorybookDatastarComponentWrapper extends LitElement {
 
   /**
    * An object representing initial Datastar signals for the component's internal scope.
-   * These are converted to `data-data` attributes on the rendered component.
-   * Note: For simple values, direct JSON.stringify is used. For complex objects or functions,
-   * you might need to manually handle serialization or evaluate them in the story.
+   * These are converted to a single `data-signals` attribute on the rendered component.
    * @type {Object.<string, any>}
    */
   @property({ type: Object })
   signals = {};
 
   /**
-   * A boolean to control whether the `data-load-if` attribute is applied,
+   * A boolean to control whether the `data-component-load-if` attribute is applied,
    * simulating conditional loading.
    * @type {boolean}
    */
@@ -55,25 +53,28 @@ export class StorybookDatastarComponentWrapper extends LitElement {
     const tagNameMatch = this.src.match(/\/([a-zA-Z0-9-]+)\.html$/);
     const componentTagName = tagNameMatch ? tagNameMatch[1] : 'unknown-component';
 
-    // Dynamically create data-prop-* attributes
+    // Dynamically create data-component-prop-* attributes
     const propAttributes = Object.entries(this.props).map(([propName, propValue]) => {
       // Ensure propName is kebab-case for HTML attributes
       const kebabCasePropName = propName.replace(/([a-z0-9]|(?=[A-Z]))([A-Z])/g, '$1-$2').toLowerCase();
       // Use Lit's property binding for complex values, or stringify for simple ones
-      return html`data-prop-${kebabCasePropName}="${propValue}"`;
+      return html`data-component-prop-${kebabCasePropName}="${propValue}"`;
     });
 
-    // Dynamically create data-data attributes
-    const signalAttributes = Object.entries(this.signals).map(([signalName, signalValue]) => {
-      // Direct JSON.stringify for basic values. For reactivity, Datastar expects
-      // the string representation of the signal value.
-      return html`data-data-${signalName}="${JSON.stringify(signalValue)}"`;
-    });
+    // Dynamically create data-signals attribute
+    // Datastar expects a single data-signals attribute with a JSON object.
+    const signalsJson = JSON.stringify(this.signals);
+    // Only include the data-signals attribute if there are actual signals to set
+    const signalAttribute = signalsJson !== '{}' ? html`data-signals='${signalsJson}'` : html``;
+
 
     // Create a ref for the actual component instance to listen to custom events
     const componentRef = `component-${Math.random().toString(36).substr(2, 9)}`;
 
     // Generate event listeners for custom events by mapping 'on*' props
+    // This is for Storybook actions, which are standard JS event listeners.
+    // Note: This part ensures Storybook's 'action' addon can capture events
+    // emitted by the Datastar component.
     const eventListeners = Object.entries(this.args || {}).map(([argName, argValue]) => {
       if (argName.startsWith('on') && typeof argValue === 'function') {
         const eventName = argName.substring(2).toLowerCase(); // e.g., 'onEditProfile' -> 'editprofile'
@@ -83,18 +84,16 @@ export class StorybookDatastarComponentWrapper extends LitElement {
     });
 
 
-    // Construct the actual Datastar component tag using Lit's dynamic tag feature
-    // We use a div and innerHTML to allow Datastar to parse it, as Lit's html``
-    // template literal doesn't render custom element instances that are not defined by Lit
-    // in the same way as native custom elements with data-component-src.
-    // Instead of dynamic tag, we'll return a div with the component string.
+    // Construct the actual Datastar component tag as a string for innerHTML.
+    // This is necessary because Lit's html`` doesn't directly support Datastar's dynamic
+    // loading behavior for custom elements using data-component-src.
     const componentHtmlString = `<${componentTagName}
       data-component-src="${this.src}"
       ${propAttributes.map(attr => attr.strings.join('')).join(' ')}
-      ${signalAttributes.map(attr => attr.strings.join('')).join(' ')}
-      ${this.loadIf ? `data-load-if="true"` : ''}
+      ${signalAttribute}
+      ${this.loadIf ? `data-component-load-if="true"` : ''}
       id="${componentRef}"
-      data-on:connected="${(e) => {
+      data-component-connected="${(e) => { // Renamed from data-on:connected
         // Attach any Storybook actions here after the component is connected.
         // This is a workaround since @event attributes on dynamic custom elements via html`` might not work as expected
         // if not directly registered by Datastar.
@@ -109,6 +108,13 @@ export class StorybookDatastarComponentWrapper extends LitElement {
           }
         });
       }}"
+      data-component-disconnected="${(e) => { // Added data-component-disconnected for consistency
+        // Perform any Storybook-specific cleanup or logging when component is disconnected
+        // This part is less critical for general functionality but good for mirroring lifecycle.
+        console.log(`Storybook Wrapper: ${componentTagName} (ID: ${componentRef}) disconnected.`);
+        // If there were any cleanup for Storybook-specific mock services or listeners
+        // attached *outside* the component's own lifecycle, they would go here.
+      }}"
     >
       ${this.slotContent.strings.join('')}
     </${componentTagName}>`;
@@ -121,6 +127,3 @@ export class StorybookDatastarComponentWrapper extends LitElement {
   @property({ type: Object })
   args = {};
 }
-
-// Ensure initDatastarComponents is called globally in Storybook's preview.js
-// This wrapper assumes Datastar and the datastar-components plugin are already initialized.
