@@ -41,7 +41,7 @@ The datastar-components plugin empowers you to build reusable, reactive Web Comp
 ------------------------
 ***Your guide to navigating the Datastar Components journey.***
 
-### [**🚀 Getting Started**](#-getting-started "null")
+### [**🚀 Getting Started**](#-getting-started-1 "null")
 _Begin your journey here to understand the core concepts._
 
 *   [Overview](#overview "null")
