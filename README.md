@@ -69,7 +69,7 @@ _Setting up your development environment to start building._
 *   [Step 2 - Set Up Your Development Server](#step-2---set-up-your-development-server "null")
     
 
-### [**👷‍♂️ Creating Your First Component**](#%EF%B8%8F-creating-your-first-components "null")
+### [**👷‍♂️ Creating Your First Component**](#-creating-your-first-components-1 "null")
 _Hands-on building of foundational Datastar components._
 
 *   [Seamless DatastarJS Integration](#seamless-datastarjs-integration "null")
