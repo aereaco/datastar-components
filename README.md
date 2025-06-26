@@ -48,7 +48,7 @@ _Begin your journey here to understand the core concepts._
     
 *   [data-component-src](#data-component-src "null")
     
-*   [data-component-prop-\*](#data-component-prop-- "null")
+*   [data-component-prop-\*](#data-component-prop- "null")
     
 *   [data-component-load-if](#data-component-load-if "null")
     
