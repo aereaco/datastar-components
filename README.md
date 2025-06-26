@@ -163,7 +163,7 @@ _Crafting fluid navigation and dynamic content experiences._
 *   [Conditional Routing](#conditional-routing "null")
     
 
-### [**📐 Design Diverse User Experiences**](#-design-diverse-user-experiences "null")
+### [**📐 Design Diverse User Experiences**](#-design-diverse-user-experiences-1 "null")
 _Applying Datastar components to various application architectures._
 
 *   [Multi-Page Applications (MPA)](#multi-page-applications-mpa "null")
