@@ -194,7 +194,7 @@ _Join our mission to empower developers with open-source tools._
 
 *   [Our Contributions](#our-contribution "null")
     
-*   [Feedback](#feedback--support "null") & Support
+*   [Feedback & Support](#feedback--support "null")
     
 *   [Acknowledgments](#acknowledgments "null")
 
