@@ -92,7 +92,7 @@ _Diving deeper into how your components work and what they can do._
     
 *   [JavaScript Execution: Declarative vs. Imperative](#javascript-execution-declarative-vs-imperative "null")
     
-*   [Props: Passing Data Down](#props-passing-data-down "null")
+*   [Reactive Prop System](#reactive-prop-system-data-component-prop- "null")
     
 *   [Slots: Projecting Content](#slots-projecting-content "null")
     
