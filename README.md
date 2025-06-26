@@ -163,7 +163,7 @@ _Crafting fluid navigation and dynamic content experiences._
 *   [Conditional Routing](#conditional-routing "null")
     
 
-### [**📐 Design Diverse User Experiences**](#-building-diverse-user-experiences "null")
+### [**📐 Design Diverse User Experiences**](#-design-diverse-user-experiences "null")
 _Applying Datastar components to various application architectures._
 
 *   [Multi-Page Applications (MPA)](#multi-page-applications-mpa "null")
@@ -2607,7 +2607,7 @@ _Structuring your application's views as encapsulated Datastar components._
 
 This paradigm describes how to leverage `data-component-src` for primary view routing and `data-component-load-if` for conditional sub-component rendering to build robust single-page applications. The core idea is to have a main "router outlet" whose `data-component-src` is dynamically updated based on the current application route, while internal features within those routes can be conditionally loaded for performance or access control.
 
-For a comprehensive example of this paradigm in action, including `index.html` setup with a global `navigate` action and several route components (`home-view.html`, `about-view.html`, `contact-view.html`, `my-3d-game.html`), please refer to the [**Single-Page Applications (SPA)**](#single-page-applications-spa "null") subsection in the "Building Diverse User Experiences" section.
+For a comprehensive example of this paradigm in action, including `index.html` setup with a global `navigate` action and several route components (`home-view.html`, `about-view.html`, `contact-view.html`, `my-3d-game.html`), please refer to the [**Single-Page Applications (SPA)**](#single-page-applications-spa "null") subsection in the "Designing Diverse User Experiences" section.
 
 <p align="right"><a href="#-table-of-contents">⬆️</a></p>
 
