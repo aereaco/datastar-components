@@ -32,9 +32,9 @@ The datastar-components plugin empowers you to build reusable, reactive Web Comp
     
 *   **Optimized Performance**: Features like conditional loading, intelligent caching, and efficient DOM scanning ensure your application remains fast and responsive.
     
-*   [**SSR & Hydration Readiness**](#-server-side-rendering-ssr--hydration-readiness "null"): Automatically detects server-rendered content and hydrates it, providing fast initial loads and seamless interactivity.
+*   [**SSR & Hydration Readiness**](#-server-side-rendering-ssr--hydration-readiness-1 "null"): Automatically detects server-rendered content and hydrates it, providing fast initial loads and seamless interactivity.
     
-*   [**Dynamic & Conditional Routing**](#-dynamic--conditional-routing "null"): Leverage Datastar's primitives and component features to build flexible, high-performance routing solutions.
+*   [**Dynamic & Conditional Routing**](#-dynamic--conditional-routing-1 "null"): Leverage Datastar's primitives and component features to build flexible, high-performance routing solutions.
     
 
 **📙 Table of Contents**
