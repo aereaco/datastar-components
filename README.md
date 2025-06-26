@@ -10,25 +10,25 @@ The datastar-components plugin empowers you to build reusable, reactive Web Comp
 
 *   **HTML-First Component Definition:** Define your components using intuitive HTML templates, supporting both Light DOM and Shadow DOM for flexible encapsulation.
     
-*   [**Seamless DatastarJS Integration**](#seamless-datastarjs-integration- "null"): Full reactivity with DatastarJS signals and actions directly within your components.
+*   [**Seamless DatastarJS Integration**](#seamless-datastarjs-integration "null"): Full reactivity with DatastarJS signals and actions directly within your components.
     
-*   [**Smart CSS Management**](#styles-css-management- "null"): Efficiently handles component-specific styles using Constructable Stylesheets for Shadow DOM and intelligent rewriting for Light DOM.
+*   [**Smart CSS Management**](#styles-css-management "null"): Efficiently handles component-specific styles using Constructable Stylesheets for Shadow DOM and intelligent rewriting for Light DOM.
     
-*   [**Robust JavaScript Execution: Declarative vs. Imperative**](#javascript-execution-declarative-vs-imperative- "null"): Execute all types of `<script>` tags (module, classic, external, inline) sequentially and reliably within your component's scope, encouraging declarative patterns but providing clear guidance for imperative control when needed, especially for third-party integrations.
+*   [**Robust JavaScript Execution: Declarative vs. Imperative**](#javascript-execution-declarative-vs-imperative "null"): Execute all types of `<script>` tags (module, classic, external, inline) sequentially and reliably within your component's scope, encouraging declarative patterns but providing clear guidance for imperative control when needed, especially for third-party integrations.
     
-*   [**Reactive Prop System**](#reactive-prop-system-data-component-prop-- "null"): Pass dynamic data from parent to child components using `data-component-prop-*` attributes with automatic reactivity.
+*   [**Reactive Prop System**](#reactive-prop-system-data-component-prop- "null"): Pass dynamic data from parent to child components using `data-component-prop-*` attributes with automatic reactivity.
     
-*   [**Standard Slot Support**](#slots-projecting-content- "null"): Easily project content into designated areas of your components using native `<slot>` elements.
+*   [**Standard Slot Support**](#slots-projecting-content "null"): Easily project content into designated areas of your components using native `<slot>` elements.
     
-*   [**Advanced Error Handling & Fallback UI**](#advanced-error-handling-fallback-ui--recovery- "null"): Provides detailed error reporting and allows for defining fallback HTML snippets to render if components fail to load or initialize.
+*   [**Advanced Error Handling & Fallback UI**](#advanced-error-handling-fallback-ui--recovery "null"): Provides detailed error reporting and allows for defining fallback HTML snippets to render if components fail to load or initialize.
     
-*   [**Native Form Integration (Form-Associated Custom Elements)**](#form-association-form-associated-custom-elements- "null"): Integrate your custom components directly into native HTML forms for submission and validation.
+*   [**Native Form Integration (Form-Associated Custom Elements)**](#form-association-form-associated-custom-elements "null"): Integrate your custom components directly into native HTML forms for submission and validation.
     
 *   **Enhanced Lifecycle Management**: Offers reliable lifecycle hooks including disconnectedCallback for resource cleanup and adoptedCallback for document transitions.
     
-*   [**Dynamic Theming with CSS Variables**](#enhanced-theming-and-css-variable-management- "null"): Utilities for setting and and getting CSS Custom Properties to streamline component-specific and application-wide theming.
+*   [**Dynamic Theming with CSS Variables**](#enhanced-theming-and-css-variable-management "null"): Utilities for setting and and getting CSS Custom Properties to streamline component-specific and application-wide theming.
     
-*   [**Backend Integration: Server-Sent Events (SSE)**](#backend-integration-server-sent-events-sse- "null"): Seamlessly integrate real-time backend updates and logic into your components using Datastar's SSE capabilities.
+*   [**Backend Integration: Server-Sent Events (SSE)**](#backend-integration-server-sent-events-sse "null"): Seamlessly integrate real-time backend updates and logic into your components using Datastar's SSE capabilities.
     
 *   **Optimized Performance**: Features like conditional loading, intelligent caching, and efficient DOM scanning ensure your application remains fast and responsive.
     
@@ -64,91 +64,91 @@ _Begin your journey here to understand the core concepts._
 ### [**📦 Installation & Setup**](#-installation--setup-1 "null")
 _Setting up your development environment to start building._
 
-*   [Step 1 - Include the Libraries](#step-1---include-the-libraries- "null")
+*   [Step 1 - Include the Libraries](#step-1---include-the-libraries "null")
     
-*   [Step 2 - Set Up Your Development Server](#step-2---set-up-your-development-server- "null")
+*   [Step 2 - Set Up Your Development Server](#step-2---set-up-your-development-server "null")
     
 
 ### [**👷‍♂️ Creating Your First Component**](#%EF%B8%8F-creating-your-first-components "null")
 _Hands-on building of foundational Datastar components._
 
-*   [Seamless DatastarJS Integration](#seamless-datastarjs-integration- "null")
+*   [Seamless DatastarJS Integration](#seamless-datastarjs-integration "null")
     
-*   [1st Component - Light DOM](#1st-component---light-dom-my-light-counterhtml- "null")
+*   [1st Component - Light DOM](#1st-component---light-dom-my-light-counterhtml "null")
     
-*   [2nd Component - Shadow DOM (Open)](#2nd-component---shadow-dom-open--my-shadow-open-counterhtml- "null")
+*   [2nd Component - Shadow DOM (Open)](#2nd-component---shadow-dom-open--my-shadow-open-counterhtml "null")
     
-*   [3rd Component - Shadow DOM (Closed)](#3rd-component---shadow-dom-closed-my-shadow-closed-counterhtml- "null")
+*   [3rd Component - Shadow DOM (Closed)](#3rd-component---shadow-dom-closed-my-shadow-closed-counterhtml "null")
     
-*   [Using Your Components in index.html](#using-your-components-in-indexhtml- "null")
+*   [Using Your Components in index.html](#using-your-components-in-indexhtml "null")
     
 
 ### [**📚 Functionality & Capabilities**](#-functionality--capabilities-1 "null")
 _Diving deeper into how your components work and what they can do._
 
-*   [Template Usage](#template-usage-defining-your-component-structure- "null")
+*   [Template Usage](#template-usage-defining-your-component-structure "null")
     
-*   [Styles (CSS) Management](#styles-css-management- "null")
+*   [Styles (CSS) Management](#styles-css-management "null")
     
-*   [JavaScript Execution: Declarative vs. Imperative](#javascript-execution-declarative-vs-imperative- "null")
+*   [JavaScript Execution: Declarative vs. Imperative](#javascript-execution-declarative-vs-imperative "null")
     
-*   [Props: Passing Data Down](#props-passing-data-down- "null")
+*   [Props: Passing Data Down](#props-passing-data-down "null")
     
-*   [Slots: Projecting Content](#slots-projecting-content- "null")
+*   [Slots: Projecting Content](#slots-projecting-content "null")
     
-*   [Scoped IDs for Accessibility and Internal Linking](#scoped-ids-for-accessibility-and-internal-linking- "null")
+*   [Scoped IDs for Accessibility and Internal Linking](#scoped-ids-for-accessibility-and-internal-linking "null")
     
-*   [Conditional Component Loading (data-component-load-if)](#conditional-component-loading-data-component-load-if- "null")
+*   [Conditional Component Loading (data-component-load-if)](#conditional-component-loading-data-component-load-if "null")
     
-*   [Form Association (Form-Associated Custom Elements)](#form-association-form-associated-custom-elements- "null")
+*   [Form Association (Form-Associated Custom Elements)](#form-association-form-associated-custom-elements "null")
     
-*   [Composing Components](#composing-components- "null")
+*   [Composing Components](#composing-components "null")
     
-*   [Backend Integration: Server-Sent Events (SSE)](#backend-integration-server-sent-events-sse- "null")
+*   [Backend Integration: Server-Sent Events (SSE)](#backend-integration-server-sent-events-sse "null")
     
 
 ### [**⚡ Performance & Optimizations**](#-performance--optimizations-1 "null")
 _Ensuring your applications are fast, efficient, and resilient._
 
-*   [Optimized Network Requests](#optimized-network-requests-- "null")
+*   [Optimized Network Requests](#optimized-network-requests "null")
     
-*   [Efficient DOM Scanning](#efficient-dom-scanning-- "null")
+*   [Efficient DOM Scanning](#efficient-dom-scanning "null")
     
-*   [Native Caching](#native-caching-- "null")
+*   [Native Caching](#native-caching "null")
     
-*   [Enhanced Theming and CSS Variable Management](#enhanced-theming-and-css-variable-management- "null")
+*   [Enhanced Theming and CSS Variable Management](#enhanced-theming-and-css-variable-management "null")
     
-*   [Advanced Error Handling (Fallback UI & Recovery)](#advanced-error-handling-fallback-ui--recovery- "null")
+*   [Advanced Error Handling (Fallback UI & Recovery)](#advanced-error-handling-fallback-ui--recovery "null")
     
-*   [Adopted Callback Integration](#adopted-callback-integration- "null")
+*   [Adopted Callback Integration](#adopted-callback-integration "null")
     
-*   [Content Ready Lifecycle Hook (contentReadyCallback)](#content-ready-lifecycle-hook-contentreadycallback- "null")
+*   [Content Ready Lifecycle Hook (contentReadyCallback)](#content-ready-lifecycle-hook-contentreadycallback "null")
     
-*   [Opinionated Lifecycle Integration for Cleanup](#opinionated-lifecycle-integration-for-cleanup-- "null")
+*   [Opinionated Lifecycle Integration for Cleanup](#opinionated-lifecycle-integration-for-cleanup "null")
     
 
 ### [**💧 Server-Side Rendering (SSR) & Hydration Readiness**](#-server-side-rendering-ssr--hydration-readiness-1 "null")
 _Achieving fast initial loads and seamless interactivity._
 
-*   [Automatic Hydration Detection](#automatic-hydration-detection- "null")
+*   [Automatic Hydration Detection](#automatic-hydration-detection "null")
     
-*   [Preventing FOUC & Performance](#preventing-fouc--performance- "null")
+*   [Preventing FOUC & Performance](#preventing-fouc--performance "null")
     
-*   [Seamless Transition](#seamless-transition- "null")
+*   [Seamless Transition](#seamless-transition "null")
     
-*   [Handling Hydration of Slot Content](#handling-hydration-of-slot-content- "null")
+*   [Handling Hydration of Slot Content](#handling-hydration-of-slot-content "null")
     
-*   [Hydration Benefits](#hydration-benefits- "null")
+*   [Hydration Benefits](#hydration-benefits "null")
     
 
 ### [**🧩 Integration with Third-Party Libraries**](#-integration-with-third-party-libraries-1 "null")
 _Connecting Datastar components with external JavaScript ecosystems._
 
-*   [Key Principles](#key-principles- "null")
+*   [Key Principles](#key-principles "null")
     
-*   [Example 1: Charting Library (Recharts-like)](#example-1-charting-library-recharts-like- "null")
+*   [Example 1: Charting Library (Recharts-like)](#example-1-charting-library-recharts-like "null")
     
-*   [Example 2: Simple Markdown Editor (Conceptual)](#example-2-simple-markdown-editor-conceptual- "null")
+*   [Example 2: Simple Markdown Editor (Conceptual)](#example-2-simple-markdown-editor-conceptual "null")
     
 
 ### [**🌐 Dynamic & Conditional Routing**](#-dynamic--conditional-routing "null")
@@ -180,23 +180,23 @@ _Applying Datastar components to various application architectures._
 ### [**📖 Integrating with Documentation Tools (e.g., Storybook)**](#-integrating-with-documentation-tools-eg-storybook-1 "null")
 _Documenting and showcasing your HTML-first Web Components._
 
-*   [Key Steps for Storybook Integration](#key-steps-for-storybook-integration- "null")
+*   [Key Steps for Storybook Integration](#key-steps-for-storybook-integration "null")
     
-*   [Step 1 - Storybook Setup](#step-1---storybook-setup- "null")
+*   [Step 1 - Storybook Setup](#step-1---storybook-setup "null")
     
-*   [Step 2 - Creating Stories for Datastar Components](#step-2---creating-stories-for-datastar-components- "null")
+*   [Step 2 - Creating Stories for Datastar Components](#step-2---creating-stories-for-datastar-components "null")
     
-*   [Benefits of Integration Pattern](#benefits-of-integration-pattern- "null")
+*   [Benefits of Integration Pattern](#benefits-of-integration-pattern "null")
     
 
 ### [**🤝 Community Engagement**](#-community-engagement-1 "null")
 _Join our mission to empower developers with open-source tools._
 
-*   [Our Contributions](#our-contribution- "null")
+*   [Our Contributions](#our-contribution "null")
     
-*   [Feedback](#feedback--support- "null") & Support
+*   [Feedback](#feedback--support "null") & Support
     
-*   [Acknowledgments](#acknowledgments- "null")
+*   [Acknowledgments](#acknowledgments "null")
 
 <br>
 
@@ -889,13 +889,13 @@ While declarative approaches are preferred, there are scenarios where imperative
             
         *   `componentInstance.emit('eventName', detail)`: To dispatch custom events from within your component, allowing parent components to react to imperative actions declaratively.
             
-        *   `componentInstance.registerCleanup(fn)`: **Crucial for imperative code.** Registers a function to be called automatically when the component is removed from the DOM, preventing memory leaks from imperative setups (see [Opinionated Lifecycle Integration for Cleanup](#opinionated-lifecycle-integration-for-cleanup-- "null")).
+        *   `componentInstance.registerCleanup(fn)`: **Crucial for imperative code.** Registers a function to be called automatically when the component is removed from the DOM, preventing memory leaks from imperative setups (see [Opinionated Lifecycle Integration for Cleanup](#opinionated-lifecycle-integration-for-cleanup "null")).
             
         *   `Datastar.scope(componentInstance)`: To access the component's Datastar scope (its signals and actions) from imperative JavaScript. This is the primary way to bridge between imperative JS logic and Datastar's reactive state.
             
         *   `componentInstance.setCssVariable()`, `componentInstance.getCssVariable()`: For programmatic control over CSS Custom Properties, enabling dynamic styling from imperative code.
             
-        *   `componentInstance.contentReadyCallback()`: A reliable lifecycle hook for imperative initializations that depend on the component's internal DOM being fully loaded and ready (see [Content Ready Lifecycle Hook](#content-ready-lifecycle-hook-contentreadycallback- "null")).
+        *   `componentInstance.contentReadyCallback()`: A reliable lifecycle hook for imperative initializations that depend on the component's internal DOM being fully loaded and ready (see [Content Ready Lifecycle Hook](#content-ready-lifecycle-hook-contentreadycallback "null")).
             
 
 **Example: Component with Declarative Actions and Imperative Logic Bridge** (`my-interactive-card.html`) Blending Datastar's declarative power with targeted imperative control.
@@ -2364,7 +2364,7 @@ _Guidelines for successful third-party library integration._
 ### **Example 1: Charting Library (Recharts-like)**
 _Integrating a third-party charting library with reactive data updates._
 
-(This example is already covered in Section [Content Ready Lifecycle Hook (contentReadyCallback)](#content-ready-lifecycle-hook-contentreadycallback- "null"). It effectively demonstrates imperative initialization of a global charting library (`ChartJS`) and reactive bridging using `Datastar.effect` for updates to Datastar signals, and `registerCleanup` for proper destruction.)
+(This example is already covered in Section [Content Ready Lifecycle Hook (contentReadyCallback)](#content-ready-lifecycle-hook-contentreadycallback "null"). It effectively demonstrates imperative initialization of a global charting library (`ChartJS`) and reactive bridging using `Datastar.effect` for updates to Datastar signals, and `registerCleanup` for proper destruction.)
 
 <p align="right"><a href="#-integration-with-third-party-libraries">⬆️</a></p>
 
