@@ -151,7 +151,7 @@ _Connecting Datastar components with external JavaScript ecosystems._
 *   [Example 2: Simple Markdown Editor (Conceptual)](#example-2-simple-markdown-editor-conceptual "null")
     
 
-### [**🌐 Dynamic & Conditional Routing**](#-dynamic--conditional-routing "null")
+### [**🌐 Dynamic & Conditional Routing**](#-dynamic--conditional-routing-1 "null")
 _Crafting fluid navigation and dynamic content experiences._
 
 *   [Datastar's Core Routing Mechanism](#datastars-core-routing-mechanism "null")
