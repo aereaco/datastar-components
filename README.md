@@ -76,7 +76,7 @@ _Hands-on building of foundational Datastar components._
     
 *   [1st Component - Light DOM](#1st-component---light-dom-my-light-counterhtml "null")
     
-*   [2nd Component - Shadow DOM (Open)](#2nd-component---shadow-dom-open--my-shadow-open-counterhtml "null")
+*   [2nd Component - Shadow DOM (Open)](#2nd-component---shadow-dom-open-my-shadow-open-counterhtml "null")
     
 *   [3rd Component - Shadow DOM (Closed)](#3rd-component---shadow-dom-closed-my-shadow-closed-counterhtml "null")
     
