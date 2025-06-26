@@ -211,7 +211,7 @@ _Join our mission to empower developers with open-source tools._
 
 This section provides a quick overview of how to start using the `datastar-components` plugin and introduces its core attributes. We'll explore how to leverage Datastar's declarative power right from your HTML, making component development intuitive and efficient.
 
-<p align="right"><a href="#-table-of-contents">⬆️</a></p>
+<p align="right"><a href="#-getting-started">⬆️</a></p>
 
 ### Overview
 _A glimpse into HTML-first, reactive Web Components._
@@ -220,7 +220,7 @@ The `datastar-components` plugin seamlessly integrates with the core Datastar fr
 
 The plugin introduces several custom `data-*` attributes, all following a `data-component-*` naming convention, to provide specific functionalities for component loading, data passing, and error handling. This clear naming convention helps differentiate them from standard Datastar attributes and ensures compatibility with other plugins.
 
-<p align="right"><a href="#-table-of-contents">⬆️</a></p>
+<p align="right"><a href="#-getting-started">⬆️</a></p>
 
 ### `data-component-src`
 _The foundational link to your component's HTML definition._
@@ -229,7 +229,7 @@ Specifies the URL to the HTML file that defines the component's structure, style
 
 *   **Usage:** `<my-component data-component-src="/path/to/my-component.html"></my-component>`
     
-<p align="right"><a href="#-table-of-contents">⬆️</a></p>
+<p align="right"><a href="#-getting-started">⬆️</a></p>
 
 ### `data-component-prop-*`
 _Declaratively passing reactive data from parent to child components._
@@ -238,7 +238,7 @@ Used to pass reactive data (props) from a parent element to a component. The str
 
 *   **Usage:** `<my-component data-component-prop-message="Hello World!"></my-component>`
     
-<p align="right"><a href="#-table-of-contents">⬆️</a></p>
+<p align="right"><a href="#-getting-started">⬆️</a></p>
 
 ### `data-component-load-if`
 _Conditionally loading components for optimized performance._
@@ -247,7 +247,7 @@ Controls whether a component is fetched and mounted based on a Datastar expressi
 
 *   **Usage:** `<my-lazy-component data-component-src="/path/to/lazy.html" data-component-load-if="$isDataReady"></my-lazy-component>`
 
-<p align="right"><a href="#-table-of-contents">⬆️</a></p>
+<p align="right"><a href="#-getting-started">⬆️</a></p>
 
 ### `data-component-form-associated`
 _Integrating custom elements seamlessly into native HTML forms._
@@ -262,7 +262,7 @@ Added to a component's `<template>` tag (within its HTML source file) to enable 
     </template>
     ```
 
-<p align="right"><a href="#-table-of-contents">⬆️</a></p>
+<p align="right"><a href="#-getting-started">⬆️</a></p>
 
 ### `data-component-fallback`
 _Ensuring graceful degradation with a declarative error UI._
@@ -278,7 +278,7 @@ Provides a fallback URL to an HTML file. If the primary component specified by `
     ></my-component>
     ```
 
-<p align="right"><a href="#-table-of-contents">⬆️</a></p>
+<p align="right"><a href="#-getting-started">⬆️</a></p>
 
 ### `data-component-connected`
 _Declaratively triggering actions when your component joins the DOM._
@@ -311,7 +311,7 @@ Executes a Datastar expression when the component's `connectedCallback` fires. T
     ></my-welcome-message>
     ```
 
-<p align="right"><a href="#-table-of-contents">⬆️</a></p>
+<p align="right"><a href="#-getting-started">⬆️</a></p>
 
 ### `data-component-disconnected`
 _Declaratively initiating cleanup when your component leaves the DOM._
@@ -359,7 +359,7 @@ Executes a Datastar expression when the component's `disconnectedCallback` fires
 
 Before we dive into creating components, let's get your development environment ready. Follow these straightforward steps to prepare your project for Datastar Components.
 
-<p align="right"><a href="#-table-of-contents">⬆️</a></p>
+<p align="right"><a href="#-installation--setup">⬆️</a></p>
 
 ### Step 1 - Include the Libraries
 _Adding Datastar and its components plugin to your project._
@@ -432,7 +432,7 @@ Ensure `datastar.js` is loaded **before** `datastar-components.js`. It's recomme
 </html>
 ```
 
-<p align="right"><a href="#-table-of-contents">⬆️</a></p>
+<p align="right"><a href="#-installation--setup">⬆️</a></p>
 
 ### Step 2 - Set Up Your Development Server
 _Serving your HTML component files for browser access._
@@ -519,7 +519,7 @@ To load your component HTML files, you'll need a simple web server. Here’s a q
 
 Now that your environment is set up, let's create your very first interactive components. This section will guide you through defining components using HTML-first principles and Datastar's declarative reactivity.
 
-<p align="right"><a href="#-table-of-contents">⬆️</a></p>
+<p align="right"><a href="#-creating-your-first-component">⬆️</a></p>
 
 ### Seamless DatastarJS Integration
 _The heart of Datastar components: HTML-first reactivity._
@@ -530,7 +530,7 @@ When a component is loaded and connected to the DOM, the plugin automatically pe
 
 Furthermore, any reactive `data-component-prop-*` attributes passed to your component from its parent are automatically converted into Datastar signals and made available within the component's scope via the `$props` object. Individual props are also exposed directly as signals on the component's scope (e.g., `$props.yourProp` or simply `$yourProp` if no naming conflict), ensuring seamless reactive data flow.
 
-<p align="right"><a href="#-table-of-contents">⬆️</a></p>
+<p align="right"><a href="#-creating-your-first-component">⬆️</a></p>
 
 ### 1st Component - Light DOM (`my-light-counter.html`)
 _A simple counter component demonstrating reactivity directly in the main document._
@@ -576,7 +576,7 @@ This component will render its content directly into the main DOM. While its sty
 </template>
 ```
 
-<p align="right"><a href="#-table-of-contents">⬆️</a></p>  
+<p align="right"><a href="#-creating-your-first-component">⬆️</a></p>  
 
 ### 2nd Component - Shadow DOM (Open) (`my-shadow-open-counter.html`)
 _Encapsulating component logic and styles within an accessible Shadow DOM._
@@ -622,7 +622,7 @@ This component will create an "open" Shadow DOM, encapsulating its styles and DO
 </template>
 ```
 
-<p align="right"><a href="#-table-of-contents">⬆️</a></p>  
+<p align="right"><a href="#-creating-your-first-component">⬆️</a></p>  
 
 ### 3rd Component - Shadow DOM (Closed) (`my-shadow-closed-counter.html`)
 _Achieving maximum encapsulation for your component's internals._
@@ -657,7 +657,7 @@ This component will create a "closed" Shadow DOM, offering stronger encapsulatio
 </template>
 ```
 
-<p align="right"><a href="#-table-of-contents">⬆️</a></p> 
+<p align="right"><a href="#-creating-your-first-component">⬆️</a></p> 
 
 ### Using Your Components in index.html
 _Bringing your newly created components to life in your main application._
@@ -705,7 +705,7 @@ Now that you've defined your components, let's see how easy it is to use them in
 
 The `datastar-components` plugin intelligently parses your component's HTML template file and handles various aspects to create a fully functional Custom Element. This section explores the versatile features that empower you to build sophisticated and maintainable UI components, always emphasizing Datastar's declarative power.
 
-<p align="right"><a href="#-table-of-contents">⬆️</a></p>
+<p align="right"><a href="#-functionality--capabilities">⬆️</a></p>
 
 ### Template Usage: Defining Your Component Structure
 _The foundation of your component: declarative HTML templates._
@@ -804,7 +804,7 @@ Usage:
 </template>
 ```
   
-<p align="right"><a href="#-table-of-contents">⬆️</a></p>
+<p align="right"><a href="#-functionality--capabilities">⬆️</a></p>
 
 ### Styles (CSS) Management
 _Effortlessly manage and encapsulate your component's visual presentation._
@@ -820,7 +820,7 @@ The plugin provides smart CSS handling to ensure your components look consistent
     
     External stylesheets referenced via `<link rel="stylesheet">` tags within your component templates are also handled and cached similarly to inline `<style>` tags. This ensures optimized loading and application of external CSS resources.
     
-<p align="right"><a href="#-table-of-contents">⬆️</a></p>
+<p align="right"><a href="#-functionality--capabilities">⬆️</a></p>
 
 ### JavaScript Execution: Declarative vs. Imperative
 _Harnessing Datastar's declarative power, with imperative control when truly needed._
@@ -994,7 +994,7 @@ export function init(componentInstance) {
 
 _This example showcases a powerful blend: `performAction` is callable declaratively from HTML, but its internal logic is imperative. The `init` function demonstrates how to attach traditional event listeners and interact with signals imperatively, highlighting the crucial need for manual cleanup via `registerCleanup` for such imperative setups._
 
-<p align="right"><a href="#-table-of-contents">⬆️</a></p>
+<p align="right"><a href="#-functionality--capabilities">⬆️</a></p>
 
 ### Reactive Prop System (`data-component-prop-*`)
 _Effortlessly pass and react to data changes from parent to child components._
@@ -1083,7 +1083,7 @@ Usage in `index.html`: Passing static and dynamic props to the greeting card com
 </html>
 ```
 
-<p align="right"><a href="#-table-of-contents">⬆️</a></p>
+<p align="right"><a href="#-functionality--capabilities">⬆️</a></p>
 
 ### Slots: Projecting Content
 _Composing components by declaratively inserting content into designated areas._
@@ -1142,7 +1142,7 @@ Leverage standard Web Component `<slot>` elements to allow parent elements to de
         
     
 
-<p align="right"><a href="#-table-of-contents">⬆️</a></p>
+<p align="right"><a href="#-functionality--capabilities">⬆️</a></p>
 
 ### Scoped IDs for Accessibility and Internal Linking
 _Ensuring unique and accessible IDs within multiple component instances._
@@ -1187,7 +1187,7 @@ To prevent ID conflicts when using multiple instances of the same component, the
 *   Now, if you have multiple `my-form-component` instances, each input and its label will have a globally unique and correctly associated ID (e.g., `my-form-component-1-username-input`, `my-form-component-2-username-input`), all applied declaratively.
     
 
-<p align="right"><a href="#-table-of-contents">⬆️</a></p>
+<p align="right"><a href="#-functionality--capabilities">⬆️</a></p>
 
 ### Conditional Component Loading (`data-component-load-if`)
 _Optimizing performance by loading components only when they are truly needed._
@@ -1317,7 +1317,7 @@ Control when a component is loaded and rendered based on the state of a Datastar
         </div>
         ```
 
-<p align="right"><a href="#-table-of-contents">⬆️</a></p>
+<p align="right"><a href="#-functionality--capabilities">⬆️</a></p>
 
 ### Form Association (Form-Associated Custom Elements)
 _Integrating your custom components into native HTML form behaviors._
@@ -1390,7 +1390,7 @@ Seamlessly integrate your custom components with native HTML forms. By adding a 
     In this example, when the form is submitted, `$formData` will correctly contain `custom_field_name: "current value of my-input-component"`. The `reset` button will also correctly revert `my-input-component` to its initial `value="Initial Value"`.
     
 
-<p align="right"><a href="#-table-of-contents">⬆️</a></p>
+<p align="right"><a href="#-functionality--capabilities">⬆️</a></p>
 
 ### Composing Components
 _Building complex user interfaces by nesting smaller, reusable components._
@@ -1540,7 +1540,7 @@ This example demonstrates:
 *   **Event Bubbling**: The `edit-profile` event emitted imperatively by `my-user-profile-card` can be caught by `index.html` (`data-on:edit-profile`), providing a clean way for children to communicate with parents.
         
 
-<p align="right"><a href="#-table-of-contents">⬆️</a></p>
+<p align="right"><a href="#-functionality--capabilities">⬆️</a></p>
 
 ### Backend Integration: Server-Sent Events (SSE)
 _Connecting your components to real-time backend updates with declarative power._
@@ -1789,28 +1789,28 @@ In these cases, you can imperatively create an `EventSource` within your compone
 
 The `datastar-components` plugin is built with performance in mind, ensuring that your application remains responsive and efficient even as it scales with more components and complex interactions. These optimizations are largely automatic, allowing you to focus on declarative development.
 
-<p align="right"><a href="#-table-of-contents">⬆️</a></p>
+<p align="right"><a href="#-performance--optimizations">⬆️</a></p>
 
 ### Optimized Network Requests
 _Smart fetching to avoid redundant downloads._
 
 The plugin intelligently prevents redundant network fetch calls for component source HTML files. It also avoids re-defining Custom Elements that are already in the process of being defined or are already registered, ensuring that component resources are loaded and processed only when necessary.
 
-<p align="right"><a href="#-table-of-contents">⬆️</a></p>
+<p align="right"><a href="#-performance--optimizations">⬆️</a></p>
 
 ### Efficient DOM Scanning
 _Minimizing overhead with intelligent DOM observation._
 
 Instead of continuously polling the DOM for changes, the plugin utilizes a `MutationObserver` to efficiently watch for newly added elements that might be Datastar components. This minimizes performance overhead and ensures new components are identified and initialized promptly.
 
-<p align="right"><a href="#-table-of-contents">⬆️</a></p>
+<p align="right"><a href="#-performance--optimizations">⬆️</a></p>
 
 ### Native Caching
 _Leveraging browser power for faster asset delivery._
 
 The plugin leverages browser-native caching mechanisms for ES Modules (JavaScript) and Constructable Stylesheets (CSS). This means that once a component's JavaScript or styles are fetched and parsed, they are efficiently cached by the browser and reused across all instances of that component, ensuring assets are fetched and parsed only once for optimal performance.
 
-<p align="right"><a href="#-table-of-contents">⬆️</a></p>
+<p align="right"><a href="#-performance--optimizations">⬆️</a></p>
 
 ### Enhanced Theming and CSS Variable Management
 _Dynamically styling components with declarative reactive changes._
@@ -1917,7 +1917,7 @@ You can then use these variables directly in your component's `<style>` tags, le
 *   **Runtime Control**: Adjust styles programmatically without needing to manipulate classes or re-inject stylesheets, providing a powerful bridge for specific imperative styling needs.
         
 
-<p align="right"><a href="#-table-of-contents">⬆️</a></p>
+<p align="right"><a href="#-performance--optimizations">⬆️</a></p>
 
 ### Advanced Error Handling (Fallback UI & Recovery)
 _Building robust applications with declarative fallbacks for component failures._
@@ -2001,7 +2001,7 @@ The plugin provides a robust mechanism for handling errors during component load
     
 When `my-failing-component`'s script fails, its content will be replaced by the "Oops! This feature could not be loaded." message from `my-error-fallback.html`, demonstrating effective error handling.
 
-<p align="right"><a href="#-table-of-contents">⬆️</a></p>
+<p align="right"><a href="#-performance--optimizations">⬆️</a></p>
 
 ### Adopted Callback Integration
 _Ensuring component reactivity persists across document transitions._
@@ -2025,7 +2025,7 @@ The `datastar-components` plugin now leverages this callback to ensure that if a
     *   **Re-establish in `adoptedCallback`**: Re-attach those document-specific listeners or re-initialize any document-bound resources when the component enters a _new_ document. Use the `registerCleanup` method for robust cleanup patterns that fire reliably upon disconnection.
         
 
-<p align="right"><a href="#-table-of-contents">⬆️</a></p>
+<p align="right"><a href="#-performance--optimizations">⬆️</a></p>
 
 ### Content Ready Lifecycle Hook (contentReadyCallback)
 _A reliable hook for imperative initializations that depend on a fully rendered component._
@@ -2102,7 +2102,7 @@ export function init(componentInstance) {
 _This example demonstrates a common pattern: declarative HTML defines the component structure, but imperative JavaScript (within `contentReadyCallback`) is used to initialize and manage a non-Datastar-aware third-party library, with Datastar effects bridging the library's state to Datastar signals for reactive updates. This showcases a controlled blend of paradigms._
     
 
-<p align="right"><a href="#-table-of-contents">⬆️</a></p>
+<p align="right"><a href="#-performance--optimizations">⬆️</a></p>
 
 ### Opinionated Lifecycle Integration for Cleanup
 _Automatically manage and prevent memory leaks from imperative resources._
@@ -2259,28 +2259,28 @@ When you click "Toggle Component Visibility," the `my-cleanup-component` will be
 
 The `datastar-components` plugin is designed to work seamlessly with Server-Side Rendered (SSR) content, enabling a smooth hydration process. This means you can get the benefits of fast initial page loads and SEO, combined with the rich interactivity provided by Datastar on the client-side.
 
-<p align="right"><a href="#-table-of-contents">⬆️</a></p>
+<p align="right"><a href="#-server-side-rendering-ssr--hydration-readiness">⬆️</a></p>
 
 ### Automatic Hydration Detection
 _Effortlessly bringing server-rendered content to life._
 
 When a component element is added to the DOM (either initially loaded from the server or dynamically inserted), the plugin intelligently checks if its content (especially its Shadow DOM, via [Declarative Shadow DOM](https://web.dev/declarative-shadow-dom/ "null")) has already been pre-rendered on the server. This detection is automatic, requiring no special client-side configuration.
 
-<p align="right"><a href="#-table-of-contents">⬆️</a></p>
+<p align="right"><a href="#-server-side-rendering-ssr--hydration-readiness">⬆️</a></p>
 
 ### Preventing FOUC & Performance
 _Smooth transitions and optimized initial rendering._
 
 If pre-rendered content is detected, the plugin "hydrates" it. This means it attaches interactivity, applies styles (including efficient Constructable Stylesheets), and initializes Datastar reactivity on the _existing_ DOM elements, rather than fetching and re-injecting HTML. This significantly improves initial page load performance, prevents flashes of unstyled content (FOUC), and is highly beneficial for SEO.
 
-<p align="right"><a href="#-table-of-contents">⬆️</a></p>
+<p align="right"><a href="#-server-side-rendering-ssr--hydration-readiness">⬆️</a></p>
 
 ### Seamless Transition
 _A unified experience from server to client._
 
 Developers can render components on the server, and the client-side plugin will seamlessly take over without re-rendering the entire component. This provides a robust and uninterrupted user experience, bridging the gap between server-generated markup and client-side interactivity.
 
-<p align="right"><a href="#-table-of-contents">⬆️</a></p>
+<p align="right"><a href="#-server-side-rendering-ssr--hydration-readiness">⬆️</a></p>
 
 ### Handling Hydration of Slot Content
 _Ensuring dynamic reactivity for content projected into slots._
@@ -2321,7 +2321,7 @@ When `my-profile-widget` hydrates on the client, Datastar will:
 5.  Hydrate these `data-text` directives, ensuring that when the `$user.name` or `$user.email` signals change (e.g., after client-side data fetch), the pre-rendered text updates reactively.
         
 
-<p align="right"><a href="#-table-of-contents">⬆️</a></p>
+<p align="right"><a href="#-server-side-rendering-ssr--hydration-readiness">⬆️</a></p>
 
 ### Hydration Benefits
 _The combined advantages of SSR and client-side interactivity._
@@ -2341,7 +2341,7 @@ By combining SSR with client-side hydration, you gain the SEO and initial perfor
 
 Datastar Components provide reliable lifecycle hooks and contextual access to the component instance, making it straightforward to integrate and manage third-party JavaScript libraries. This section outlines key principles and provides examples for bridging the gap between declarative Datastar and imperative library APIs. The core idea is to initialize the library when the component's content is ready and clean up any resources when the component is removed, primarily using imperative JavaScript that then interacts with Datastar signals for reactive updates.
 
-<p align="right"><a href="#-table-of-contents">⬆️</a></p>
+<p align="right"><a href="#-integration-with-third-party-libraries">⬆️</a></p>
 
 ### Key Principles
 _Guidelines for successful third-party library integration._
@@ -2359,14 +2359,14 @@ _Guidelines for successful third-party library integration._
 *   `element.emit('eventName', detail)`: To dispatch custom events from imperative library callbacks, notifying parent components declaratively.
         
 
-<p align="right"><a href="#-table-of-contents">⬆️</a></p>
+<p align="right"><a href="#-integration-with-third-party-libraries">⬆️</a></p>
 
 ### **Example 1: Charting Library (Recharts-like)**
 _Integrating a third-party charting library with reactive data updates._
 
 (This example is already covered in Section [Content Ready Lifecycle Hook (contentReadyCallback)](#content-ready-lifecycle-hook-contentreadycallback- "null"). It effectively demonstrates imperative initialization of a global charting library (`ChartJS`) and reactive bridging using `Datastar.effect` for updates to Datastar signals, and `registerCleanup` for proper destruction.)
 
-<p align="right"><a href="#-table-of-contents">⬆️</a></p>
+<p align="right"><a href="#-integration-with-third-party-libraries">⬆️</a></p>
 
 ### **Example 2: Simple Markdown Editor (Conceptual)**
 _Bridging an imperative markdown editor to Datastar's reactive state._
@@ -2523,7 +2523,7 @@ Datastar's approach to routing is deeply integrated with its core philosophy of 
 
 The `datastar-components` plugin significantly enhances these routing capabilities by providing a structured way to define and manage individual "pages" or "views" as encapsulated, reactive Web Components, allowing for dynamic view swapping and conditional feature rendering.
 
-<p align="right"><a href="#-table-of-contents">⬆️</a></p>
+<p align="right"><a href="#-dynamic--conditional-routing">⬆️</a></p>
 
 ### Datastar's Core Routing Mechanism
 _Understanding Datastar's hypermedia-driven approach to navigation._
@@ -2600,7 +2600,7 @@ When the "Go to Dashboard" button is clicked:
 4.  The `#main-content` element's content is replaced with the new HTML, and `data-view-transition: true` provides a smooth visual transition. This entire process is orchestrates by declarative attributes and server instructions.
     
 
-<p align="right"><a href="#-table-of-contents">⬆️</a></p>
+<p align="right"><a href="#-dynamic--conditional-routing">⬆️</a></p>
 
 ### Component-Based Routing Paradigm
 _Structuring your application's views as encapsulated Datastar components._
@@ -2609,7 +2609,7 @@ This paradigm describes how to leverage `data-component-src` for primary view ro
 
 For a comprehensive example of this paradigm in action, including `index.html` setup with a global `navigate` action and several route components (`home-view.html`, `about-view.html`, `contact-view.html`, `my-3d-game.html`), please refer to the [**Single-Page Applications (SPA)**](#single-page-applications-spa "null") subsection in the "Designing Diverse User Experiences" section.
 
-<p align="right"><a href="#-table-of-contents">⬆️</a></p>
+<p align="right"><a href="#-dynamic--conditional-routing">⬆️</a></p>
 
 ### Dynamic Routing
 _Declaratively swapping primary views based on application state or user actions._
@@ -2688,7 +2688,7 @@ Consider an `index.html` with a main content area (`id="router-outlet"`) and nav
 
 This setup enables dynamic swapping of primary view components, driven by user interaction and declarative signal updates, maintaining a responsive SPA-like feel.
 
-<p align="right"><a href="#-table-of-contents">⬆️</a></p>
+<p align="right"><a href="#-dynamic--conditional-routing">⬆️</a></p>
 
 ### Conditional Routing
 _Declaratively rendering components only when specific conditions are met._
@@ -2765,7 +2765,7 @@ This declarative approach to conditional loading ensures that resources are effi
 
 The `datastar-components` plugin, combined with Datastar's core capabilities, empowers developers to craft a wide array of frontend user experiences. From traditional multi-page applications to dynamic single-page interfaces and immersive interactive experiences, this plugin provides the tools to build highly optimized, declarative-first, and progressively enhanced web applications.
 
-<p align="right"><a href="#-table-of-contents">⬆️</a></p>
+<p align="right"><a href="#-design-diverse-user-experiences">⬆️</a></p>
 
 ### Multi-Page Applications (MPA)
 _Enhancing traditional MPAs with client-side interactivity._
@@ -2825,7 +2825,7 @@ In a pure MPA, each navigation link triggers a full page reload. Datastar enhanc
     
 **Benefit**: The initial page is fast and SEO-friendly due to server rendering. Interactive components like `my-product-reviews` then progressively enhance the experience by loading their dynamic content via client-side JavaScript, leveraging `data-component-prop-*` for contextual data and Datastar signals for reactive updates.
 
-<p align="right"><a href="#-table-of-contents">⬆️</a></p>
+<p align="right"><a href="#-design-diverse-user-experiences">⬆️</a></p>
 
 ### Single-Page Applications (SPA)
 _Building dynamic, responsive SPAs with Datastar's HTML-first approach._
@@ -3090,7 +3090,7 @@ Build true SPA experiences where different "pages" are dynamically swapped out w
 **Benefit**: This example demonstrates a fast, client-side driven SPA experience with clean URLs, minimal reloads, and highly encapsulated, component-level state management. The combined use of `data-component-src` for primary routing and `data-component-load-if` for conditional feature loading ensures that only necessary parts of the UI are loaded and active, optimizing performance and resource utilization.
     
 
-<p align="right"><a href="#-table-of-contents">⬆️</a></p>
+<p align="right"><a href="#-design-diverse-user-experiences">⬆️</a></p>
 
 ### Server-Side Rendering (SSR) with Client-Side Rendering (CSR) Hydration
 _Combining the speed of SSR with the interactivity of client-side components._
@@ -3185,7 +3185,7 @@ Combine the best of both worlds: fast initial page loads via SSR, with subsequen
 **Benefit**: Initial page load is fast due to SSR. Subsequent navigation or lazy loading of product details transitions smoothly to client-side rendered components, with data hydrated via props. This blend provides excellent perceived performance and SEO benefits.
     
 
-<p align="right"><a href="#-table-of-contents">⬆️</a></p>
+<p align="right"><a href="#-design-diverse-user-experiences">⬆️</a></p>
 
 ### Immersive Canvas Experiences (Charts, 3D, Physics, Gaming)
 _Integrating rich, interactive canvas applications as dynamic components._
@@ -3197,7 +3197,7 @@ Routing can seamlessly transition to complex, interactive components that levera
 **Benefit**: Complex, resource-intensive canvas applications or data visualizations are loaded and initialized only when their route is active. They are properly torn down when navigating away (via `registerCleanup`), preventing memory leaks, and can leverage Datastar's reactivity for dynamic data updates or control parameters within the canvas context. This approach keeps your main application lightweight while enabling powerful, immersive experiences on demand.
     
 
-<p align="right"><a href="#-table-of-contents">⬆️</a></p>
+<p align="right"><a href="#-design-diverse-user-experiences">⬆️</a></p>
 
 ### Enhanced UX & Optimizations
 _Maximizing user experience and performance through Datastar's features._
@@ -3278,7 +3278,7 @@ Storybook is an open-source tool for developing UI components in isolation, enab
 
 While `datastar-components.js` provides the fundamental primitives, setting up Storybook to correctly render components that dynamically load HTML templates and use Datastar reactivity requires specific configuration and patterns.
 
-<p align="right"><a href="#-table-of-contents">⬆️</a></p>
+<p align="right"><a href="#-integrating-with-documentation-tools-eg-storybook">⬆️</a></p>
 
 ### **Key Steps for Storybook Integration**
 _Understanding how Datastar components operate within Storybook's isolated environment._
@@ -3302,7 +3302,7 @@ This HTML-first approach means that integrating with tools like Storybook requir
 
 Now, let's look at the key steps to achieve this seamless integration:
 
-<p align="right"><a href="#-table-of-contents">⬆️</a></p>
+<p align="right"><a href="#-integrating-with-documentation-tools-eg-storybook">⬆️</a></p>
 
 ### Step 1 - Storybook Setup
 _Configuring Storybook to recognize and initialize Datastar components._
@@ -3362,7 +3362,7 @@ module.exports = {
     ```    
         
 
-<p align="right"><a href="#-table-of-contents">⬆️</a></p>
+<p align="right"><a href="#-integrating-with-documentation-tools-eg-storybook">⬆️</a></p>
 
 ### Step 2 - Creating Stories for Datastar Components
 _Defining stories to showcase and interact with your components in isolation._
@@ -3448,7 +3448,7 @@ Instead of manually constructing the complex `data-component-src` and `data-comp
     ```
     
 
-<p align="right"><a href="#-table-of-contents">⬆️</a></p>
+<p align="right"><a href="#-integrating-with-documentation-tools-eg-storybook">⬆️</a></p>
 
 ### Benefits of Integration Pattern
 The advantages of documenting Datastar components with Storybook.
@@ -3481,7 +3481,7 @@ At **Aerea**, we're dedicated to fostering **open-source communities** and striv
 
 This plugin is designed to make developing Web Components with `Datastar` easy, powerful, straightforward and robust. We believe in the strength of collective intelligence and the impact of community contributions.
 
-<p align="right"><a href="#-table-of-contents">⬆️</a></p>
+<p align="right"><a href="#-community-engagement">⬆️</a></p>
 
 ### Our Contribution
 _Meet the driving force behind this open-source initiative._
@@ -3492,7 +3492,7 @@ _Meet the driving force behind this open-source initiative._
 
 [**Aerea Co. | Chicago, IL** | https://aerea.co](https://aerea.co "null")
 
-<p align="right"><a href="#-table-of-contents">⬆️</a></p>
+<p align="right"><a href="#-community-engagement">⬆️</a></p>
 
 ### Feedback & Support
 _Your voice shapes the evolution of Datastar Components._
@@ -3505,7 +3505,7 @@ We believe in the power of community and collaboration. Your feedback is crucial
     
 *   **Questions, Feedback & Discussions:** For general questions, feedback, or to discuss new ideas, head over to our [GitHub Discussions page](https://github.com/aereaco/datastar-components/discussions "null").
 
-<p align="right"><a href="#-table-of-contents">⬆️</a></p>
+<p align="right"><a href="#-community-engagement">⬆️</a></p>
 
 ### Acknowledgments
 _Our gratitude to the Datastar team and community._
