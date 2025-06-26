@@ -2759,7 +2759,7 @@ This declarative approach to conditional loading ensures that resources are effi
 
 
 
-📐 Designing Diverse User Experiences
+📐 Design Diverse User Experiences
 -----------------------------------
 ***Applying Datastar components to various application architectures.***
 
